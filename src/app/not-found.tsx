@@ -1,39 +1,44 @@
-import Link from "next/link";
-import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
-import { Topbar } from "@/components/layout/Topbar";
-import { Footer } from "@/components/layout/Footer";
-import { siteNav } from "@/content/site";
+"use client";
 
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+
+/**
+ * Cualquier URL inexistente renderiza esta página (404) y redirige a la home.
+ * La redirección es del lado del cliente (el servidor mantiene el código 404,
+ * que es lo correcto para SEO: Google descarta la URL inválida).
+ */
 export default function NotFound() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/");
+  }, [router]);
+
   return (
-    <WhatsAppProvider
-      baseMessage="Hola VanguardiaMax, quiero información sobre sus tasaciones."
-      segment="not-found"
+    <main
+      style={{
+        minHeight: "60vh",
+        display: "grid",
+        placeItems: "center",
+        fontFamily: "system-ui, sans-serif",
+        color: "#5b6b7a",
+        gap: 6,
+        textAlign: "center",
+        padding: "40px 20px",
+      }}
     >
-      <Topbar nav={siteNav} />
-      <main>
-        <section className="hero hero--service">
-          <div className="wrap" style={{ display: "block", textAlign: "center" }}>
-            <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Error 404
-            </span>
-            <h1>Página no encontrada</h1>
-            <p className="sub" style={{ margin: "0 auto 30px" }}>
-              La página que buscas no existe o fue movida. Vuelve al inicio o
-              explora nuestros servicios de tasación.
-            </p>
-            <div className="hero-cta" style={{ justifyContent: "center" }}>
-              <Link className="btn btn-wa" href="/">
-                Ir al inicio
-              </Link>
-              <Link className="btn btn-ghost" href="/servicios">
-                Ver servicios
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </WhatsAppProvider>
+      <p style={{ fontSize: 18, fontWeight: 600, color: "#0f2a43" }}>
+        Redirigiendo al inicio…
+      </p>
+      <p>
+        Si no avanzas,{" "}
+        <Link href="/" style={{ color: "#c8841f", textDecoration: "underline" }}>
+          haz clic aquí
+        </Link>
+        .
+      </p>
+    </main>
   );
 }
