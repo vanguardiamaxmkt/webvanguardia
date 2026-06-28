@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Base resets, typography and shared primitives.
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+[id] {
+  scroll-margin-top: 88px;
+}
+body {
+  font-family: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-fraunces), "Fraunces", Georgia, serif;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+.accent {
+  color: var(--gold);
+}
+
+/* buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 11px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  line-height: 1;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-wa {
+  background: var(--wa);
+  color: #063019;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.32);
+}
+.btn-wa:hover {
+  background: var(--wa-d);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+.btn-wa svg {
+  width: 19px;
+  height: 19px;
+  fill: #063019;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--line);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold-d);
+}
+
+/* sections */
+section {
+  padding: 68px 0;
+}
+.sec-eyebrow {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.sec-h {
+  font-size: clamp(26px, 3.4vw, 38px);
+  color: var(--navy);
+  max-width: 18em;
+  margin-bottom: 16px;
+}
+.sec-p {
+  color: var(--muted);
+  max-width: 42em;
+  font-size: 16.5px;
+}
+.sec-head-center {
+  text-align: center;
+  max-width: 46em;
+  margin: 0 auto 40px;
+}
+.sec-head-center .sec-eyebrow {
+  justify-content: center;
+}
+.sec-head-center .sec-h,
+.sec-head-center .sec-p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 860px) {
+  section {
+    padding: 52px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

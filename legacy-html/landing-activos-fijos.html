@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasación de Activos Fijos para Empresas | VanguardiaMax</title>
+<meta name="description" content="Tasación de maquinaria, equipos, plantas y bienes muebles para estados financieros (NIIF), garantías, seguros y compraventa. Peritos certificados, informes con validez reconocidos por auditores y bancos. Consulta por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- GTM: pega aquí tu snippet real de Google Tag Manager (GTM-PKC382BQ) en <head> y <body> -->
+<style>
+  :root{
+    --navy:#0F2A43; --slate:#13344F; --ink:#16222E; --muted:#5B6B7A;
+    --gold:#E8A33D; --gold-d:#C8841F; --cream:#FBF6EC; --line:#E7ECF1;
+    --wa:#25D366; --wa-d:#1EBE5A; --white:#FFFFFF;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.1;font-weight:600;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .accent{color:var(--gold)}
+
+  /* top bar */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(15,42,67,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{display:flex;align-items:center;gap:10px;color:#fff}
+  .brand-mark{width:30px;height:30px;border-radius:8px;background:var(--gold);display:grid;place-items:center;color:var(--navy);font-family:"Fraunces",serif;font-weight:700;font-size:17px}
+  .brand b{font-family:"Fraunces",serif;font-weight:600;font-size:17px;letter-spacing:.2px}
+  .brand small{display:block;font-family:"Inter";font-size:10px;color:#AEC4D8;letter-spacing:.5px;text-transform:uppercase;margin-top:-2px}
+  .top-actions{display:flex;align-items:center;gap:16px}
+  .top-phone{color:#CFE0EE;font-size:14px;font-weight:500;display:flex;align-items:center;gap:7px}
+  .top-phone svg{width:15px;height:15px;fill:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;border-radius:11px;padding:12px 20px;cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease;line-height:1}
+  .btn:active{transform:translateY(1px)}
+  .btn-wa{background:var(--wa);color:#063019;box-shadow:0 6px 18px rgba(37,211,102,.32)}
+  .btn-wa:hover{background:var(--wa-d);box-shadow:0 8px 24px rgba(37,211,102,.4)}
+  .btn-wa svg{width:19px;height:19px;fill:#063019}
+  .btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-d)}
+  .top-actions .btn-wa{padding:10px 16px;font-size:14px}
+  @media(max-width:720px){.top-phone{display:none}}
+
+  /* hero */
+  .hero{background:linear-gradient(165deg,#0F2A43 0%,#0C2236 60%,#0A1C2E 100%);color:#fff;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(232,163,63,.16),transparent 65%)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:72px;position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .eyebrow::before{content:"";width:24px;height:1.5px;background:var(--gold)}
+  .hero h1{font-size:clamp(34px,5vw,56px);font-weight:700;color:#fff;margin-bottom:20px}
+  .hero h1 .accent{display:block;font-style:italic;font-weight:500}
+  .hero .sub{font-size:clamp(16px,1.7vw,18.5px);color:#C7D6E4;max-width:30em;margin-bottom:30px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+  .hero-cta .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.22)}
+  .hero-cta .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .trustline{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;font-size:13.5px;color:#9FB6CC}
+  .trustline span{display:flex;align-items:center;gap:7px}
+  .trustline svg{width:16px;height:16px;fill:var(--gold)}
+
+  /* certificate card (signature) */
+  .cert{position:relative;background:#fff;border-radius:18px;padding:26px 26px 24px;color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.5);max-width:380px;margin:0 auto;transform:rotate(-1.4deg)}
+  .cert-top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px dashed var(--line);padding-bottom:16px;margin-bottom:16px}
+  .cert-top h4{font-family:"Fraunces",serif;font-size:19px;color:var(--navy);font-weight:600}
+  .cert-top p{font-size:12px;color:var(--muted)}
+  .cert-rows{display:flex;flex-direction:column;gap:11px;margin-bottom:18px}
+  .cert-row{display:flex;justify-content:space-between;align-items:center}
+  .cert-row .k{font-size:13px;color:var(--muted)}
+  .cert-row .v{font-family:"Fraunces",serif;font-weight:600;color:var(--navy);font-size:15px}
+  .cert-bar{height:9px;border-radius:6px;background:linear-gradient(90deg,var(--gold),#F2C57C);width:78%}
+  .cert-bar.b2{width:54%;background:linear-gradient(90deg,var(--navy),#3C6189)}
+  .cert-foot{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+  .seal{flex:0 0 auto;width:72px;height:72px}
+  .cert-foot p{font-size:11px;color:var(--muted);line-height:1.45}
+
+  /* trust strip */
+  .strip{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:30px 22px;text-align:center}
+  .stat .n{font-family:"Fraunces",serif;font-size:clamp(26px,3vw,34px);font-weight:700;color:var(--navy)}
+  .stat .l{font-size:13px;color:var(--muted);margin-top:2px}
+  @media(max-width:720px){.strip .wrap{grid-template-columns:repeat(2,1fr);gap:22px}}
+
+  /* sections */
+  section{padding:68px 0}
+  .sec-eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);margin-bottom:12px}
+  .sec-h{font-size:clamp(26px,3.4vw,38px);color:var(--navy);max-width:18em;margin-bottom:16px}
+  .sec-p{color:var(--muted);max-width:42em;font-size:16.5px}
+
+  .pain{background:var(--navy);color:#fff}
+  .pain .sec-h{color:#fff}
+  .pain .sec-p{color:#C7D6E4;font-size:17px}
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  @media(max-width:860px){.pain-grid{grid-template-columns:1fr;gap:26px}}
+
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  .bcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 24px;transition:transform .18s ease,box-shadow .18s ease}
+  .bcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,42,67,.1)}
+  .bnum{font-family:"Fraunces",serif;font-size:22px;font-weight:700;color:var(--gold);display:block;margin-bottom:14px}
+  .bcard h3{font-size:20px;color:var(--navy);margin-bottom:9px}
+  .bcard p{color:var(--muted);font-size:15px}
+  @media(max-width:860px){.benefits-grid{grid-template-columns:1fr}}
+
+  .how{background:var(--cream)}
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:30px}
+  .step{display:flex;gap:16px;align-items:flex-start}
+  .step-n{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--navy);color:var(--gold);font-family:"Fraunces",serif;font-weight:700;font-size:20px;display:grid;place-items:center}
+  .step h3{font-size:18px;color:var(--navy);margin-bottom:5px}
+  .step p{font-size:14.5px;color:var(--muted)}
+  @media(max-width:860px){.steps{grid-template-columns:1fr;gap:20px}}
+
+  /* form */
+  .lead{background:linear-gradient(160deg,#13344F,#0F2A43);color:#fff}
+  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .lead h2{color:#fff;font-size:clamp(26px,3.2vw,36px);margin-bottom:14px}
+  .lead .sec-p{color:#C7D6E4}
+  .lead ul{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:12px}
+  .lead li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:#DCE6F0}
+  .lead li svg{width:20px;height:20px;fill:var(--gold);flex:0 0 auto;margin-top:2px}
+  .form-card{background:#fff;border-radius:18px;padding:30px 28px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+  .form-card h3{font-size:21px;color:var(--navy);margin-bottom:4px}
+  .form-card .fp{font-size:14px;color:var(--muted);margin-bottom:20px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--slate);margin-bottom:6px}
+  .field input,.field select{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:11px;font-size:15px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .15s ease}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,163,63,.18)}
+  .form-card .btn-wa{width:100%;justify-content:center;margin-top:6px;padding:15px}
+  .form-note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+  @media(max-width:860px){.lead-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* faq */
+  .faq{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:"Fraunces",serif;font-size:18.5px;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:18px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq-ico{flex:0 0 auto;width:22px;height:22px;position:relative}
+  .faq-ico::before,.faq-ico::after{content:"";position:absolute;background:var(--gold-d);border-radius:2px;transition:transform .2s ease}
+  .faq-ico::before{top:10px;left:3px;width:16px;height:2px}
+  .faq-ico::after{top:3px;left:10px;width:2px;height:16px}
+  .faq[open] .faq-ico::after{transform:rotate(90deg);opacity:0}
+  .faq-a{padding:0 0 22px;max-width:52em}
+  .faq-a p{color:var(--muted);font-size:15.5px}
+
+  /* final cta */
+  .final{background:var(--gold);color:var(--navy);text-align:center}
+  .final h2{font-size:clamp(28px,3.6vw,40px);color:var(--navy);margin-bottom:12px}
+  .final p{font-size:18px;color:#5A3D0E;max-width:34em;margin:0 auto 26px}
+  .final .btn-wa{background:var(--navy);color:#fff;box-shadow:0 10px 30px rgba(15,42,67,.3)}
+  .final .btn-wa svg{fill:#fff}
+  .final .btn-wa:hover{background:var(--slate)}
+
+  /* footer */
+  footer{background:var(--navy);color:#9FB6CC;padding:40px 0;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
+  footer .legal{font-size:12px;color:#6E869C;max-width:46em;line-height:1.5}
+  footer a{color:#CFE0EE}
+
+  /* floating wa */
+  .float-wa{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.6s infinite}
+  .float-wa svg{width:31px;height:31px;fill:#fff}
+  @keyframes pulse{0%{box-shadow:0 10px 30px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 10px 30px rgba(37,211,102,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 10px 30px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:54px}
+    .cert{transform:rotate(0)}
+    section{padding:52px 0}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<!-- WhatsApp icon reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></symbol></svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="https://vanguardiamax.com" aria-label="VanguardiaMax inicio">
+      <span class="brand-mark">V</span>
+      <span><b>VanguardiaMax</b><small>Tasaciones Perú</small></span>
+    </a>
+    <div class="top-actions">
+      <a class="top-phone" href="tel:+51914965373"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>914 965 373</a>
+      <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Tasación de activos fijos</span>
+      <h1>El valor real de los activos de tu empresa <span class="accent">con respaldo técnico</span></h1>
+      <p class="sub">Tasamos maquinaria, equipos, plantas industriales y bienes muebles para estados financieros, garantías, seguros y compraventa. Informes conforme a norma, reconocidos por auditores y entidades financieras.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>Solicita tu tasación</a>
+        <a class="btn btn-ghost" href="#cotizar">Cotiza por formulario</a>
+      </div>
+      <div class="trustline">
+        <span><svg viewBox="0 0 24 24"><path d="M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z"/></svg>Autenticado por la SBS</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 1l3 6 6 .9-4.5 4.3 1 6.3L12 16l-5.5 2.8 1-6.3L3 7.9 9 7z"/></svg>+25 años de experiencia</span>
+        <span><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Informes bajo NIIF</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="cert" role="img" aria-label="Ejemplo de informe de tasación de activos fijos con valor de mercado y de reposición">
+        <div class="cert-top">
+          <div><h4>Informe de Tasación</h4><p>Valor de mercado · Valor de reposición</p></div>
+        </div>
+        <div class="cert-rows">
+          <div class="cert-row"><span class="k">Valor de mercado</span><span class="v">S/ ———</span></div>
+          <div class="cert-bar"></div>
+          <div class="cert-row"><span class="k">Valor neto de reemplazo</span><span class="v">S/ ———</span></div>
+          <div class="cert-bar b2"></div>
+        </div>
+        <div class="cert-foot">
+          <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" fill="none" stroke="#E8A33D" stroke-width="2"/>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#E8A33D" stroke-width="1" stroke-dasharray="2 3"/>
+            <circle cx="50" cy="50" r="26" fill="#0F2A43"/>
+            <path d="M40 50l7 7 14-15" fill="none" stroke="#E8A33D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs><path id="c" d="M50 14 a36 36 0 1 1 -0.1 0"/></defs>
+            <text font-family="Inter,sans-serif" font-size="8.2" font-weight="700" fill="#0F2A43" letter-spacing="1.4"><textPath href="#c" startOffset="2%">TASACIÓN CERTIFICADA · SBS · NIIF · REGLAMENTO NACIONAL · </textPath></text>
+          </svg>
+          <p>Válido para auditoría, banca y seguros · SBS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><div class="n">+25</div><div class="l">años de experiencia</div></div>
+    <div class="stat"><div class="n">+10 mil</div><div class="l">tasaciones realizadas</div></div>
+    <div class="stat"><div class="n">SBS</div><div class="l">empresa autenticada</div></div>
+    <div class="stat"><div class="n">Nacional</div><div class="l">cobertura en todo el Perú</div></div>
+  </div>
+</div>
+
+<section class="pain">
+  <div class="wrap pain-grid">
+    <div>
+      <div class="sec-eyebrow" style="color:var(--gold)">El problema</div>
+      <h2 class="sec-h">Tus activos necesitan un valor que la auditoría y el banco acepten</h2>
+    </div>
+    <div><p class="sec-p">Un valor en libros desactualizado o sin sustento se cuestiona en auditoría y debilita tu acceso a financiamiento. Entregamos valorizaciones técnicas con respaldo normativo, reconocidas por auditores, bancos y aseguradoras.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">Por qué VanguardiaMax</div>
+    <h2 class="sec-h">El valor correcto, con sustento que se defiende</h2>
+    <div class="benefits-grid">
+        <article class="bcard">
+          <span class="bnum">01</span>
+          <h3>Valorización bajo NIIF</h3>
+          <p>Informes de valor razonable alineados a NIIF 13 y NIC 16 para tu contabilidad y auditoría.</p>
+        </article>
+        <article class="bcard">
+          <span class="bnum">02</span>
+          <h3>Peritos especializados</h3>
+          <p>Expertos en maquinaria, equipos industriales, plantas y bienes muebles del activo fijo.</p>
+        </article>
+        <article class="bcard">
+          <span class="bnum">03</span>
+          <h3>Cobertura nacional</h3>
+          <p>Equipos descentralizados con doble visado en todo el Perú.</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="sec-eyebrow">Cómo funciona</div>
+    <h2 class="sec-h">Tres pasos, sin vueltas</h2>
+    <ol class="steps">
+        <li class="step">
+          <span class="step-n">1</span>
+          <div>
+            <h3>Cuéntanos de tus activos</h3>
+            <p>Tipo de bienes y finalidad (estados financieros, garantía, seguro o compraventa). Te orientamos el mismo día.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">2</span>
+          <div>
+            <h3>Inspección e inventario</h3>
+            <p>Un perito identifica, inventaría y evalúa cada activo conforme al Reglamento Nacional de Tasaciones.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-n">3</span>
+          <div>
+            <h3>Informe con sustento</h3>
+            <p>Recibes la valorización con valor de mercado y de reposición, lista para auditoría, banco o aseguradora.</p>
+          </div>
+        </li>
+    </ol>
+  </div>
+</section>
+
+<section class="lead" id="cotizar">
+  <div class="wrap lead-grid">
+    <div>
+      <div class="sec-eyebrow" style="color:var(--gold)">Cotiza ahora</div>
+      <h2>Cuéntanos de tus activos y te respondemos hoy</h2>
+      <p class="sec-p">Completa los datos y te llevamos directo a WhatsApp con tu consulta lista. Sin formularios eternos.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Respuesta el mismo día por WhatsApp</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Cotización personalizada según tu inventario</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Atención en Lima, Callao y todo el Perú</li>
+      </ul>
+    </div>
+    <div class="form-card">
+      <h3>Solicita tu cotización</h3>
+      <p class="fp">Toma 20 segundos.</p>
+      <form id="leadForm">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="field">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Razón social o nombre comercial" required>
+        </div>
+        <div class="field">
+          <label for="tipo">Tipo de activo</label>
+          <select id="tipo" name="tipo" required>
+            <option value="" disabled selected>Selecciona…</option>
+            <option>Maquinaria y equipo</option><option>Equipos industriales</option><option>Planta industrial completa</option>
+            <option>Flota vehicular</option><option>Mobiliario y enseres</option><option>Equipos de cómputo</option><option>Otro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="finalidad">Finalidad</label>
+          <select id="finalidad" name="finalidad" required>
+            <option value="" disabled selected>Selecciona…</option>
+            <option value="Estados financieros / NIIF">Estados financieros / NIIF</option><option value="Garantía para financiamiento">Garantía para financiamiento</option><option value="Seguro / póliza">Seguro / póliza</option><option value="Compraventa / due diligence">Compraventa / due diligence</option><option value="Reorganización societaria">Reorganización societaria</option><option value="Auditoría">Auditoría</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="9XX XXX XXX" required>
+        </div>
+        <button type="submit" class="btn btn-wa"><svg><use href="#wa"/></svg>Enviar por WhatsApp</button>
+        <p class="form-note">Al enviar se abrirá WhatsApp con tu consulta lista.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">Preguntas frecuentes</div>
+    <h2 class="sec-h">Lo que más nos consultan</h2>
+    <div style="margin-top:18px">
+        <details class="faq">
+          <summary>¿La tasación sirve para mis estados financieros bajo NIIF?<span class="faq-ico" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Sí. Determinamos el valor razonable de tus activos conforme a NIIF 13 y NIC 16, con sustento listo para tu contabilidad y la revisión de auditoría.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué tipo de activos pueden tasar?<span class="faq-ico" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Maquinaria, equipos industriales, plantas completas, flota vehicular, mobiliario, equipos de cómputo y demás bienes muebles del activo fijo.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Sirve como garantía ante bancos o fondos?<span class="faq-ico" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Sí. Nuestras valorizaciones tienen validez y son reconocidas por instituciones financieras para respaldar operaciones de financiamiento.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué documentos necesito?<span class="faq-ico" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Generalmente la relación de activos, facturas o comprobantes, fichas técnicas y acceso para la inspección. Te indicamos la lista exacta según tu caso por WhatsApp.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Cuánto demora y cuánto cuesta?<span class="faq-ico" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Depende del volumen de activos, su ubicación y la urgencia. Escríbenos con el detalle del caso y te damos plazo y cotización personalizada.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Por cuánto tiempo es válida?<span class="faq-ico" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Las tasaciones tienen validez de 1 año; pasado ese plazo conviene actualizar el valor a las condiciones del mercado.</p></div>
+        </details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Pon valor técnico a los activos de tu empresa</h2>
+    <p>Cuéntanos el tipo de activos y la finalidad por WhatsApp y te orientamos hoy.</p>
+    <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>Solicita tu tasación</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="margin-bottom:8px"><span class="brand-mark">V</span><span><b style="color:#fff">VanguardiaMax</b></span></div>
+      Platinum Plaza I, C. Dean Valdivia 148, San Isidro · <a href="tel:+51914965373">914 965 373</a>
+    </div>
+    <p class="legal">Tasaciones conforme al Reglamento Nacional de Tasaciones del Perú (R.M. Nº172-2016-VIVIENDA) y Resolución S.B.S. Nº11356-2008, con la finalidad de concluir el valor comercial y de realización de los bienes. © 2026 VanguardiaMax.</p>
+  </div>
+</footer>
+
+<a class="float-wa wa-link" href="#" aria-label="Escríbenos por WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  var NUM = "51914965373";
+  var BASE_MSG = "Hola VanguardiaMax, necesito una *Tasación de Activos Fijos* para mi empresa.";
+  var SEGMENTO = "activos-fijos";
+
+  // 1) Leer UTMs / click ids de la URL (atribución)
+  var p = new URLSearchParams(window.location.search);
+  var utm = {
+    source: p.get("utm_source") || "",
+    medium: p.get("utm_medium") || "",
+    campaign: p.get("utm_campaign") || "",
+    content: p.get("utm_content") || "",
+    term: p.get("utm_term") || "",
+    fbclid: p.get("fbclid") || ""
+  };
+  function originTag(){
+    var parts = [];
+    if(utm.campaign) parts.push(utm.campaign);
+    if(utm.source) parts.push(utm.source);
+    if(utm.content) parts.push(utm.content);
+    var label = parts.length ? parts.join(" | ") : "web-" + SEGMENTO;
+    return "\n\n(Origen: " + label + ")";
+  }
+  function waUrl(msg){
+    return "https://wa.me/" + NUM + "?text=" + encodeURIComponent(msg + originTag());
+  }
+
+  // 2) Aplicar a todos los botones de WhatsApp
+  function dl(extra){
+    window.dataLayer = window.dataLayer || [];
+    var ev = {event:"whatsapp_click", segmento:SEGMENTO, utm_campaign:utm.campaign, utm_source:utm.source};
+    if(extra) for(var k in extra) ev[k]=extra[k];
+    window.dataLayer.push(ev);
+  }
+  var links = document.querySelectorAll(".wa-link");
+  links.forEach(function(a){
+    a.setAttribute("href", waUrl(BASE_MSG));
+    a.setAttribute("target","_blank");
+    a.setAttribute("rel","noopener");
+    a.addEventListener("click", function(){ dl(); });
+  });
+
+  // 3) Formulario -> arma mensaje calificado + UTM y abre WhatsApp
+  var form = document.getElementById("leadForm");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = new FormData(form);
+    var msg = "Hola VanguardiaMax, quiero cotizar una tasación de activos fijos (" + SEGMENTO + ")."
+      + "\n\n*Nombre:* " + (d.get("nombre")||"")
+      + "\n*Empresa:* " + (d.get("empresa")||"")
+      + "\n*Tipo de activo:* " + (d.get("tipo")||"")
+      + "\n*Finalidad:* " + (d.get("finalidad")||"")
+      + "\n*Tel:* " + (d.get("telefono")||"");
+    dl({form_submit:true});
+    window.open(waUrl(msg), "_blank", "noopener");
+  });
+})();
+</script>
+</body>
+</html>

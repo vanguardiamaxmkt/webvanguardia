@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasación de Embarcaciones y Naves en Perú | VanguardiaMax</title>
+<meta name="description" content="Tasación y peritaje de embarcaciones, naves y artefactos navales en el Perú: pesqueras, yates, lanchas y remolcadores. Valorización para compraventa, garantía, seguros y procesos judiciales. Peritos certificados, cobertura nacional.">
+<link rel="canonical" href="https://vanguardiamax.com/servicios/tasacion-embarcaciones">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- GTM: pega aquí tu snippet real de Google Tag Manager (GTM-PKC382BQ) en <head> y <body> -->
+<style>
+  :root{
+    --navy:#0F2A43; --slate:#13344F; --ink:#16222E; --muted:#5B6B7A;
+    --gold:#E8A33D; --gold-d:#C8841F; --cream:#FBF6EC; --line:#E7ECF1;
+    --wa:#25D366; --wa-d:#1EBE5A; --white:#FFFFFF;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.1;font-weight:600;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .accent{color:var(--gold)}
+
+  /* top bar */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(15,42,67,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{display:flex;align-items:center;gap:10px;color:#fff}
+  .brand-mark{width:30px;height:30px;border-radius:8px;background:var(--gold);display:grid;place-items:center;color:var(--navy);font-family:"Fraunces",serif;font-weight:700;font-size:17px}
+  .brand b{font-family:"Fraunces",serif;font-weight:600;font-size:17px;letter-spacing:.2px}
+  .brand small{display:block;font-family:"Inter";font-size:10px;color:#AEC4D8;letter-spacing:.5px;text-transform:uppercase;margin-top:-2px}
+  .top-actions{display:flex;align-items:center;gap:16px}
+  .top-phone{color:#CFE0EE;font-size:14px;font-weight:500;display:flex;align-items:center;gap:7px}
+  .top-phone svg{width:15px;height:15px;fill:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;border-radius:11px;padding:12px 20px;cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease;line-height:1}
+  .btn:active{transform:translateY(1px)}
+  .btn-wa{background:var(--wa);color:#063019;box-shadow:0 6px 18px rgba(37,211,102,.32)}
+  .btn-wa:hover{background:var(--wa-d);box-shadow:0 8px 24px rgba(37,211,102,.4)}
+  .btn-wa svg{width:19px;height:19px;fill:#063019}
+  .btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-d)}
+  .top-actions .btn-wa{padding:10px 16px;font-size:14px}
+  @media(max-width:720px){.top-phone{display:none}}
+
+  /* breadcrumb */
+  .crumb{background:var(--cream);border-bottom:1px solid var(--line);font-size:13px}
+  .crumb .wrap{display:flex;gap:8px;align-items:center;padding:12px 22px;color:var(--muted);flex-wrap:wrap}
+  .crumb a:hover{color:var(--gold-d)}
+  .crumb .sep{opacity:.45}
+  .crumb .cur{color:var(--navy);font-weight:600}
+
+  /* hero */
+  .hero{background:linear-gradient(165deg,#0F2A43 0%,#0C2236 60%,#0A1C2E 100%);color:#fff;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(232,163,63,.16),transparent 65%)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:60px;position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow::before{content:"";width:24px;height:1.5px;background:var(--gold)}
+  .hero h1{font-size:clamp(31px,4.4vw,50px);font-weight:700;color:#fff;margin-bottom:18px}
+  .hero h1 .accent{display:block;font-style:italic;font-weight:500}
+  .hero .sub{font-size:clamp(16px,1.7vw,18px);color:#C7D6E4;max-width:32em;margin-bottom:28px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+  .hero-cta .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.22)}
+  .hero-cta .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .trustline{display:flex;flex-wrap:wrap;gap:18px;margin-top:24px;font-size:13.5px;color:#9FB6CC}
+  .trustline span{display:flex;align-items:center;gap:7px}
+  .trustline svg{width:16px;height:16px;fill:var(--gold)}
+
+  /* facts card */
+  .facts{position:relative;background:#fff;border-radius:18px;padding:26px 26px;color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.5);max-width:380px;margin:0 auto}
+  .facts h4{font-family:"Fraunces",serif;font-size:18px;color:var(--navy);margin-bottom:16px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+  .facts dl{display:flex;flex-direction:column;gap:14px;margin:0}
+  .facts .frow .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-d);font-weight:700}
+  .facts .frow .v{font-size:14.5px;color:var(--slate);margin-top:3px;font-weight:500}
+
+  /* trust strip */
+  .strip{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:30px 22px;text-align:center}
+  .stat .n{font-family:"Fraunces",serif;font-size:clamp(26px,3vw,34px);font-weight:700;color:var(--navy)}
+  .stat .l{font-size:13px;color:var(--muted);margin-top:2px}
+  @media(max-width:720px){.strip .wrap{grid-template-columns:repeat(2,1fr);gap:22px}}
+
+  /* sections */
+  section{padding:64px 0}
+  .sec-eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);margin-bottom:12px}
+  .sec-h{font-size:clamp(25px,3.2vw,36px);color:var(--navy);max-width:20em;margin-bottom:16px}
+
+  /* prose */
+  .prose{max-width:47em}
+  .prose h2{font-size:clamp(23px,2.8vw,31px);color:var(--navy);margin:0 0 16px}
+  .prose h3{font-size:19.5px;color:var(--navy);margin:30px 0 9px}
+  .prose p{color:var(--muted);font-size:16.5px;margin-bottom:16px}
+  .prose ul{list-style:none;margin:0 0 18px;display:flex;flex-direction:column;gap:10px}
+  .prose li{position:relative;padding-left:28px;color:var(--muted);font-size:16px}
+  .prose li::before{content:"";position:absolute;left:0;top:8px;width:13px;height:13px;border-radius:4px;background:var(--gold)}
+  .prose li b,.prose p b{color:var(--slate)}
+
+  .alt{background:var(--cream)}
+
+  /* feature cards */
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+  .bcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;transition:transform .18s ease,box-shadow .18s ease}
+  .bcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,42,67,.1)}
+  .bnum{font-family:"Fraunces",serif;font-size:22px;font-weight:700;color:var(--gold);display:block;margin-bottom:12px}
+  .bcard h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+  .bcard p{color:var(--muted);font-size:15px}
+  @media(max-width:860px){.benefits-grid{grid-template-columns:1fr}}
+
+  /* faq */
+  .faq{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:"Fraunces",serif;font-size:18.5px;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:18px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq-ico{flex:0 0 auto;width:22px;height:22px;position:relative}
+  .faq-ico::before,.faq-ico::after{content:"";position:absolute;background:var(--gold-d);border-radius:2px;transition:transform .2s ease}
+  .faq-ico::before{top:10px;left:3px;width:16px;height:2px}
+  .faq-ico::after{top:3px;left:10px;width:2px;height:16px}
+  .faq[open] .faq-ico::after{transform:rotate(90deg);opacity:0}
+  .faq-a{padding:0 0 22px;max-width:54em}
+  .faq-a p{color:var(--muted);font-size:15.5px}
+
+  /* related (internal links) */
+  .related{background:var(--navy);color:#fff}
+  .related .sec-h{color:#fff}
+  .related .lead-p{color:#C7D6E4;font-size:16.5px;max-width:42em}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+  .rel-card{display:block;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px 20px;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+  .rel-card:hover{transform:translateY(-3px);border-color:var(--gold);background:rgba(255,255,255,.08)}
+  .rel-tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:700}
+  .rel-card h3{font-size:18px;color:#fff;margin:9px 0 6px}
+  .rel-card p{font-size:14px;color:#AEC4D8}
+  .rel-card .go{display:inline-flex;align-items:center;gap:6px;margin-top:13px;font-size:13.5px;font-weight:600;color:var(--gold)}
+  .more-links{margin-top:26px;font-size:14.5px;color:#9FB6CC}
+  .more-links a{color:#CFE0EE;text-decoration:underline;text-underline-offset:3px;margin:0 4px}
+  .more-links a:hover{color:var(--gold)}
+  @media(max-width:860px){.related-grid{grid-template-columns:1fr}}
+
+  /* final cta */
+  .final{background:var(--gold);color:var(--navy);text-align:center}
+  .final h2{font-size:clamp(26px,3.4vw,38px);color:var(--navy);margin-bottom:12px}
+  .final p{font-size:18px;color:#5A3D0E;max-width:36em;margin:0 auto 26px}
+  .final .btn-wa{background:var(--navy);color:#fff;box-shadow:0 10px 30px rgba(15,42,67,.3)}
+  .final .btn-wa svg{fill:#fff}
+  .final .btn-wa:hover{background:var(--slate)}
+
+  /* footer */
+  footer{background:var(--navy);color:#9FB6CC;padding:40px 0;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
+  footer .legal{font-size:12px;color:#6E869C;max-width:46em;line-height:1.5}
+  footer a{color:#CFE0EE}
+
+  /* floating wa */
+  .float-wa{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.6s infinite}
+  .float-wa svg{width:31px;height:31px;fill:#fff}
+  @keyframes pulse{0%{box-shadow:0 10px 30px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 10px 30px rgba(37,211,102,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 10px 30px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:36px;padding-top:44px;padding-bottom:48px}
+    section{padding:50px 0}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></symbol></svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="https://vanguardiamax.com" aria-label="VanguardiaMax inicio">
+      <span class="brand-mark">V</span>
+      <span><b>VanguardiaMax</b><small>Tasaciones Perú</small></span>
+    </a>
+    <div class="top-actions">
+      <a class="top-phone" href="tel:+51914965373"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>914 965 373</a>
+      <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<nav class="crumb" aria-label="Ruta de navegación">
+  <div class="wrap">
+    <a href="https://vanguardiamax.com">Inicio</a><span class="sep">›</span>
+    <a href="https://vanguardiamax.com/servicios">Servicios</a><span class="sep">›</span>
+    <span class="cur">Tasación de embarcaciones</span>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Tasación de embarcaciones</span>
+      <h1>Tasación de embarcaciones y naves <span class="accent">en todo el Perú</span></h1>
+      <p class="sub">Valorización y peritaje de embarcaciones pesqueras, yates, lanchas, remolcadores y artefactos navales. Informes con sustento técnico para compraventa, garantía, seguros y procesos judiciales.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>Consultar por WhatsApp</a>
+        <a class="btn btn-ghost" href="#servicios">Ver servicios relacionados</a>
+      </div>
+      <div class="trustline">
+        <span><svg viewBox="0 0 24 24"><path d="M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z"/></svg>Autenticado por la SBS</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 1l3 6 6 .9-4.5 4.3 1 6.3L12 16l-5.5 2.8 1-6.3L3 7.9 9 7z"/></svg>+25 años de experiencia</span>
+        <span><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Cobertura nacional</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="facts">
+        <h4>Ficha del servicio</h4>
+        <dl>
+          <div class="frow"><div class="k">Qué tasamos</div><div class="v">Embarcaciones pesqueras, yates, lanchas, remolcadores y artefactos navales</div></div>
+          <div class="frow"><div class="k">Aplicaciones</div><div class="v">Compraventa · Garantía · Seguros · Procesos judiciales · Sucesiones</div></div>
+          <div class="frow"><div class="k">Respaldo</div><div class="v">Reglamento Nacional de Tasaciones · Peritos certificados · SBS</div></div>
+          <div class="frow"><div class="k">Cobertura</div><div class="v">Lima, Callao y principales puertos del Perú</div></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><div class="n">+25</div><div class="l">años de experiencia</div></div>
+    <div class="stat"><div class="n">+10 mil</div><div class="l">tasaciones realizadas</div></div>
+    <div class="stat"><div class="n">SBS</div><div class="l">empresa autenticada</div></div>
+    <div class="stat"><div class="n">Nacional</div><div class="l">cobertura en todo el Perú</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap prose">
+    <h2>¿Qué es la tasación de embarcaciones?</h2>
+    <p>La tasación de embarcaciones es la valorización técnica de una nave o artefacto naval realizada por un perito, con el fin de determinar su valor de mercado y de realización a partir de su estado, antigüedad, equipamiento y características de navegación. A diferencia de una tasación inmobiliaria o vehicular, requiere criterio especializado sobre casco, motorización, sistemas de a bordo y documentación marítima.</p>
+    <p>En VanguardiaMax emitimos informes con sustento conforme al Reglamento Nacional de Tasaciones del Perú, reconocidos por entidades financieras, aseguradoras e instancias judiciales y notariales.</p>
+
+    <h3>Tipos de embarcaciones que tasamos</h3>
+    <ul>
+      <li><b>Embarcaciones pesqueras</b> — artesanales e industriales, con o sin permiso de pesca.</li>
+      <li><b>Yates y embarcaciones de recreo</b> — para compraventa, seguros o sucesiones.</li>
+      <li><b>Lanchas y botes</b> — de transporte, turismo o uso particular.</li>
+      <li><b>Remolcadores y embarcaciones de servicio</b> — uso portuario e industrial.</li>
+      <li><b>Artefactos navales</b> — plataformas, pontones y unidades flotantes sin propulsión propia.</li>
+    </ul>
+
+    <h3>¿Para qué sirve una tasación de embarcaciones?</h3>
+    <ul>
+      <li><b>Compraventa</b> — conocer el valor real antes de comprar o vender.</li>
+      <li><b>Garantía para financiamiento</b> — respaldar una operación de crédito con la nave como garantía.</li>
+      <li><b>Seguros</b> — fijar la suma asegurada o sustentar un siniestro.</li>
+      <li><b>Procesos judiciales y sucesiones</b> — valor pericial para herencias, divisiones de bienes o expedientes.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">Por qué VanguardiaMax</div>
+    <h2 class="sec-h">Peritaje naval con respaldo técnico</h2>
+    <div class="benefits-grid">
+      <article class="bcard"><span class="bnum">01</span><h3>Peritos especializados</h3><p>Profesionales con criterio técnico sobre casco, motorización y documentación marítima.</p></article>
+      <article class="bcard"><span class="bnum">02</span><h3>Validez ante terceros</h3><p>Informes reconocidos por bancos, aseguradoras y autoridades judiciales y notariales.</p></article>
+      <article class="bcard"><span class="bnum">03</span><h3>Cobertura nacional</h3><p>Atención en los principales puertos del país, en costa, sierra y selva.</p></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">Preguntas frecuentes</div>
+    <h2 class="sec-h">Tasación de embarcaciones: dudas comunes</h2>
+    <div style="margin-top:18px">
+      <details class="faq"><summary>¿Qué tipo de embarcaciones pueden tasar?<span class="faq-ico"></span></summary><div class="faq-a"><p>Tasamos embarcaciones pesqueras artesanales e industriales, yates y embarcaciones de recreo, lanchas, botes, remolcadores y artefactos navales como pontones y plataformas flotantes.</p></div></details>
+      <details class="faq"><summary>¿La tasación sirve para un seguro o una garantía?<span class="faq-ico"></span></summary><div class="faq-a"><p>Sí. Nuestros informes sirven para fijar la suma asegurada de una póliza y para respaldar la embarcación como garantía en operaciones de financiamiento, ya que son reconocidos por aseguradoras y entidades financieras.</p></div></details>
+      <details class="faq"><summary>¿Cómo se determina el valor de una embarcación?<span class="faq-ico"></span></summary><div class="faq-a"><p>Se evalúan la antigüedad, el estado del casco y la motorización, el equipamiento, el tipo de uso y las condiciones del mercado, para concluir un valor comercial y un valor de realización conforme al Reglamento Nacional de Tasaciones.</p></div></details>
+      <details class="faq"><summary>¿Qué documentos necesito?<span class="faq-ico"></span></summary><div class="faq-a"><p>Generalmente el certificado de matrícula, el certificado de arqueo, documentos de propiedad y, si corresponde, el permiso de pesca. Te indicamos la lista exacta según el tipo de embarcación por WhatsApp.</p></div></details>
+      <details class="faq"><summary>¿Atienden en todo el Perú?<span class="faq-ico"></span></summary><div class="faq-a"><p>Sí. Contamos con cobertura nacional y atendemos en los principales puertos del país. Coordinamos la inspección según la ubicación de la embarcación.</p></div></details>
+      <details class="faq"><summary>¿Por cuánto tiempo es válida la tasación?<span class="faq-ico"></span></summary><div class="faq-a"><p>Las tasaciones tienen una validez referencial de 1 año; pasado ese plazo conviene actualizar el valor a las condiciones del mercado.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="related" id="servicios">
+  <div class="wrap">
+    <div class="sec-eyebrow" style="color:var(--gold)">Servicios relacionados</div>
+    <h2 class="sec-h">Otras tasaciones y servicios de VanguardiaMax</h2>
+    <p class="lead-p">Si necesitas valorizar otros bienes o regularizar tu patrimonio, también podemos ayudarte:</p>
+    <div class="related-grid">
+      <a class="rel-card" href="landing-activos-fijos.html"><span class="rel-tag">Empresas</span><h3>Tasación de activos fijos</h3><p>Maquinaria, equipos y plantas para estados financieros, garantías y seguros.</p><span class="go">Ver servicio →</span></a>
+      <a class="rel-card" href="landing-judicial.html"><span class="rel-tag">Legal</span><h3>Tasación judicial y pericial</h3><p>Peritaje con validez legal para herencias, divorcios y procesos judiciales.</p><span class="go">Ver servicio →</span></a>
+      <a class="rel-card" href="landing-saneamiento-inmobiliario.html"><span class="rel-tag">Inmobiliario</span><h3>Saneamiento inmobiliario</h3><p>Independización, prescripción e inscripción en SUNARP de tu predio.</p><span class="go">Ver servicio →</span></a>
+    </div>
+    <p class="more-links">También: <a href="servicio-auditoria-planos.html">Auditoría de planos</a> · <a href="servicio-supervision-obras.html">Proyectos y supervisión de obras</a> · <a href="servicio-impuesto-predial.html">Impuesto predial y municipal</a></p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>¿Necesitas tasar una embarcación?</h2>
+    <p>Cuéntanos el tipo de nave y la finalidad por WhatsApp y te damos plazo y cotización personalizada.</p>
+    <a class="btn btn-wa wa-link" href="#"><svg><use href="#wa"/></svg>Solicita tu cotización</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="margin-bottom:8px"><span class="brand-mark">V</span><span><b style="color:#fff">VanguardiaMax</b></span></div>
+      Platinum Plaza I, C. Dean Valdivia 148, San Isidro · <a href="tel:+51914965373">914 965 373</a>
+    </div>
+    <p class="legal">Tasaciones conforme al Reglamento Nacional de Tasaciones del Perú (R.M. Nº172-2016-VIVIENDA) y Resolución S.B.S. Nº11356-2008, con la finalidad de concluir el valor comercial y de realización de los bienes. © 2026 VanguardiaMax.</p>
+  </div>
+</footer>
+
+<a class="float-wa wa-link" href="#" aria-label="Escríbenos por WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"Tasación de embarcaciones","name":"Tasación de embarcaciones y naves","provider":{"@type":"Organization","name":"VanguardiaMax","telephone":"+51914965373","address":{"@type":"PostalAddress","streetAddress":"Platinum Plaza I, C. Dean Valdivia 148","addressLocality":"San Isidro","addressRegion":"Lima","addressCountry":"PE"}},"areaServed":{"@type":"Country","name":"Perú"},"description":"Tasación y peritaje de embarcaciones pesqueras, yates, lanchas, remolcadores y artefactos navales para compraventa, garantía, seguros y procesos judiciales."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vanguardiamax.com"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://vanguardiamax.com/servicios"},{"@type":"ListItem","position":3,"name":"Tasación de embarcaciones","item":"https://vanguardiamax.com/servicios/tasacion-embarcaciones"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué tipo de embarcaciones pueden tasar?","acceptedAnswer":{"@type":"Answer","text":"Tasamos embarcaciones pesqueras artesanales e industriales, yates y embarcaciones de recreo, lanchas, botes, remolcadores y artefactos navales como pontones y plataformas flotantes."}},{"@type":"Question","name":"¿La tasación sirve para un seguro o una garantía?","acceptedAnswer":{"@type":"Answer","text":"Sí. Los informes sirven para fijar la suma asegurada de una póliza y para respaldar la embarcación como garantía en operaciones de financiamiento, ya que son reconocidos por aseguradoras y entidades financieras."}},{"@type":"Question","name":"¿Cómo se determina el valor de una embarcación?","acceptedAnswer":{"@type":"Answer","text":"Se evalúan la antigüedad, el estado del casco y la motorización, el equipamiento, el tipo de uso y las condiciones del mercado, concluyendo un valor comercial y de realización conforme al Reglamento Nacional de Tasaciones."}},{"@type":"Question","name":"¿Qué documentos necesito?","acceptedAnswer":{"@type":"Answer","text":"Generalmente el certificado de matrícula, el certificado de arqueo, documentos de propiedad y, si corresponde, el permiso de pesca."}},{"@type":"Question","name":"¿Por cuánto tiempo es válida la tasación?","acceptedAnswer":{"@type":"Answer","text":"Las tasaciones tienen una validez referencial de 1 año; pasado ese plazo conviene actualizar el valor a las condiciones del mercado."}}]}
+</script>
+<script>
+(function(){
+  var NUM="51914965373";
+  var BASE_MSG="Hola VanguardiaMax, quiero consultar por una *Tasación de Embarcaciones*.";
+  var SEG="embarcaciones";
+  var p=new URLSearchParams(location.search);
+  var camp=p.get("utm_campaign")||"", src=p.get("utm_source")||"";
+  function tag(){var l=[camp,src].filter(Boolean).join(" | ")||"web-"+SEG;return "\n\n(Origen: "+l+")";}
+  function url(m){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(m+tag());}
+  document.querySelectorAll(".wa-link").forEach(function(a){
+    a.href=url(BASE_MSG);a.target="_blank";a.rel="noopener";
+    a.addEventListener("click",function(){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:"whatsapp_click",segmento:SEG,utm_campaign:camp,utm_source:src});});
+  });
+})();
+</script>
+</body>
+</html>

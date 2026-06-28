@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Scroll-reveal + render optimization
+   - Cada bloque (secciones) y cada tarjeta se revela INDIVIDUALMENTE cuando
+     entra al viewport, observada por un IntersectionObserver.
+   - `content-visibility:auto` evita renderizar/pintar las secciones fuera de
+     pantalla: menos trabajo de layout/paint en la carga inicial.
+   - `html.reveal-ready` lo añade un script inline ANTES del primer paint, así
+     que sin JavaScript todo queda visible (sin FOUC y accesible).
+   ========================================================================== */
+
+/* Saltar el render de lo que está fuera de pantalla (perf / consumo). */
+main > section:not(.hero),
+main > .strip {
+  content-visibility: auto;
+  /* Tamaño estimado para reservar espacio y evitar saltos de scroll; el
+     navegador recuerda el alto real tras el primer render (keyword `auto`). */
+  contain-intrinsic-size: auto 600px;
+}
+
+/* Estado inicial oculto SOLO cuando el reveal por JS está activo.
+   Las secciones (bloques) y cada tarjeta se animan por separado. */
+html.reveal-ready main > section,
+html.reveal-ready main > .strip {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+html.reveal-ready :is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip) {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Estado revelado: lo añade el IntersectionObserver a CADA elemento. */
+html.reveal-ready main > section.reveal-in,
+html.reveal-ready main > .strip.reveal-in,
+html.reveal-ready .reveal-in:is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip) {
+  opacity: 1;
+  transform: none;
+}
+
+/* Escalonado dentro de cada fila/grupo, según la posición de la tarjeta. */
+html.reveal-ready :is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip):nth-child(2) {
+  transition-delay: 0.05s;
+}
+html.reveal-ready :is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip):nth-child(3) {
+  transition-delay: 0.1s;
+}
+html.reveal-ready :is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip):nth-child(4) {
+  transition-delay: 0.15s;
+}
+html.reveal-ready :is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip):nth-child(5) {
+  transition-delay: 0.2s;
+}
+html.reveal-ready :is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip):nth-child(n + 6) {
+  transition-delay: 0.25s;
+}
+
+/* Sin animación si el usuario prefiere movimiento reducido: todo visible. */
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-ready main > section,
+  html.reveal-ready main > .strip,
+  html.reveal-ready :is(.seg-card, .bcard, .inst, .rel-card, .proc-step, .stat, .chip) {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

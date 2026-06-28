@@ -1,0 +1,224 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-06-20 00:00:00",
+  "containerVersion": {
+    "path": "accounts/6000000000/containers/200000000/versions/0",
+    "accountId": "6000000000",
+    "containerId": "200000000",
+    "containerVersionId": "0",
+    "name": "VanguardiaMax - WhatsApp + GA4",
+    "container": {
+      "path": "accounts/6000000000/containers/200000000",
+      "accountId": "6000000000",
+      "containerId": "200000000",
+      "name": "VanguardiaMax",
+      "publicId": "GTM-PKC382BQ",
+      "usageContext": ["WEB"],
+      "fingerprint": "0",
+      "tagManagerUrl": "https://tagmanager.google.com/"
+    },
+    "tag": [
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "tagId": "20",
+        "name": "Google tag - GA4 (G-D4J0DVQ9K6)",
+        "type": "googtag",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "tagId", "value": "G-D4J0DVQ9K6" }
+        ],
+        "fingerprint": "0",
+        "firingTriggerId": ["2147479553"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": { "type": "MAP" },
+        "consentSettings": { "consentStatus": "NOT_SET" }
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "tagId": "21",
+        "name": "GA4 Event - contacto_whatsapp",
+        "type": "gaawe",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "eventName", "value": "contacto_whatsapp" },
+          { "type": "BOOLEAN", "key": "sendEcommerceData", "value": "false" },
+          {
+            "type": "LIST",
+            "key": "eventSettingsTable",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "parameter", "value": "segmento" },
+                  { "type": "TEMPLATE", "key": "parameterValue", "value": "{{DLV - segmento}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "parameter", "value": "origen" },
+                  { "type": "TEMPLATE", "key": "parameterValue", "value": "{{DLV - origen}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "parameter", "value": "utm_campaign" },
+                  { "type": "TEMPLATE", "key": "parameterValue", "value": "{{DLV - utm_campaign}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "parameter", "value": "utm_source" },
+                  { "type": "TEMPLATE", "key": "parameterValue", "value": "{{DLV - utm_source}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "parameter", "value": "utm_medium" },
+                  { "type": "TEMPLATE", "key": "parameterValue", "value": "{{DLV - utm_medium}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "parameter", "value": "utm_content" },
+                  { "type": "TEMPLATE", "key": "parameterValue", "value": "{{DLV - utm_content}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "parameter", "value": "form_submit" },
+                  { "type": "TEMPLATE", "key": "parameterValue", "value": "{{DLV - form_submit}}" }
+                ]
+              }
+            ]
+          },
+          { "type": "TEMPLATE", "key": "measurementIdOverride", "value": "G-D4J0DVQ9K6" }
+        ],
+        "fingerprint": "0",
+        "firingTriggerId": ["10"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": { "type": "MAP" },
+        "consentSettings": { "consentStatus": "NOT_SET" }
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "triggerId": "10",
+        "name": "CE - whatsapp_click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "whatsapp_click" }
+            ]
+          }
+        ],
+        "fingerprint": "0"
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "variableId": "1",
+        "name": "DLV - segmento",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "segmento" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "variableId": "2",
+        "name": "DLV - origen",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "origen" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "variableId": "3",
+        "name": "DLV - utm_campaign",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "utm_campaign" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "variableId": "4",
+        "name": "DLV - utm_source",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "utm_source" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "variableId": "5",
+        "name": "DLV - utm_medium",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "utm_medium" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "variableId": "6",
+        "name": "DLV - utm_content",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "utm_content" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "200000000",
+        "variableId": "7",
+        "name": "DLV - form_submit",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "true" },
+          { "type": "TEMPLATE", "key": "defaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "form_submit" }
+        ],
+        "fingerprint": "0"
+      }
+    ],
+    "fingerprint": "0"
+  }
+}

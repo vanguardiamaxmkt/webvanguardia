@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Design tokens — single source of truth for the VanguardiaMax design system.
+   ========================================================================== */
+:root {
+  --navy: #0f2a43;
+  --slate: #13344f;
+  --ink: #16222e;
+  --muted: #5b6b7a;
+  --gold: #e8a33d;
+  --gold-d: #c8841f;
+  --cream: #fbf6ec;
+  --line: #e7ecf1;
+  --wa: #25d366;
+  --wa-d: #1ebe5a;
+  --white: #ffffff;
+  --maxw: 1120px;
+}
