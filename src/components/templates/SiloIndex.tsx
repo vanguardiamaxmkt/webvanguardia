@@ -3,6 +3,7 @@ import type { PageEntry } from "@/content/pages";
 import { pagePath } from "@/content/pages";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
+import { siteNav } from "@/content/site";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Breadcrumb } from "@/components/sections/Breadcrumb";
@@ -31,7 +32,7 @@ export function SiloIndex({
 }) {
   return (
     <WhatsAppProvider baseMessage={baseMessage} segment={segment}>
-      <Topbar />
+      <Topbar nav={siteNav} />
       <Breadcrumb items={[{ label: "Inicio", href: "/" }, { label: current }]} />
       <main>
         <section className="seg">

@@ -4,6 +4,7 @@ import { listPublished } from "@/lib/articles";
 import type { Article } from "@/types/article";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
+import { siteNav } from "@/content/site";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 
@@ -34,7 +35,7 @@ export default async function ArticulosPage() {
       baseMessage="Hola VanguardiaMax, llegué desde un artículo y quiero más información."
       segment="articulos"
     >
-      <Topbar />
+      <Topbar nav={siteNav} />
       <main>
         <section className="blog">
           <div className="wrap">

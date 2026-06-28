@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPublishedBySlug } from "@/lib/articles";
-import { site } from "@/content/site";
+import { site, siteNav } from "@/content/site";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
 import { Footer } from "@/components/layout/Footer";
@@ -94,7 +94,7 @@ export default async function ArticuloPage({
       segment="articulo"
     >
       <JsonLd data={[jsonLd]} />
-      <Topbar />
+      <Topbar nav={siteNav} />
       <Breadcrumb
         items={[
           { label: "Inicio", href: "/" },

@@ -25,3 +25,11 @@ export const homeNav = [
   { href: "/articulos", label: "Artículos" },
   { href: "#faq", label: "Preguntas" },
 ] as const;
+
+/** Navegación de sitio (rutas) para landings, servicios y demás páginas. */
+export const siteNav = [
+  { href: "/", label: "Inicio" },
+  { href: "/tasaciones", label: "Tasaciones" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/articulos", label: "Artículos" },
+] as const;

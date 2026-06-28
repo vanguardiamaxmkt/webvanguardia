@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
 import { Footer } from "@/components/layout/Footer";
+import { siteNav } from "@/content/site";
 
 export default function NotFound() {
   return (
@@ -9,7 +10,7 @@ export default function NotFound() {
       baseMessage="Hola VanguardiaMax, quiero información sobre sus tasaciones."
       segment="not-found"
     >
-      <Topbar />
+      <Topbar nav={siteNav} />
       <main>
         <section className="hero hero--service">
           <div className="wrap" style={{ display: "block", textAlign: "center" }}>

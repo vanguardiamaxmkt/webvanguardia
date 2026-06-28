@@ -15,9 +15,28 @@ function PhoneIcon() {
   );
 }
 
+function NavItem({
+  item,
+  onClick,
+}: {
+  item: { href: string; label: string };
+  onClick?: () => void;
+}) {
+  return item.href.startsWith("/") ? (
+    <Link href={item.href} onClick={onClick}>
+      {item.label}
+    </Link>
+  ) : (
+    <a href={item.href} onClick={onClick}>
+      {item.label}
+    </a>
+  );
+}
+
 /**
  * Site header. `variant="home"` renders the transparent-over-hero bar that turns
- * solid on scroll and shows in-page nav links; the default is a solid sticky bar.
+ * solid on scroll and shows in-page nav links (con menú hamburguesa en móvil);
+ * the default is a solid sticky bar.
  */
 export function Topbar({
   variant = "solid",
@@ -27,6 +46,8 @@ export function Topbar({
   nav?: readonly { href: string; label: string }[];
 }) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const hasNav = !!nav && nav.length > 0;
 
   useEffect(() => {
     if (variant !== "home") return;
@@ -59,19 +80,11 @@ export function Topbar({
           />
         </Link>
         <div className="nav">
-          {nav && nav.length > 0 && (
+          {hasNav && (
             <nav className="nav-links">
-              {nav.map((item) =>
-                item.href.startsWith("/") ? (
-                  <Link key={item.href} href={item.href}>
-                    {item.label}
-                  </Link>
-                ) : (
-                  <a key={item.href} href={item.href}>
-                    {item.label}
-                  </a>
-                ),
-              )}
+              {nav!.map((item) => (
+                <NavItem key={item.href} item={item} />
+              ))}
             </nav>
           )}
           <div className="top-actions">
@@ -83,9 +96,34 @@ export function Topbar({
               <WaIcon />
               WhatsApp
             </WhatsAppLink>
+            {hasNav && (
+              <button
+                type="button"
+                className={`nav-toggle${menuOpen ? " open" : ""}`}
+                aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen((v) => !v)}
+              >
+                <span />
+                <span />
+                <span />
+              </button>
+            )}
           </div>
         </div>
       </div>
+
+      {hasNav && menuOpen && (
+        <div className="mobile-menu">
+          {nav!.map((item) => (
+            <NavItem
+              key={item.href}
+              item={item}
+              onClick={() => setMenuOpen(false)}
+            />
+          ))}
+        </div>
+      )}
     </header>
   );
 }

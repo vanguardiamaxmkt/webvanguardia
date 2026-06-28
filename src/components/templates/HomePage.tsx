@@ -165,8 +165,10 @@ export function HomePage() {
               {home.process.steps.map((step) => (
                 <div className="proc-step" key={step.num}>
                   <div className="proc-n">{step.num}</div>
-                  <h3>{step.title}</h3>
-                  <p>{step.body}</p>
+                  <div className="proc-text">
+                    <h3>{step.title}</h3>
+                    <p>{step.body}</p>
+                  </div>
                 </div>
               ))}
             </div>

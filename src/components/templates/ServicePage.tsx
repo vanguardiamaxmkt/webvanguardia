@@ -1,6 +1,7 @@
 import type { ServiceContent } from "@/types/content";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
+import { siteNav } from "@/content/site";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Breadcrumb } from "@/components/sections/Breadcrumb";
@@ -29,7 +30,7 @@ export function ServicePage({
       segment={content.whatsapp.segment}
     >
       <JsonLd data={content.jsonLd} />
-      <Topbar />
+      <Topbar nav={siteNav} />
       <Breadcrumb
         items={[
           { label: "Inicio", href: "/" },
