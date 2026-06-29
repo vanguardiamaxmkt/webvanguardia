@@ -74,16 +74,15 @@
   text-transform: uppercase;
   margin-top: -2px;
 }
-/* Logo en blanco (monocromo) para que resalte sobre el fondo oscuro. */
+/* Logo a color directo sobre el fondo oscuro. */
 .brand-logo {
-  height: 32px;
+  height: 34px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
 }
 @media (max-width: 480px) {
   .brand-logo {
-    height: 28px;
+    height: 30px;
   }
 }
 .nav {
@@ -1260,18 +1259,18 @@
 
 /* ---- Final CTA ---------------------------------------------------------- */
 .final {
-  background: var(--gold);
-  color: var(--navy);
+  background: #0185cb;
+  color: #fff;
   text-align: center;
 }
 .final h2 {
   font-size: clamp(28px, 3.6vw, 40px);
-  color: var(--navy);
+  color: #fff;
   margin-bottom: 12px;
 }
 .final p {
   font-size: 18px;
-  color: #0a3346;
+  color: #e6f2fb;
   max-width: 34em;
   margin: 0 auto 26px;
 }

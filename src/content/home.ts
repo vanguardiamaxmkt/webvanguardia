@@ -74,7 +74,7 @@ export const home = {
         "M7 11v0M7 15v0M15 7v0M15 11v0M15 15v0",
       ],
       tag: "Empresas · Activos",
-      title: "Activos fijos y empresas",
+      title: "Inventario Activos Fijos",
       body: "Valorización de maquinaria, equipos y plantas para estados financieros (NIIF), seguros, garantías o reestructuración. Soporte para tu RUC.",
       href: "/tasaciones/activos-fijos",
     },
