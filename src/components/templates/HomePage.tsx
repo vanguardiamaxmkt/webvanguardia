@@ -53,7 +53,9 @@ export function HomePage() {
             <div className="hero-copy">
               <span className="eyebrow">{home.hero.eyebrow}</span>
               <h1>
-                {home.hero.heading}
+                Conoce el valor real
+                <br />
+                de tu inmueble{" "}
                 <span className="accent">{home.hero.headingAccent}</span>
               </h1>
               <p className="sub">{home.hero.sub}</p>
