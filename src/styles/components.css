@@ -76,13 +76,13 @@
 }
 /* Logo a color directo sobre el fondo oscuro. */
 .brand-logo {
-  height: 34px;
+  height: 38px;
   width: auto;
   display: block;
 }
 @media (max-width: 480px) {
   .brand-logo {
-    height: 30px;
+    height: 32px;
   }
 }
 .nav {
