@@ -315,6 +315,11 @@
 .hero--service h1 {
   font-size: clamp(31px, 4.4vw, 50px);
 }
+/* Home: tamaño un poco menor + balance para que el título quede en 2 líneas */
+.hero--home h1 {
+  font-size: clamp(30px, 4.2vw, 46px);
+  text-wrap: balance;
+}
 .hero h1 .accent {
   display: block;
   font-style: italic;
