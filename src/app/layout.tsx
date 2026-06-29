@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { site } from "@/content/site";
 import { AutoReveal } from "@/components/ux/AutoReveal";
 import "./globals.css";
@@ -12,11 +12,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const heading = Montserrat({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  variable: "--font-heading",
   display: "swap",
 });
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-PE" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="es-PE" className={`${inter.variable} ${heading.variable}`}>
       <body>
         {/* Marca el documento antes del primer paint: habilita el reveal por
             scroll sin parpadeo y mantiene todo visible si no hay JavaScript. */}

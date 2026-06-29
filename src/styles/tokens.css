@@ -1,15 +1,18 @@
 /* ==========================================================================
-   Design tokens — single source of truth for the VanguardiaMax design system.
+   Design tokens — identidad de marca VanguardiaMax.
+   Nota: --gold/--gold-d conservan el nombre por compatibilidad, pero ahora
+   son el AZUL CIAN de marca (acento principal). --spark es la chispa cálida.
    ========================================================================== */
 :root {
-  --navy: #0f2a43;
-  --slate: #13344f;
-  --ink: #16222e;
-  --muted: #5b6b7a;
-  --gold: #e8a33d;
-  --gold-d: #c8841f;
-  --cream: #fbf6ec;
-  --line: #e7ecf1;
+  --navy: #262d31; /* carbón de marca (fondos oscuros) */
+  --slate: #333b40;
+  --ink: #2a3135;
+  --muted: #6b7378;
+  --gold: #01b1fd; /* acento principal: cian de marca */
+  --gold-d: #0185cb; /* acento oscuro / texto-acento */
+  --cream: #f4f6f7; /* gris claro frío (secciones claras) */
+  --line: #e3e8ea;
+  --spark: #f5a623; /* chispa cálida (10%): números clave y sello */
   --wa: #25d366;
   --wa-d: #1ebe5a;
   --white: #ffffff;
