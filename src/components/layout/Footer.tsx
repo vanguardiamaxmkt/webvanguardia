@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { site } from "@/content/site";
 
 export function Footer() {
@@ -18,6 +19,11 @@ export function Footer() {
           </div>
           {site.address} ·{" "}
           <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
+          <div style={{ marginTop: 10 }}>
+            <Link href="/libro-de-reclamaciones" className="footer-libro">
+              📕 Libro de Reclamaciones
+            </Link>
+          </div>
         </div>
         <p className="legal">{site.legal}</p>
       </div>

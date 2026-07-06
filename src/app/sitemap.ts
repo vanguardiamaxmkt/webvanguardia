@@ -7,7 +7,13 @@ export const dynamic = "force-dynamic";
 
 /** Sitemap derivado del registro unificado de páginas + artículos publicados. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = ["/", "/tasaciones", "/servicios", "/articulos"];
+  const staticRoutes = [
+    "/",
+    "/tasaciones",
+    "/servicios",
+    "/articulos",
+    "/libro-de-reclamaciones",
+  ];
   const pageRoutes = pages.map(pagePath);
 
   const base = [...staticRoutes, ...pageRoutes].map((path) => ({

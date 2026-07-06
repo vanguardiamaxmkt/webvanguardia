@@ -12,6 +12,9 @@ export const site = {
   phoneE164: "+51963561496",
   phoneDisplay: "963 561 496",
   address: "Platinum Plaza I, C. Dean Valdivia 148, San Isidro",
+  /** Razón social y RUC (Libro de Reclamaciones). COMPLETAR con los datos reales. */
+  legalName: "VanguardiaMax",
+  ruc: "",
   /** Google Tag Manager container id (snippet injected when set). */
   gtmId: "GTM-PKC382BQ",
   legal:

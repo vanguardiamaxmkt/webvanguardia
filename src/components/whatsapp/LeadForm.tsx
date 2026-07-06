@@ -15,6 +15,10 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const valor = (name: string) => (data.get(name) as string) || "";
+
+    // Honeypot: si el campo trampa (oculto para humanos) viene lleno, es un bot.
+    if (valor("empresa_web")) return;
+
     const campos = fields.map((f) => ({ label: f.label, valor: valor(f.name) }));
     const lines = campos.map((c) => `*${c.label}:* ${c.valor}`);
     const message =
@@ -59,6 +63,23 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
             )}
           </div>
         ))}
+        {/* Honeypot anti-bots: oculto para humanos, los bots lo autocompletan */}
+        <div className="hp-field" aria-hidden="true">
+          <label htmlFor="empresa_web">No llenar este campo</label>
+          <input
+            id="empresa_web"
+            name="empresa_web"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
+        <label className="form-check">
+          <input type="checkbox" name="no_robot" required />
+          <span>No soy un robot</span>
+        </label>
+
         <button type="submit" className="btn btn-wa">
           <WaIcon />
           Enviar por WhatsApp

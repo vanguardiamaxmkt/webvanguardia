@@ -1114,6 +1114,32 @@
   text-align: center;
   margin-top: 12px;
 }
+/* Checkbox anti-bot "No soy un robot" */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 2px 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--slate);
+  cursor: pointer;
+}
+.form-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+/* Honeypot: fuera de pantalla para humanos, visible para bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 @media (max-width: 860px) {
   .lead-grid {
     grid-template-columns: 1fr;
@@ -1376,3 +1402,44 @@ footer a {
 .hero-skyline path[fill="#0C2236"] {
   fill: #1c2125;
 }
+
+/* ---- Libro de Reclamaciones -------------------------------------------- */
+.libro-wrap { max-width: 760px; margin: 0 auto; }
+.libro-intro { color: var(--muted); font-size: 16px; margin-bottom: 8px; max-width: 46em; }
+.libro-prov {
+  background: var(--cream); border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px; font-size: 13.5px; color: var(--muted); margin: 20px 0;
+}
+.libro-prov strong { color: var(--navy); }
+.libro-sec { font-size: 17px; color: var(--navy); margin: 26px 0 12px; }
+.libro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+@media (max-width: 620px) { .libro-grid { grid-template-columns: 1fr; } }
+.libro-form textarea {
+  width: 100%; padding: 12px 14px; border: 1.5px solid var(--line);
+  border-radius: 11px; font-size: 15px; font-family: inherit; color: var(--ink);
+  resize: vertical; background: #fff;
+}
+.libro-form textarea:focus {
+  outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(1, 177, 253, 0.18);
+}
+.libro-radios { display: flex; gap: 22px; margin-bottom: 8px; font-size: 15px; color: var(--slate); }
+.libro-radios label { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.libro-radios input { width: 17px; height: 17px; accent-color: var(--gold); }
+.libro-check { display: flex; align-items: flex-start; gap: 9px; font-size: 14px; color: var(--slate); margin: 10px 0 14px; cursor: pointer; }
+.libro-check input { width: 18px; height: 18px; accent-color: var(--gold); margin-top: 1px; flex: 0 0 auto; }
+.libro-hint { font-size: 13px; color: var(--muted); background: var(--cream); border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; }
+.libro-legal { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin: 8px 0 18px; }
+.libro-error { background: #fdecec; border: 1px solid #f0c6c6; color: #b02a2a; border-radius: 9px; padding: 11px 14px; font-size: 14px; margin-bottom: 16px; }
+.libro-form button { background: var(--gold-d); color: #fff; border: none; border-radius: 11px; font-weight: 600; font-size: 15px; cursor: pointer; }
+.libro-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+.libro-ok { text-align: center; padding: 30px 10px; }
+.libro-ok-ic { width: 56px; height: 56px; border-radius: 50%; background: #e6f6ee; color: #1f9d57; font-size: 30px; font-weight: 800; display: grid; place-items: center; margin: 0 auto 16px; }
+.libro-ok h2 { color: var(--navy); margin-bottom: 10px; }
+.libro-ok p { color: var(--muted); max-width: 40em; margin: 0 auto 12px; font-size: 15.5px; }
+.libro-codigo { display: inline-block; font-size: 22px; color: var(--gold-d); letter-spacing: 1px; margin-top: 6px; }
+.footer-libro {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 8px;
+  padding: 6px 12px; font-size: 13px; color: #cfe0ee;
+}
+.footer-libro:hover { border-color: var(--gold); color: #fff; }

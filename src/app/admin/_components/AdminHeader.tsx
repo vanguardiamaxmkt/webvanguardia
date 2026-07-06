@@ -10,6 +10,7 @@ export function AdminHeader() {
         </Link>
         <nav className="adm-nav">
           <Link href="/admin">Artículos</Link>
+          <Link href="/admin/reclamaciones">Reclamaciones</Link>
           <Link href="/articulos" target="_blank">
             Ver blog ↗
           </Link>
