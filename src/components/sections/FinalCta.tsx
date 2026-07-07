@@ -2,9 +2,9 @@ import type { FinalCTA } from "@/types/content";
 import { WhatsAppLink } from "@/components/whatsapp/WhatsAppLink";
 import { WaIcon } from "@/components/whatsapp/WaIcon";
 
-export function FinalCta({ data }: { data: FinalCTA }) {
+export function FinalCta({ data, id }: { data: FinalCTA; id?: string }) {
   return (
-    <section className="final">
+    <section className="final" id={id}>
       <div className="wrap">
         <h2>{data.title}</h2>
         <p>{data.body}</p>

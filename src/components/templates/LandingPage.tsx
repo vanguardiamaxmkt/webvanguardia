@@ -22,9 +22,13 @@ export function LandingPage({ content }: { content: LandingContent }) {
       baseMessage={content.whatsapp.baseMessage}
       segment={content.whatsapp.segment}
     >
-      <Topbar />
+      <Topbar ctaTarget="cotizar" />
       <main>
-        <Hero content={content.hero} card={<CertCard data={content.heroCard} />} />
+        <Hero
+          content={content.hero}
+          card={<CertCard data={content.heroCard} />}
+          ctaTarget="cotizar"
+        />
         <TrustStrip stats={content.stats} />
         {content.pain && (
           <Pain
@@ -74,7 +78,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
         <FinalCta data={content.finalCta} />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp target="cotizar" />
     </WhatsAppProvider>
   );
 }

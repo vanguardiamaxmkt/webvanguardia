@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/content/site";
 import { WhatsAppLink } from "@/components/whatsapp/WhatsAppLink";
+import { WizardLink } from "@/components/whatsapp/WizardLink";
 import { WaIcon } from "@/components/whatsapp/WaIcon";
 
 function PhoneIcon() {
@@ -41,9 +42,16 @@ function NavItem({
 export function Topbar({
   variant = "solid",
   nav,
+  ctaTarget,
 }: {
   variant?: "home" | "solid";
   nav?: readonly { href: string; label: string }[];
+  /**
+   * Si se pasa (p. ej. "cotizar"), el botón de WhatsApp del menú baja al wizard
+   * de esa página (anti-bots). Si se omite (páginas sin formulario), va directo
+   * a WhatsApp.
+   */
+  ctaTarget?: string;
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -92,10 +100,21 @@ export function Topbar({
               <PhoneIcon />
               {site.phoneDisplay}
             </a>
-            <WhatsAppLink className="btn btn-wa" location="header">
-              <WaIcon />
-              WhatsApp
-            </WhatsAppLink>
+            {ctaTarget ? (
+              <WizardLink
+                className="btn btn-wa"
+                target={ctaTarget}
+                ariaLabel="Cotizar por WhatsApp"
+              >
+                <WaIcon />
+                WhatsApp
+              </WizardLink>
+            ) : (
+              <WhatsAppLink className="btn btn-wa" location="header">
+                <WaIcon />
+                WhatsApp
+              </WhatsAppLink>
+            )}
             {hasNav && (
               <button
                 type="button"

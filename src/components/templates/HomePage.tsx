@@ -2,7 +2,7 @@ import Link from "next/link";
 import { home } from "@/content/home";
 import { homeNav } from "@/content/site";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
-import { WhatsAppLink } from "@/components/whatsapp/WhatsAppLink";
+import { WizardLink } from "@/components/whatsapp/WizardLink";
 import { WaIcon } from "@/components/whatsapp/WaIcon";
 import { LeadForm } from "@/components/whatsapp/LeadForm";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
@@ -20,7 +20,7 @@ export function HomePage() {
       baseMessage={home.whatsapp.baseMessage}
       segment={home.whatsapp.segment}
     >
-      <Topbar variant="home" nav={homeNav} />
+      <Topbar variant="home" nav={homeNav} ctaTarget="cotizar" />
       <main>
         {/* ===== Hero ===== */}
         <section className="hero hero--home">
@@ -60,11 +60,10 @@ export function HomePage() {
               </h1>
               <p className="sub">{home.hero.sub}</p>
               <div className="hero-cta">
-                <WhatsAppLink className="btn btn-wa" location="hero">
-
+                <WizardLink className="btn btn-wa" target="cotizar" ariaLabel={home.hero.primaryLabel}>
                   <WaIcon />
                   {home.hero.primaryLabel}
-                </WhatsAppLink>
+                </WizardLink>
                 <a className="btn btn-ghost" href="#servicios">
                   {home.hero.secondaryLabel}
                 </a>
@@ -290,7 +289,7 @@ export function HomePage() {
         <FinalCta data={home.finalCta} />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp target="cotizar" />
     </WhatsAppProvider>
   );
 }
