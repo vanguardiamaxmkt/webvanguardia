@@ -28,26 +28,40 @@ export function WizardLink({
       const el = document.getElementById(target);
       if (!el) return; // sin destino en esta página: deja el salto por defecto
       e.preventDefault();
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      // Elemento a resaltar: la tarjeta del formulario si existe; si no
-      // (páginas de servicio), el botón del CTA final.
+      // Destino real del scroll: la tarjeta del formulario si existe; si no
+      // (páginas de servicio), el botón del CTA final. Así no se detiene en el
+      // inicio de la sección (título/bullets), sino en el wizard mismo.
       const highlight =
         el.querySelector<HTMLElement>(".form-card") ??
         el.querySelector<HTMLElement>(".btn-wa") ??
         el;
+
+      // Scroll a la tarjeta descontando la altura del menú fijo. Se recalcula
+      // en cada llamada porque el layout puede moverse mientras cargan las
+      // imágenes de arriba (reflow) — por eso corregimos varias veces.
+      const scrollToWizard = () => {
+        const header = document.querySelector<HTMLElement>(".topbar");
+        const offset = (header?.offsetHeight ?? 0) + 16;
+        const y = highlight.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+      };
+
       // Primer campo real del formulario (ignora honeypot y ocultos).
       const field = el.querySelector<HTMLElement>(
         "input:not([type=hidden]):not([tabindex='-1']), select, textarea",
       );
 
-      // Tras el scroll suave: pulso de atención + enfoque del primer campo.
+      scrollToWizard();
+      // Correcciones por reflow (imágenes/íconos que terminan de cargar).
+      window.setTimeout(scrollToWizard, 350);
       window.setTimeout(() => {
+        scrollToWizard();
         highlight.classList.remove("wizard-attn");
         void highlight.offsetWidth; // reinicia la animación en cada clic
         highlight.classList.add("wizard-attn");
         field?.focus({ preventScroll: true });
-      }, 450);
+      }, 700);
     },
     [target],
   );

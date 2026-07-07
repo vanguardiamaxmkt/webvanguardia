@@ -44,7 +44,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-PE" className={`${inter.variable} ${heading.variable}`}>
+    <html
+      lang="es-PE"
+      className={`${inter.variable} ${heading.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         {/* Marca el documento antes del primer paint: habilita el reveal por
             scroll sin parpadeo y mantiene todo visible si no hay JavaScript. */}
