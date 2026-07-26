@@ -11,7 +11,15 @@ export const site = {
   /** Phone for tel: links. */
   phoneE164: "+51963561496",
   phoneDisplay: "963 561 496",
+  email: "info@vanguardiamax.com",
   address: "Platinum Plaza I, C. Dean Valdivia 148, San Isidro",
+  /** Redes sociales oficiales. */
+  social: {
+    facebook: "https://www.facebook.com/vanguardiamax",
+    instagram: "https://www.instagram.com/vanguardiamax/",
+    tiktok: "https://www.tiktok.com/@tasacionesvanguardiamax",
+    linkedin: "https://www.linkedin.com/company/vanguardiamax/",
+  },
   /** Razón social y RUC (Libro de Reclamaciones). COMPLETAR con los datos reales. */
   legalName: "VanguardiaMax",
   ruc: "",

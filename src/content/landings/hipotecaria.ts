@@ -4,15 +4,15 @@ import { DEFAULT_STATS } from "./_shared";
 export const hipotecaria: LandingContent = {
   slug: "hipotecaria",
   meta: {
-    title: "Tasación Hipotecaria Express en 48 h | VanguardiaMax",
+    title: "Tasación Hipotecaria Express en 24 h | VanguardiaMax",
     description:
-      "Tasación de tu inmueble lista para el banco en 48 horas. Valor comercial y de realización, homologada SBS y conforme al Reglamento Nacional de Tasaciones. Cotiza por WhatsApp.",
+      "Tasación de tu inmueble lista para el banco en 24 horas. Valor comercial y de realización, homologada SBS y conforme al Reglamento Nacional de Tasaciones. Cotiza por WhatsApp.",
     canonical: "/tasaciones/hipotecaria",
   },
   hero: {
     eyebrow: "Tasación hipotecaria express",
     heading: "Tu tasación lista para el banco ",
-    headingAccent: "en 48 horas",
+    headingAccent: "en 24 horas",
     sub: "Valor comercial y de realización, homologada ante la SBS y conforme al Reglamento Nacional de Tasaciones. La que tu banco acepta para avanzar tu crédito.",
     primaryCta: { label: "Cotiza tu tasación hipotecaria", whatsapp: true },
     secondaryCta: { label: "Cotiza por formulario", href: "#cotizar" },
@@ -45,7 +45,7 @@ export const hipotecaria: LandingContent = {
     items: [
       {
         num: "01",
-        title: "Entrega en 48 horas",
+        title: "Entrega en 24 horas",
         body: "Inspección ágil y entrega del informe en plazos express, sin trámites de más.",
       },
       {
@@ -76,7 +76,7 @@ export const hipotecaria: LandingContent = {
       },
       {
         num: "3",
-        title: "Informe en 48 h",
+        title: "Informe en 24 h",
         body: "Recibes tu informe con valor comercial y de realización, listo para presentar al banco.",
       },
     ],
@@ -95,7 +95,7 @@ export const hipotecaria: LandingContent = {
     ] },
     { type: "p", html: "Si te falta algún documento, escríbenos igual: te indicamos cómo obtenerlo y confirmamos la lista exacta según tu caso particular." },
     { type: "h3", text: "Cuánto demora y cuánto vale" },
-    { type: "p", html: "El costo de una tasación hipotecaria depende del tipo de inmueble (casa, departamento, terreno, local), de su tamaño y de la ubicación, por lo que cada cotización es personalizada. En cuanto a plazos, trabajamos en modalidad <b>express</b>: la entrega del informe puede darse en aproximadamente <b>48 horas</b> desde la inspección, siempre que la documentación esté completa. Si además necesitas valorizar otros bienes, también realizamos <a href='/tasaciones/vehicular'>tasación vehicular</a> y otros servicios que puedes revisar en nuestro hub de <a href='/tasaciones'>tasaciones</a>." },
+    { type: "p", html: "El costo de una tasación hipotecaria depende del tipo de inmueble (casa, departamento, terreno, local), de su tamaño y de la ubicación, por lo que cada cotización es personalizada. En cuanto a plazos, trabajamos en modalidad <b>express</b>: la entrega del informe puede darse en aproximadamente <b>24 horas</b> desde la inspección, siempre que la documentación esté completa. Si además necesitas valorizar otros bienes, también realizamos <a href='/tasaciones/vehicular'>tasación vehicular</a> y otros servicios que puedes revisar en nuestro hub de <a href='/tasaciones'>tasaciones</a>." },
     { type: "h3", text: "Vigencia de la tasación" },
     { type: "p", html: "Una tasación hipotecaria tiene una validez aproximada de <b>1 año</b>. Pasado ese tiempo conviene una nueva evaluación para reflejar las condiciones actuales del mercado inmobiliario, ya que los valores comerciales pueden variar y el banco suele exigir un informe vigente al momento del desembolso." },
     { type: "p", html: "¿Necesitas tu tasación lista para el banco esta semana? Cuéntanos el distrito y el tipo de inmueble por <b>WhatsApp</b> y te damos el alcance y la cotización el mismo día, sin compromiso." },
@@ -151,7 +151,7 @@ export const hipotecaria: LandingContent = {
       },
       {
         q: "¿Cuánto demora?",
-        a: "Para tasaciones hipotecarias trabajamos en modalidad express: la entrega puede darse en aproximadamente 48 horas desde la inspección, según disponibilidad de la documentación.",
+        a: "Para tasaciones hipotecarias trabajamos en modalidad express: la entrega puede darse en aproximadamente 24 horas desde la inspección, según disponibilidad de la documentación.",
       },
       {
         q: "¿Cuánto cuesta?",
