@@ -12,6 +12,13 @@ export function FinalCta({ data, id }: { data: FinalCTA; id?: string }) {
           <WaIcon />
           {data.button}
         </WhatsAppLink>
+        <p className="final-privacy">
+          Al escribirnos aceptas el tratamiento de tus datos conforme a nuestra{" "}
+          <a href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer">
+            Política de Privacidad
+          </a>
+          .
+        </p>
       </div>
     </section>
   );

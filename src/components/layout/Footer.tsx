@@ -66,7 +66,8 @@ export function Footer() {
               </a>
             ))}
           </div>
-          <div style={{ marginTop: 10 }}>
+          <div className="footer-links">
+            <Link href="/politica-de-privacidad">Política de Privacidad</Link>
             <Link href="/libro-de-reclamaciones" className="footer-libro">
               📕 Libro de Reclamaciones
             </Link>

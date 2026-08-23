@@ -20,6 +20,11 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
     if (valor("empresa_web")) return;
 
     const campos = fields.map((f) => ({ label: f.label, valor: valor(f.name) }));
+    // Registro de la autorización de datos (consentimiento) para trazabilidad.
+    campos.push({
+      label: "Consentimiento",
+      valor: "Autorizó el tratamiento de datos (Política de Privacidad)",
+    });
     const lines = campos.map((c) => `*${c.label}:* ${c.valor}`);
     const message =
       `Hola VanguardiaMax, quiero cotizar una tasación (${segment}).\n\n` +
@@ -75,9 +80,16 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
           />
         </div>
 
-        <label className="form-check">
-          <input type="checkbox" name="no_robot" required />
-          <span>No soy un robot</span>
+        <label className="form-check form-consent">
+          <input type="checkbox" name="consent" required />
+          <span>
+            Autorizo el tratamiento de mis datos personales y ser contactado por
+            WhatsApp, conforme a la{" "}
+            <a href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer">
+              Política de Privacidad
+            </a>
+            .
+          </span>
         </label>
 
         <button type="submit" className="btn btn-wa">

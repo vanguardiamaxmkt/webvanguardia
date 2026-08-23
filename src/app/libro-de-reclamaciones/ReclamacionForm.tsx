@@ -190,6 +190,14 @@ export function ReclamacionForm() {
         INDECOPI. El proveedor debe dar respuesta en un plazo no mayor a 15 días
         hábiles, improrrogable conforme a ley.
       </p>
+      <p className="libro-legal">
+        Los datos que registres serán tratados únicamente para atender tu reclamo o
+        queja, conforme a la Ley N.º 29733 y nuestra{" "}
+        <a href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer">
+          Política de Privacidad
+        </a>
+        .
+      </p>
 
       <button className="adm-btn adm-btn-primary" style={{ padding: "13px 20px" }} disabled={sending}>
         {sending ? "Enviando…" : "Enviar reclamación"}

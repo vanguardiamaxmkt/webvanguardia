@@ -21,8 +21,8 @@ export const site = {
     linkedin: "https://www.linkedin.com/company/vanguardiamax/",
   },
   /** Razón social y RUC (Libro de Reclamaciones). COMPLETAR con los datos reales. */
-  legalName: "VanguardiaMax",
-  ruc: "",
+  legalName: "Asociados VanguardiaMax S.A.C.",
+  ruc: "20611491710",
   /** Google Tag Manager container id (snippet injected when set). */
   gtmId: "GTM-PKC382BQ",
   legal:

@@ -1169,6 +1169,21 @@
   cursor: pointer;
   flex: 0 0 auto;
 }
+/* Consentimiento de datos: texto largo, alineado arriba, con enlace visible. */
+.form-consent {
+  align-items: flex-start;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.form-consent input[type="checkbox"] {
+  margin-top: 1px;
+}
+.form-consent a {
+  color: var(--gold-d);
+  text-decoration: underline;
+}
 /* Honeypot: fuera de pantalla para humanos, visible para bots */
 .hp-field {
   position: absolute;
@@ -1348,6 +1363,17 @@
 .final .btn-wa:hover {
   background: var(--slate);
 }
+.final .final-privacy {
+  font-size: 12.5px;
+  color: #d3e9f8;
+  max-width: 34em;
+  margin: 16px auto 0;
+  line-height: 1.5;
+}
+.final .final-privacy a {
+  color: #fff;
+  text-decoration: underline;
+}
 
 /* ---- Footer ------------------------------------------------------------- */
 footer {
@@ -1442,6 +1468,17 @@ footer a {
 
 /* ---- Libro de Reclamaciones -------------------------------------------- */
 .libro-wrap { max-width: 760px; margin: 0 auto; }
+
+/* ---- Documento legal (política de privacidad, etc.) -------------------- */
+.legal-updated { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+.legal-doc { color: var(--slate); font-size: 15.5px; line-height: 1.7; }
+.legal-doc h2 { color: var(--navy); font-size: 20px; margin: 30px 0 10px; }
+.legal-doc h3 { color: var(--navy); font-size: 16.5px; margin: 20px 0 8px; }
+.legal-doc p { margin-bottom: 12px; }
+.legal-doc ul { margin: 0 0 14px 20px; list-style: disc; }
+.legal-doc li { margin-bottom: 6px; }
+.legal-doc a { color: var(--gold-d); text-decoration: underline; }
+.legal-doc strong { color: var(--navy); }
 .libro-intro { color: var(--muted); font-size: 16px; margin-bottom: 8px; max-width: 46em; }
 .libro-prov {
   background: var(--cream); border: 1px solid var(--line); border-radius: 10px;
@@ -1466,6 +1503,7 @@ footer a {
 .libro-check input { width: 18px; height: 18px; accent-color: var(--gold); margin-top: 1px; flex: 0 0 auto; }
 .libro-hint { font-size: 13px; color: var(--muted); background: var(--cream); border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; }
 .libro-legal { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin: 8px 0 18px; }
+.libro-legal a { color: var(--gold-d); text-decoration: underline; }
 .libro-error { background: #fdecec; border: 1px solid #f0c6c6; color: #b02a2a; border-radius: 9px; padding: 11px 14px; font-size: 14px; margin-bottom: 16px; }
 .libro-form button { background: var(--gold-d); color: #fff; border: none; border-radius: 11px; font-weight: 600; font-size: 15px; cursor: pointer; }
 .libro-form button:disabled { opacity: 0.6; cursor: not-allowed; }
@@ -1474,6 +1512,14 @@ footer a {
 .libro-ok h2 { color: var(--navy); margin-bottom: 10px; }
 .libro-ok p { color: var(--muted); max-width: 40em; margin: 0 auto 12px; font-size: 15.5px; }
 .libro-codigo { display: inline-block; font-size: 22px; color: var(--gold-d); letter-spacing: 1px; margin-top: 6px; }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin-top: 12px;
+}
+.footer-links > a { font-size: 13px; color: #cfe0ee; }
 .footer-libro {
   display: inline-flex; align-items: center; gap: 6px;
   border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 8px;
