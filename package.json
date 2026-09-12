@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "articulos:limpiar": "node scripts/limpiar-articulos.mjs",
+    "articulos:importar": "node --env-file=.env.local scripts/importar-articulos.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.2",
@@ -20,11 +22,13 @@
     "jose": "^6.2.3",
     "mysql2": "^3.22.5",
     "next": "^15.5.0",
+    "nodemailer": "^10.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "eslint": "^9.18.0",

@@ -6,9 +6,9 @@ import { WizardLink } from "@/components/whatsapp/WizardLink";
 import { WaIcon } from "@/components/whatsapp/WaIcon";
 import { LeadForm } from "@/components/whatsapp/LeadForm";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
+import { HeroLeadForm } from "@/components/hero/HeroLeadForm";
 import { Topbar } from "@/components/layout/Topbar";
 import { Footer } from "@/components/layout/Footer";
-import { CertCard } from "@/components/sections/CertCard";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -78,7 +78,7 @@ export function HomePage() {
               </div>
             </div>
             <div className="hero-art">
-              <CertCard data={{ kind: "cert", ...home.cert }} />
+              <HeroLeadForm cert={home.cert} />
             </div>
           </div>
         </section>

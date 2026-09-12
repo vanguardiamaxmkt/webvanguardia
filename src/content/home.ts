@@ -32,10 +32,11 @@ export const home = {
   },
   cert: {
     title: "Informe de Tasación",
-    subtitle: "Valor comercial · Valor de realización",
+    subtitle: "Comercial · Realización · Asegurable",
     rows: [
       { k: "Valor comercial", v: "S/ ———" },
       { k: "Valor de realización", v: "S/ ———" },
+      { k: "Valor asegurable", v: "S/ ———" },
     ],
     sealText: "TASACIÓN CERTIFICADA · SBS · REGLAMENTO NACIONAL · ",
     foot: "Reconocido por bancos, juzgados y notarías · SBS",

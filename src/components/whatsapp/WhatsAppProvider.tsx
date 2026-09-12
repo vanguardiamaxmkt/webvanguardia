@@ -17,13 +17,21 @@ import {
   clearUtm,
   originLabel,
   pushDataLayer,
+  persistVisit,
   type Utm,
+  type Visit,
 } from "@/lib/whatsapp";
 
 interface WhatsAppContextValue {
   /** Page-level WhatsApp config. */
   baseMessage: string;
   segment: string;
+  /** Atribución vigente de la visita (UTM / click-ids). */
+  utm: Utm;
+  /** Etiqueta de origen resuelta (la misma que va en el tag de WhatsApp). */
+  origin: string;
+  /** Página de entrada y referrer de la sesión. */
+  visit: Visit;
   /** Build a deep link for an arbitrary message, enriched with attribution. */
   buildUrl: (message?: string) => string;
   /**
@@ -73,10 +81,13 @@ export function WhatsAppProvider({
   children: React.ReactNode;
 }) {
   const [utm, setUtm] = useState<Utm>(EMPTY_UTM);
+  const [visit, setVisit] = useState<Visit>({ landing: "", referrer: "" });
 
   // Al montar cada página: si la URL trae atribución, la guardamos (gana la más
   // reciente); si no, recuperamos la guardada para que SIGA entre páginas.
+  // La página de entrada y el referrer se fijan una sola vez por sesión.
   useEffect(() => {
+    setVisit(persistVisit());
     const fromUrl = readUtm(window.location.search);
     if (hasAttribution(fromUrl)) {
       persistUtm(fromUrl);
@@ -140,12 +151,15 @@ export function WhatsAppProvider({
     () => ({
       baseMessage,
       segment,
+      utm,
+      origin: originLabel(utm, segment),
+      visit,
       buildUrl: (message?: string) =>
         whatsappUrl(message ?? baseMessage, utm, segment),
       contact,
       submitLead,
     }),
-    [baseMessage, segment, utm, contact, submitLead],
+    [baseMessage, segment, utm, visit, contact, submitLead],
   );
 
   return <WhatsAppContext.Provider value={value}>{children}</WhatsAppContext.Provider>;

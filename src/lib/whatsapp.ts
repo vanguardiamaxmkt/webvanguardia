@@ -124,6 +124,102 @@ export function clearUtm(): void {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/* Página de entrada y referrer de la visita                                  */
+/*                                                                            */
+/* Se guardan una sola vez (en la primera página de la sesión) para saber por */
+/* qué página aterrizó el visitante y desde dónde venía, aunque luego navegue */
+/* a otra página y recién ahí envíe el formulario.                            */
+/* -------------------------------------------------------------------------- */
+
+const VISIT_KEY = "vmax_visit";
+
+export interface Visit {
+  /** URL completa de la primera página de la sesión. */
+  landing: string;
+  /** document.referrer en esa primera página (vacío si llegó directo). */
+  referrer: string;
+}
+
+/** Registra la página de entrada si aún no hay una guardada en la sesión. */
+export function persistVisit(): Visit {
+  const current: Visit = {
+    landing: typeof window === "undefined" ? "" : window.location.href,
+    referrer: typeof document === "undefined" ? "" : document.referrer,
+  };
+  if (typeof window === "undefined") return current;
+  try {
+    const raw = window.sessionStorage.getItem(VISIT_KEY);
+    if (raw) return JSON.parse(raw) as Visit;
+    window.sessionStorage.setItem(VISIT_KEY, JSON.stringify(current));
+  } catch {
+    /* storage no disponible */
+  }
+  return current;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Clasificación del canal (para correos / reportes)                          */
+/* -------------------------------------------------------------------------- */
+
+const PAID_MEDIUMS = [
+  "cpc", "ppc", "paid", "paidsearch", "paid_search", "paid-search",
+  "paidsocial", "paid_social", "paid-social", "display", "cpm", "cpv", "cpa",
+  "retargeting", "remarketing", "ads",
+];
+const SEARCH_HOSTS = ["google.", "bing.", "yahoo.", "duckduckgo.", "ecosia.", "yandex."];
+const SOCIAL_HOSTS: [string, string][] = [
+  ["facebook.", "Facebook"],
+  ["fb.", "Facebook"],
+  ["instagram.", "Instagram"],
+  ["tiktok.", "TikTok"],
+  ["linkedin.", "LinkedIn"],
+  ["youtube.", "YouTube"],
+  ["twitter.", "X (Twitter)"],
+  ["x.com", "X (Twitter)"],
+  ["t.co", "X (Twitter)"],
+  ["whatsapp.", "WhatsApp"],
+];
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+
+/**
+ * Describe de dónde vino la visita en lenguaje claro, p. ej.
+ * "Pagado · Google Ads", "Orgánico · Google", "Social · Facebook",
+ * "Campaña · email", "Referido · idealista.pe" o "Directo".
+ * Es una función pura: sirve tanto en el cliente como en el servidor.
+ */
+export function channelLabel(utm: Utm, referrer = ""): string {
+  const medium = utm.medium.toLowerCase();
+  const source = utm.source || "";
+
+  if (utm.gclid) return "Pagado · Google Ads";
+  if (utm.msclkid) return "Pagado · Microsoft/Bing Ads";
+  if (utm.ttclid) return "Pagado · TikTok Ads";
+  if (PAID_MEDIUMS.includes(medium)) return `Pagado · ${source || medium}`;
+  if (medium === "organic") return `Orgánico · ${source || "buscador"}`;
+  if (medium === "social" || medium === "social-media") return `Social · ${source || "redes"}`;
+  if (utm.fbclid) return "Social · Facebook/Instagram";
+  if (utm.campaign || source || medium) {
+    return `Campaña · ${[source, medium].filter(Boolean).join(" / ")}`;
+  }
+
+  const host = hostOf(referrer);
+  if (!host || host.endsWith(hostOf(site.url) || "vanguardiamax.com")) return "Directo";
+  if (SEARCH_HOSTS.some((h) => host.startsWith(h) || host.includes("." + h))) {
+    return `Orgánico · ${host.split(".")[0]}`;
+  }
+  const social = SOCIAL_HOSTS.find(([h]) => host.startsWith(h) || host.includes("." + h));
+  if (social) return `Social · ${social[1]}`;
+  return `Referido · ${host}`;
+}
+
 /** Push a GTM dataLayer event (no-op safe when GTM is absent). */
 export function pushDataLayer(event: Record<string, unknown>): void {
   if (typeof window === "undefined") return;

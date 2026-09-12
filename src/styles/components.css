@@ -281,7 +281,7 @@
   background: radial-gradient(circle, rgba(1, 177, 253, 0.18), transparent 65%);
 }
 .hero--home .wrap {
-  padding-top: 122px;
+  padding-top: 96px;
   padding-bottom: 88px;
 }
 .hero--service .wrap {
@@ -426,6 +426,10 @@
   width: 54%;
   background: linear-gradient(90deg, var(--navy), #5b6b73);
 }
+.cert-bar.b3 {
+  width: 66%;
+  background: linear-gradient(90deg, var(--spark), #f7c66b);
+}
 .cert-foot {
   display: flex;
   align-items: center;
@@ -443,6 +447,162 @@
   font-size: 11px;
   color: var(--muted);
   line-height: 1.45;
+}
+
+/* ---- Hero: "Informe de Tasación" + formulario en una sola tarjeta ------ */
+.hero-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px 22px 18px;
+  color: var(--ink);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+}
+/* Cabecera con los valores del informe (más compacta que en las landings). */
+.hero-card .cert-top {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 12px;
+}
+.hero-card .cert-top h4 {
+  font-size: 18px;
+}
+.hero-card .cert-rows {
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.hero-card .cert-row {
+  margin-bottom: 4px;
+}
+.hero-card .cert-bar {
+  height: 8px;
+}
+.hero-card .cert-foot {
+  margin-top: 16px;
+  padding-top: 14px;
+}
+.hero-card .seal {
+  width: 44px;
+  height: 44px;
+}
+
+/* ---- Formulario compacto del hero (envía a correo) --------------------- */
+.hf-eyebrow {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-bottom: 12px;
+}
+.hf-row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+.hf-field {
+  margin-bottom: 9px;
+}
+.hf-field input,
+.hf-field select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+.hf-field select:invalid {
+  color: var(--muted);
+}
+.hf-field input:focus,
+.hf-field select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(1, 177, 253, 0.16);
+}
+.hf-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin: 8px 0 12px;
+  cursor: pointer;
+}
+.hf-consent input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold);
+  margin-top: 1px;
+  flex: 0 0 auto;
+}
+.hf-consent a {
+  color: var(--gold-d);
+  text-decoration: underline;
+}
+.hf-error {
+  color: #c0392b;
+  font-size: 12.5px;
+  margin: 0 0 8px;
+}
+.hf-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 11px;
+  background: var(--gold-d);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.hf-btn:hover {
+  background: var(--gold);
+}
+.hf-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.hero-form--ok {
+  text-align: center;
+  padding: 18px 0 6px;
+}
+.hero-form--ok h3 {
+  font-family: var(--font-heading), Montserrat, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.hf-ok-ic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e6f6ee;
+  color: #1f9d57;
+  font-size: 26px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+}
+.hero-form--ok p {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+@media (max-width: 860px) {
+  .hero-card {
+    margin: 0 auto;
+  }
 }
 
 /* ---- Facts card (servicio hero art) ------------------------------------- */
