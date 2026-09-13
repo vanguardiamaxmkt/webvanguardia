@@ -45,6 +45,34 @@ export const CONTACT_TO: string[] = (
   .map((s) => s.trim())
   .filter(Boolean);
 
+/** Resumen de la configuración de correo, sin secretos (para /admin/correo). */
+export function mailConfigSummary() {
+  const pass = process.env.SMTP_PASS || "";
+  return {
+    host: process.env.SMTP_HOST || "smtp.hostinger.com",
+    port: Number(process.env.SMTP_PORT || 465),
+    user: process.env.SMTP_USER || "",
+    passLength: pass.length,
+    from: process.env.CONTACT_FROM || process.env.SMTP_USER || "",
+    to: CONTACT_TO,
+    dryRun: DRY_RUN,
+  };
+}
+
+/** Prueba el login SMTP sin enviar nada. */
+export async function verifySmtp(): Promise<{ ok: boolean; error?: string }> {
+  if (DRY_RUN) return { ok: true };
+  if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    return { ok: false, error: "Faltan SMTP_USER y/o SMTP_PASS en las variables de entorno." };
+  }
+  try {
+    await getTransporter().verify();
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : String(e) };
+  }
+}
+
 /** Envía un correo. Lanza si el SMTP no está configurado o falla. */
 export async function sendMail(opts: {
   /** Destinatarios; por defecto CONTACT_TO. */

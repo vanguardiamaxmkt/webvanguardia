@@ -33,8 +33,8 @@ export default function LoginPage() {
   return (
     <div className="adm-login">
       <form className="adm-login-card" onSubmit={onSubmit}>
-        <h1>Panel de artículos</h1>
-        <p>Inicia sesión para administrar el blog.</p>
+        <h1>Panel de administración</h1>
+        <p>Inicia sesión para administrar el blog, las reclamaciones y el correo del formulario.</p>
         {error && <div className="adm-error">{error}</div>}
         <div className="adm-field">
           <label htmlFor="user">Usuario</label>
