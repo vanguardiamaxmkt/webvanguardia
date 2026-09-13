@@ -17,7 +17,8 @@ export default async function AdminCorreo() {
     ["Usuario (SMTP_USER)", cfg.user || "— no definido"],
     ["Contraseña (SMTP_PASS)", cfg.passLength ? `definida (${cfg.passLength} caracteres)` : "— no definida"],
     ["Remitente", cfg.from || "—"],
-    ["Destinatarios", cfg.to.join(", ")],
+    ["Destinatarios (Para)", cfg.to.join(", ") || "—"],
+    ["Copia oculta (BCC)", cfg.bcc.join(", ") || "—"],
   ];
 
   return (

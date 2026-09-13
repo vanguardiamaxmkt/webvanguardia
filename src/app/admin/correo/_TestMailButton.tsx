@@ -14,7 +14,14 @@ export function TestMailButton() {
       const res = await fetch("/api/admin/correo", { method: "POST" });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(json.error || "No se pudo enviar.");
-      setResult({ ok: true, msg: "Enviado a: " + (json.to as string[]).join(", ") + ". Revisa las bandejas (y Spam)." });
+      const bcc = (json.bcc as string[]) || [];
+      setResult({
+        ok: true,
+        msg:
+          "Enviado a: " + (json.to as string[]).join(", ") +
+          (bcc.length ? " · copia oculta: " + bcc.join(", ") : "") +
+          ". Revisa las bandejas (y Spam).",
+      });
     } catch (e) {
       setResult({ ok: false, msg: e instanceof Error ? e.message : "No se pudo enviar." });
     } finally {

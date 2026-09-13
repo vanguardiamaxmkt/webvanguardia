@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { CONTACT_TO, mailConfigSummary, sendMail, verifySmtp } from "@/lib/mailer";
+import { CONTACT_BCC, CONTACT_TO, mailConfigSummary, sendMail, verifySmtp } from "@/lib/mailer";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +15,7 @@ export async function POST() {
   try {
     await sendMail({
       to: CONTACT_TO,
+      bcc: CONTACT_BCC,
       subject: "Prueba de correo — formulario web VanguardiaMax",
       text:
         "Este es un correo de prueba enviado desde el panel /admin/correo.\n" +
@@ -23,7 +24,7 @@ export async function POST() {
         "<p>Este es un correo de prueba enviado desde el panel <b>/admin/correo</b>.</p>" +
         "<p>Si lo recibes, el formulario del hero ya puede enviar solicitudes.</p>",
     });
-    return NextResponse.json({ ok: true, to: CONTACT_TO });
+    return NextResponse.json({ ok: true, to: CONTACT_TO, bcc: CONTACT_BCC });
   } catch (e) {
     return NextResponse.json(
       { error: e instanceof Error ? e.message : "No se pudo enviar el correo de prueba." },

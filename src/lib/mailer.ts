@@ -34,16 +34,24 @@ function getTransporter(): Transporter {
   return transporter;
 }
 
+function listaCorreos(v: string): string[] {
+  return v
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
 /**
- * Destinatarios de los formularios de contacto. Se puede sobrescribir con
- * CONTACT_TO (varios correos separados por coma).
+ * Destinatarios visibles ("Para") de los formularios de contacto.
+ * Se puede sobrescribir con CONTACT_TO (varios correos separados por coma).
  */
-export const CONTACT_TO: string[] = (
-  process.env.CONTACT_TO || "info@vanguardiamax.com, ayllondark@gmail.com"
-)
-  .split(",")
-  .map((s) => s.trim())
-  .filter(Boolean);
+export const CONTACT_TO: string[] = listaCorreos(process.env.CONTACT_TO || "info@vanguardiamax.com");
+
+/**
+ * Destinatarios en copia oculta (BCC): reciben el correo pero no aparecen en
+ * "Para". Se puede sobrescribir con CONTACT_BCC.
+ */
+export const CONTACT_BCC: string[] = listaCorreos(process.env.CONTACT_BCC ?? "ayllondark@gmail.com");
 
 /** Resumen de la configuración de correo, sin secretos (para /admin/correo). */
 export function mailConfigSummary() {
@@ -55,6 +63,7 @@ export function mailConfigSummary() {
     passLength: pass.length,
     from: process.env.CONTACT_FROM || process.env.SMTP_USER || "",
     to: CONTACT_TO,
+    bcc: CONTACT_BCC,
     dryRun: DRY_RUN,
   };
 }
@@ -75,8 +84,10 @@ export async function verifySmtp(): Promise<{ ok: boolean; error?: string }> {
 
 /** Envía un correo. Lanza si el SMTP no está configurado o falla. */
 export async function sendMail(opts: {
-  /** Destinatarios; por defecto CONTACT_TO. */
+  /** Destinatarios visibles; por defecto CONTACT_TO. */
   to?: string | string[];
+  /** Copia oculta; por defecto CONTACT_BCC. */
+  bcc?: string | string[];
   subject: string;
   html: string;
   text?: string;
@@ -91,6 +102,7 @@ export async function sendMail(opts: {
   const info = await getTransporter().sendMail({
     from: `"VanguardiaMax Web" <${from}>`,
     to: opts.to ?? CONTACT_TO,
+    bcc: opts.bcc ?? CONTACT_BCC,
     replyTo: opts.replyTo,
     subject: opts.subject,
     text: opts.text,
