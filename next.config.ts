@@ -16,6 +16,7 @@ const legacyArticleSlugs = [
   "precio-de-una-tasacion-cuanto-cuesta-tasar-en-peru-lo-que-las-tasadoras-no-te-dicen",
   "que-es-la-tasacion-de-propiedades-con-ifrs",
   "tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru",
+  "tasaciones-ifrs-en-peru-descubre-el-valor-real-de-tu-empresa",
 ];
 
 // URLs antiguas que no tienen artículo publicado propio: los duplicados apuntan

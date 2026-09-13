@@ -3,14 +3,16 @@
  *
  *   node --env-file=.env.local scripts/importar-articulos.mjs --dry-run
  *   node --env-file=.env.local scripts/importar-articulos.mjs
+ *   node --env-file=.env.local scripts/importar-articulos.mjs db/articulos-extra.json
  *
  * La clave es el `slug`: si ya existe se actualiza, si no se inserta. Es
- * idempotente, se puede volver a ejecutar tras editar el JSON.
+ * idempotente, se puede volver a ejecutar tras editar el JSON. Se puede pasar
+ * otro archivo JSON (p. ej. artículos redactados a mano) como argumento.
  */
 import { readFileSync } from "node:fs";
 import mysql from "mysql2/promise";
 
-const FILE = "db/articulos-import.json";
+const FILE = process.argv.find((a) => a.endsWith(".json")) ?? "db/articulos-import.json";
 const DRY = process.argv.includes("--dry-run");
 
 /** Columnas de la tabla y su longitud máxima (VARCHAR). */
