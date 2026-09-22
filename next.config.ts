@@ -35,6 +35,51 @@ const legacyArticleAliases: Record<string, string> = {
   "tasador-online-sepa-en-cuanto-esta-valorizado-su-inmueble": "/articulos",
 };
 
+// Páginas de servicio y URLs del WordPress antiguo que aún reciben impresiones
+// en Search Console (export 1 jul – 19 sep 2026, ver seo/gsc/2026-09) y que
+// devolvían 404. Cada una va a su página equivalente en la nueva estructura.
+const legacyPageRedirects: Record<string, string> = {
+  // Tasaciones
+  "tasaciones-de-alquileres-y-renta": "/tasaciones/alquiler",
+  "tasaciones-judiciales": "/tasaciones/judicial",
+  "gestion-notarial": "/tasaciones/judicial",
+  "peritaje-judicial-y-gestion-notarial": "/tasaciones/judicial",
+  "tasaciones-para-cobertura-de-seguros": "/tasaciones/para-seguros",
+  "tasaciones-para-toma-de-seguros": "/tasaciones/para-seguros",
+  "tasaciones-de-vehiculos-y-maquinarias": "/tasaciones/vehicular",
+  "tasacion-equipos-estado-de-obsolescencia": "/tasaciones/activos-fijos",
+  "tasaciones-con-fines-contables": "/tasaciones/empresas",
+  "tasaciones-con-fines-contables/tasaciones-overhaul-calculo-de-vidas-utiles-para-dar-baja-estados-financieros":
+    "/tasaciones/empresas",
+  "inventarios-y-tasaciones-de-activos-fijos-bajo-ifrs": "/tasaciones/empresas",
+  "tasacion-gestion-e-inventarios": "/tasaciones/empresas",
+  "tasaciones-de-todo-tipo-de-embarcaciones": "/tasaciones/embarcaciones",
+  "tasaciones-inmobiliarias-analisis-y-calculo-impuesto-predial-municipal": "/tasaciones/impuesto-predial",
+  "tasacion-de-inmuebles-old": "/tasaciones",
+  "tasacion-de-inmuebles-2": "/tasaciones",
+  "tasaciones-vanguardiamax": "/tasaciones",
+  // Servicios
+  "servicios-tasaciones-peru-vanguardiamax": "/servicios",
+  "planos-y-topografia": "/servicios/auditoria-planos",
+  "auditoria-de-planos-e-inmuebles": "/servicios/auditoria-planos",
+  "supervision-de-obra-la-garantia-de-que-tu-inversion-no-se-devalue": "/servicios/proyectos-supervision-obras",
+  "proyectos-y-supervision-de-obras": "/servicios/proyectos-supervision-obras",
+  "saneamiento-independizaciones-y-tramites": "/servicios/saneamiento-inmobiliario",
+  "consultoria-inmobiliaria-y-bi": "/servicios/proyectos-estudio-viabilidad",
+  // Artículos con slug distinto en el sitio nuevo
+  "valoraciones-ifrs-niif-la-clave-para-estados-financieros-precisos-y-auditable":
+    "/articulos/valoraciones-ifrs-niif-peru",
+  // Institucionales
+  "nosotros": "/",
+  "nosotros-2": "/",
+  "contacto-tasaciones": "/",
+  "cotizaciones-tasaciones": "/",
+  "libro-reclamaciones": "/libro-de-reclamaciones",
+};
+
+// Archivos de WordPress (autor, categorías, etiquetas, noticias) → índice del blog.
+const legacyBlogArchives = ["noticias", "author", "category", "tag"];
+
 const legacyArticleRedirects = [
   ...legacyArticleSlugs.map((slug) => ({
     source: `/${slug}`,
@@ -46,6 +91,15 @@ const legacyArticleRedirects = [
     destination,
     statusCode: 301,
   })),
+  ...Object.entries(legacyPageRedirects).map(([slug, destination]) => ({
+    source: `/${slug}`,
+    destination,
+    statusCode: 301,
+  })),
+  ...legacyBlogArchives.flatMap((base) => [
+    { source: `/${base}`, destination: "/articulos", statusCode: 301 },
+    { source: `/${base}/:path*`, destination: "/articulos", statusCode: 301 },
+  ]),
 ];
 
 const nextConfig: NextConfig = {
@@ -63,6 +117,13 @@ const nextConfig: NextConfig = {
   // 301 de las URLs antiguas a la nueva estructura por silos (/tasaciones, /servicios).
   async redirects() {
     return [
+      // www → dominio principal (Search Console contaba www como página aparte).
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.vanguardiamax.com" }],
+        destination: "https://vanguardiamax.com/:path*",
+        statusCode: 301,
+      },
       { source: "/hipotecaria", destination: "/tasaciones/hipotecaria", statusCode: 301 },
       { source: "/judicial", destination: "/tasaciones/judicial", statusCode: 301 },
       { source: "/activos-fijos", destination: "/tasaciones/activos-fijos", statusCode: 301 },
