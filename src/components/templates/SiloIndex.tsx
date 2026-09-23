@@ -7,12 +7,19 @@ import { siteNav } from "@/content/site";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Breadcrumb } from "@/components/sections/Breadcrumb";
+import { Prose } from "@/components/sections/Prose";
+import { Faq } from "@/components/sections/Faq";
+import { JsonLd } from "@/components/ui/JsonLd";
+import type { FaqItem, ProseBlock } from "@/types/content";
 
 function label(p: PageEntry): string {
   return p.kind === "landing" ? p.content.hero.eyebrow : p.content.breadcrumbLabel;
 }
 
-/** Índice de un silo (/tasaciones o /servicios): grilla de tarjetas. */
+/**
+ * Índice de un silo (/tasaciones o /servicios): grilla de tarjetas. Opcionalmente
+ * añade contenido SEO y preguntas frecuentes (con su schema FAQPage) debajo.
+ */
 export function SiloIndex({
   eyebrow,
   heading,
@@ -21,6 +28,8 @@ export function SiloIndex({
   items,
   baseMessage,
   segment,
+  seoContent,
+  faq,
 }: {
   eyebrow: string;
   heading: string;
@@ -29,9 +38,22 @@ export function SiloIndex({
   items: PageEntry[];
   baseMessage: string;
   segment: string;
+  seoContent?: ProseBlock[];
+  faq?: { heading?: string; items: FaqItem[] };
 }) {
+  const faqJsonLd = faq && {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <WhatsAppProvider baseMessage={baseMessage} segment={segment}>
+      {faqJsonLd && <JsonLd data={[faqJsonLd]} />}
       <Topbar nav={siteNav} />
       <Breadcrumb items={[{ label: "Inicio", href: "/" }, { label: current }]} />
       <main>
@@ -61,6 +83,10 @@ export function SiloIndex({
             </div>
           </div>
         </section>
+        {/* Fondo blanco (sin `alt`): separa la guía de la grilla gris de tarjetas,
+            que sigue siendo el bloque principal de la página. */}
+        {seoContent && <Prose blocks={seoContent} />}
+        {faq && <Faq heading={faq.heading} items={faq.items} id="faq" />}
       </main>
       <Footer />
       <FloatingWhatsApp />

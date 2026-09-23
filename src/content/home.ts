@@ -118,6 +118,8 @@ export const home = {
       "Almacén / industrial",
       "Proyecto inmobiliario",
     ],
+    /** Enlace interno al destino de "tasación de inmuebles" (paso 2 SEO). */
+    more: { label: "Todo sobre la tasación de inmuebles", href: "/tasaciones" },
   },
   benefits: {
     eyebrow: "Por qué VanguardiaMax",

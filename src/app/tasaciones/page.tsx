@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
 import { tasacionesPages } from "@/content/pages";
+import { tasacionesIndex } from "@/content/tasaciones-index";
 import { SiloIndex } from "@/components/templates/SiloIndex";
 
 export const metadata: Metadata = {
-  title: "Tasaciones con validez legal en el Perú | VanguardiaMax",
-  description:
-    "Todas nuestras tasaciones: hipotecaria, judicial, de activos fijos, vehicular, de alquiler y de embarcaciones. Informes con valor comercial y de realización reconocidos por la SBS, bancos y juzgados.",
+  title: tasacionesIndex.meta.title,
+  description: tasacionesIndex.meta.description,
   alternates: { canonical: "/tasaciones" },
 };
 
 export default function TasacionesIndex() {
   return (
     <SiloIndex
-      eyebrow="Tasaciones"
-      heading="Tasaciones con validez legal para cada necesidad"
-      intro="Elige el tipo de tasación que necesitas. Todos nuestros informes tienen sustento conforme al Reglamento Nacional de Tasaciones y son reconocidos por bancos, juzgados y notarías."
+      eyebrow={tasacionesIndex.eyebrow}
+      heading={tasacionesIndex.heading}
+      intro={tasacionesIndex.intro}
       current="Tasaciones"
       items={tasacionesPages}
-      baseMessage="Hola VanguardiaMax, quiero información sobre sus tasaciones."
+      baseMessage="Hola VanguardiaMax, quiero información sobre la tasación de mi inmueble."
       segment="tasaciones-index"
+      seoContent={tasacionesIndex.seoContent}
+      faq={tasacionesIndex.faq}
     />
   );
 }

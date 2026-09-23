@@ -806,6 +806,29 @@
   max-width: 50em;
   margin: 0 auto;
 }
+.assets-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 26px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--gold);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.assets-more:hover {
+  border-bottom-color: var(--gold);
+}
+.assets-more svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .chip {
   display: inline-flex;
   align-items: center;
@@ -1250,6 +1273,16 @@
 .prose li b,
 .prose p b {
   color: var(--slate);
+}
+/* Enlaces internos del contenido: mismo estilo que en los artículos. */
+.prose a {
+  color: var(--gold-d);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.prose a:hover {
+  color: var(--gold);
 }
 .alt {
   background: var(--cream);
