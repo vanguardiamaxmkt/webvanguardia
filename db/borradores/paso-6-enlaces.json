@@ -1,0 +1,58 @@
+[
+  {
+    "id": 12,
+    "slug": "precio-de-una-tasacion-cuanto-cuesta-tasar-en-peru-lo-que-las-tasadoras-no-te-dicen",
+    "destino": "/tasaciones/judicial",
+    "motivo": "Artículo con más tráfico del blog (URL antigua: 11 clics, 863 impr.). La sección sobre REPEJ explica quién hace un peritaje judicial pero no lleva al servicio.",
+    "buscar": "Las Tasaciones de inmuebles judiciales se realizan",
+    "reemplazar": "Las <a href=\"/tasaciones/judicial\">tasaciones de inmuebles judiciales</a> se realizan"
+  },
+  {
+    "id": 12,
+    "slug": "precio-de-una-tasacion-cuanto-cuesta-tasar-en-peru-lo-que-las-tasadoras-no-te-dicen",
+    "destino": "/tasaciones/obras-arte",
+    "motivo": "La lista de servicios describe la tasación de obras de arte en detalle pero no enlaza a su landing (87 impr., 2 clics).",
+    "buscar": "<li>Tasación de obras de arte:",
+    "reemplazar": "<li><a href=\"/tasaciones/obras-arte\">Tasación de obras de arte</a>:"
+  },
+  {
+    "id": 14,
+    "slug": "tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru",
+    "destino": "/tasaciones/judicial",
+    "motivo": "El artículo no tiene ni un enlace: quien termina de leer sobre tasación judicial no tiene cómo llegar al servicio de tasación judicial.",
+    "buscar": "Contar con un perito judicial acreditado garantiza",
+    "reemplazar": "Contar con un <a href=\"/tasaciones/judicial\">perito judicial acreditado</a> garantiza"
+  },
+  {
+    "id": 13,
+    "slug": "que-es-la-tasacion-de-propiedades-con-ifrs",
+    "destino": "/tasaciones/empresas",
+    "motivo": "Mejor CTR del blog (URL antigua: 10 %) y ningún enlace saliente. La sección 'Rol de los tasadores independientes' es justo el punto de contratación.",
+    "buscar": "Un tasador independiente con la cualificación y experiencia adecuadas",
+    "reemplazar": "Un <a href=\"/tasaciones/empresas\">tasador independiente</a> con la cualificación y experiencia adecuadas"
+  },
+  {
+    "id": 7,
+    "slug": "tasadores-de-terrenos-como-determinar-el-valor-del-terreno",
+    "destino": "/tasaciones/agricolas",
+    "motivo": "Segundo artículo con más tráfico (URL antigua: 6 clics, 355 impr.). Menciona los terrenos rurales al hablar de ubicación; la landing de predios agrícolas es su continuación natural.",
+    "buscar": "que los terrenos en zonas rurales o menos desarrolladas",
+    "reemplazar": "que los <a href=\"/tasaciones/agricolas\">terrenos en zonas rurales</a> o menos desarrolladas"
+  },
+  {
+    "id": 11,
+    "slug": "cuales-son-los-pasos-para-la-construccion-de-un-centro-comercial",
+    "destino": "/servicios/proyectos-estudio-viabilidad",
+    "motivo": "Cada sección del artículo es uno de nuestros servicios de proyectos, pero ninguno está enlazado. Primer enlace desde el blog hacia el silo /servicios.",
+    "buscar": "Es un estudio Físico económico Financiero",
+    "reemplazar": "Es un <a href=\"/servicios/proyectos-estudio-viabilidad\">estudio físico, económico y financiero</a>"
+  },
+  {
+    "id": 11,
+    "slug": "cuales-son-los-pasos-para-la-construccion-de-un-centro-comercial",
+    "destino": "/servicios/proyectos-supervision-obras",
+    "motivo": "La sección 'Supervisión de obra' describe el servicio sin enlazarlo.",
+    "buscar": "verificar el fiel cumplimiento de la normativa o anteproyecto.",
+    "reemplazar": "verificar el fiel cumplimiento de la normativa o anteproyecto. Lo detallamos en nuestro servicio de <a href=\"/servicios/proyectos-supervision-obras\">supervisión de obras</a>."
+  }
+]

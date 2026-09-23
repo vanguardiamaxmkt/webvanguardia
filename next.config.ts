@@ -69,6 +69,8 @@ const legacyPageRedirects: Record<string, string> = {
   // Artículos con slug distinto en el sitio nuevo
   "valoraciones-ifrs-niif-la-clave-para-estados-financieros-precisos-y-auditable":
     "/articulos/valoraciones-ifrs-niif-peru",
+  // Activo solo cuando se publique el artículo (hoy en borrador en /admin).
+  "guia-completa-sobre-el-calculo-del-valor-de-reposicion": "/articulos/valor-de-reposicion",
   // Institucionales
   "nosotros": "/",
   "nosotros-2": "/",
