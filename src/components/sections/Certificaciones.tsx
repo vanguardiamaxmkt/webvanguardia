@@ -5,7 +5,6 @@ export interface CertificacionItem {
   src: string;
   alt: string;
   name: string;
-  detail: string;
 }
 
 export interface CertificacionesData {
@@ -42,15 +41,12 @@ export function Certificaciones({
               <Image
                 src={item.src}
                 alt={item.alt}
-                width={1005}
-                height={428}
-                sizes="(max-width: 640px) 45vw, (max-width: 980px) 30vw, 200px"
+                width={300}
+                height={130}
+                sizes="(max-width: 560px) 44vw, (max-width: 980px) 29vw, 190px"
                 loading="lazy"
               />
-              <div className="cert-logo-txt">
-                <b>{item.name}</b>
-                <span>{item.detail}</span>
-              </div>
+              <b className="cert-logo-name">{item.name}</b>
             </li>
           ))}
         </ul>
