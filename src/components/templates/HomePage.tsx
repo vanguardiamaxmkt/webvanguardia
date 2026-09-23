@@ -10,6 +10,7 @@ import { HeroLeadForm } from "@/components/hero/HeroLeadForm";
 import { Topbar } from "@/components/layout/Topbar";
 import { Footer } from "@/components/layout/Footer";
 import { TrustStrip } from "@/components/sections/TrustStrip";
+import { Certificaciones } from "@/components/sections/Certificaciones";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Icon } from "@/components/ui/Icon";
@@ -259,6 +260,9 @@ export function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ===== Certificaciones y registros ===== */}
+        <Certificaciones data={home.certificaciones} />
 
         {/* ===== Formulario maestro ===== */}
         <section className="lead" id="cotizar">

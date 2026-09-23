@@ -172,6 +172,55 @@ export const home = {
       },
     ],
   },
+  /**
+   * Entidades ante las que los peritos están inscritos o colegiados y
+   * organismos que reconocen los informes. Los logotipos NO implican
+   * auspicio ni representación de esas instituciones.
+   */
+  certificaciones: {
+    eyebrow: "Certificaciones y registros",
+    heading: "Peritos inscritos y colegiados ante las entidades que tu trámite exige",
+    body: "Nuestros peritos están registrados en la SBS y en el Poder Judicial, y colegiados en el Colegio de Ingenieros o de Arquitectos del Perú. Los informes se emiten conforme al Reglamento Nacional de Tasaciones del Ministerio de Vivienda, Construcción y Saneamiento.",
+    items: [
+      {
+        src: "/certificaciones/sbs.webp",
+        alt: "Superintendencia de Banca, Seguros y AFP del Perú",
+        name: "SBS",
+        detail: "Peritos inscritos en el REPEV",
+      },
+      {
+        src: "/certificaciones/poder-judicial.webp",
+        alt: "Poder Judicial del Perú",
+        name: "Poder Judicial",
+        detail: "Peritos inscritos en el REPEJ",
+      },
+      {
+        src: "/certificaciones/ministerio-vivienda.webp",
+        alt: "Ministerio de Vivienda, Construcción y Saneamiento del Perú",
+        name: "Ministerio de Vivienda",
+        detail: "Reglamento Nacional de Tasaciones",
+      },
+      {
+        src: "/certificaciones/sunarp.webp",
+        alt: "SUNARP, Superintendencia Nacional de los Registros Públicos",
+        name: "SUNARP",
+        detail: "Sustento para trámites registrales",
+      },
+      {
+        src: "/certificaciones/colegio-ingenieros.webp",
+        alt: "Colegio de Ingenieros del Perú",
+        name: "Colegio de Ingenieros",
+        detail: "Profesionales colegiados y habilitados",
+      },
+      {
+        src: "/certificaciones/colegio-arquitectos.webp",
+        alt: "Colegio de Arquitectos del Perú",
+        name: "Colegio de Arquitectos",
+        detail: "Profesionales colegiados y habilitados",
+      },
+    ],
+    note: "Los logotipos corresponden a las entidades ante las que nuestros peritos están inscritos o colegiados y a los organismos que reconocen nuestros informes. No implican auspicio ni representación.",
+  },
   homologacion: {
     eyebrow: "Homologación",
     heading: "Tasaciones homologadas, útiles ante el Estado y la banca",
