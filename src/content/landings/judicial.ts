@@ -89,7 +89,7 @@ export const judicial: LandingContent = {
     },
     {
       type: "p",
-      html: "El informe expresa tanto el <b>valor comercial</b> como el <b>valor de realización</b> del bien, calculados conforme al Reglamento Nacional de Tasaciones del Perú. Esa doble valuación es la que permite sustentar acuerdos, particiones o remates con cifras defendibles ante cualquier parte del proceso.",
+      html: "El informe expresa tanto el <b>valor comercial</b> como el <b>valor de realización</b> del bien, calculados conforme al Reglamento Nacional de Tasaciones del Perú. Esa doble valuación es la que permite sustentar acuerdos, particiones o remates con cifras defendibles ante cualquier parte del proceso. Si quieres conocer cada etapa del peritaje, revisa cómo es el <a href='/articulos/tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru'>proceso de una tasación judicial en el Perú</a>.",
     },
     { type: "h3", text: "Casos en que se usa una tasación pericial" },
     {
