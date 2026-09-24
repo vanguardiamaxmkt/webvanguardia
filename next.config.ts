@@ -15,8 +15,10 @@ const legacyArticleSlugs = [
   "cuales-son-los-pasos-para-la-construccion-de-un-centro-comercial",
   "precio-de-una-tasacion-cuanto-cuesta-tasar-en-peru-lo-que-las-tasadoras-no-te-dicen",
   "que-es-la-tasacion-de-propiedades-con-ifrs",
-  "tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru",
   "tasaciones-ifrs-en-peru-descubre-el-valor-real-de-tu-empresa",
+  // Recuperado el 24-09-2026: fue la página con más tráfico del sitio anterior
+  // (abr–jun 2026: 5 475 impresiones, 64 clics).
+  "tasacion-judicial-importancia-proceso-y-aplicaciones-en-el-sistema-legal-peruano",
 ];
 
 // URLs antiguas que no tienen artículo publicado propio: los duplicados apuntan
@@ -25,8 +27,8 @@ const legacyArticleSlugs = [
 const legacyArticleAliases: Record<string, string> = {
   "tasaciones-todo-lo-que-necesitas-saber":
     "/articulos/tasaciones-de-inmuebles-guia-completa-para-valoraciones-precisas",
-  "tasacion-judicial-importancia-proceso-y-aplicaciones-en-el-sistema-legal-peruano":
-    "/articulos/tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru",
+  // Duplicado de tasacion-judicial-importancia-proceso-y-…, retirado el 24-09-2026.
+  "tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru": "/articulos/tasacion-judicial-importancia-proceso-y-aplicaciones-en-el-sistema-legal-peruano",
   "la-vivienda-sube-un-37-al-inicio-de-2022-a-la-espera-de-la-estabilizacion-de-precios": "/articulos",
   "las-tasaciones-hipotecarias-de-vivienda-aumentaron-un-5-hasta-junio-a-maximos-desde-2014": "/articulos",
   "las-tasaciones-hipotecarias-de-viviendas-se-estancan-en-la-primera-mitad-del-ano": "/articulos",
@@ -79,6 +81,11 @@ const legacyPageRedirects: Record<string, string> = {
   "libro-reclamaciones": "/libro-de-reclamaciones",
 };
 
+// Artículos retirados del blog nuevo: se consolidan en su equivalente.
+const retiredArticles: Record<string, string> = {
+  "tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru": "tasacion-judicial-importancia-proceso-y-aplicaciones-en-el-sistema-legal-peruano",
+};
+
 // Archivos de WordPress (autor, categorías, etiquetas, noticias) → índice del blog.
 const legacyBlogArchives = ["noticias", "author", "category", "tag"];
 
@@ -96,6 +103,11 @@ const legacyArticleRedirects = [
   ...Object.entries(legacyPageRedirects).map(([slug, destination]) => ({
     source: `/${slug}`,
     destination,
+    statusCode: 301,
+  })),
+  ...Object.entries(retiredArticles).map(([from, to]) => ({
+    source: `/articulos/${from}`,
+    destination: `/articulos/${to}`,
     statusCode: 301,
   })),
   ...legacyBlogArchives.flatMap((base) => [

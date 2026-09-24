@@ -27,8 +27,10 @@ export function Hero({
     <section className={`hero${variant === "service" ? " hero--service" : ""}`}>
       <div className="wrap">
         <div className="hero-copy">
-          <span className="eyebrow">{eyebrow}</span>
+          {/* El antetítulo va DENTRO del h1: aporta la keyword principal
+              ("Tasación judicial y pericial") sin cambiar el diseño. */}
           <h1>
+            <span className="eyebrow">{eyebrow}</span>{" "}
             {heading}
             {headingAccent && <span className="accent">{headingAccent}</span>}
           </h1>

@@ -12,17 +12,70 @@ import { Steps } from "@/components/sections/Steps";
 import { Prose } from "@/components/sections/Prose";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { Breadcrumb } from "@/components/sections/Breadcrumb";
+import { SiloLinks } from "@/components/sections/SiloLinks";
 import { LeadForm } from "@/components/whatsapp/LeadForm";
 import { Icon } from "@/components/ui/Icon";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { siteNav } from "@/content/site";
+import { breadcrumbListJsonLd, serviceJsonLd } from "@/lib/schema";
 
-/** Renders a complete paid-traffic landing page from its content config. */
-export function LandingPage({ content }: { content: LandingContent }) {
+/**
+ * Renders a complete landing page from its content config. Además del diseño
+ * de conversión, emite su JSON-LD (Service, FAQPage, BreadcrumbList), migas
+ * visibles, menú y enlaces a las demás páginas del silo.
+ */
+export function LandingPage({
+  content,
+  parent,
+  siblings,
+}: {
+  content: LandingContent;
+  /** Silo al que pertenece (Tasaciones / Servicios). */
+  parent: { name: string; href: string };
+  /** Demás páginas del mismo silo, para el bloque de enlaces. */
+  siblings: { label: string; href: string }[];
+}) {
+  const name = content.serviceName ?? content.hero.eyebrow;
+  const path = content.meta.canonical ?? `${parent.href}/${content.slug}`;
+
+  const jsonLd: Record<string, unknown>[] = [
+    serviceJsonLd({
+      name,
+      serviceType: name,
+      description: content.meta.description,
+      path,
+    }),
+    breadcrumbListJsonLd([
+      { name: "Inicio", path: "/" },
+      { name: parent.name, path: parent.href },
+      { name, path },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: content.faq.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    },
+  ];
+
   return (
     <WhatsAppProvider
       baseMessage={content.whatsapp.baseMessage}
       segment={content.whatsapp.segment}
     >
-      <Topbar ctaTarget="cotizar" />
+      <JsonLd data={jsonLd} />
+      <Topbar nav={siteNav} ctaTarget="cotizar" />
+      <Breadcrumb
+        items={[
+          { label: "Inicio", href: "/" },
+          { label: parent.name, href: parent.href },
+          { label: name },
+        ]}
+      />
       <main>
         <Hero
           content={content.hero}
@@ -75,6 +128,17 @@ export function LandingPage({ content }: { content: LandingContent }) {
         </section>
 
         <Faq items={content.faq.items} id="faq" />
+        <SiloLinks
+          eyebrow={parent.name === "Tasaciones" ? "Otras tasaciones" : "Otros servicios"}
+          heading={
+            parent.name === "Tasaciones"
+              ? "¿Necesitas tasar otro tipo de bien?"
+              : "Más servicios para tu proyecto"
+          }
+          parent={parent}
+          allLabel={parent.name === "Tasaciones" ? "Ver todas las tasaciones" : "Ver todos los servicios"}
+          links={siblings}
+        />
         <FinalCta data={content.finalCta} />
       </main>
       <Footer />

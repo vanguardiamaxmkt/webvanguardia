@@ -3,7 +3,8 @@
  * la API del panel /admin (el servidor sí tiene acceso a MySQL). Cada edición
  * puede traer:
  *   - "buscar" / "reemplazar": cambio dentro del campo `content`;
- *   - "campos": otros campos a sobrescribir (title, meta_title, focus_keyword…).
+ *   - "campos": otros campos a sobrescribir (title, meta_title, focus_keyword,
+ *     status, noindex…). Para publicar un borrador: status "publicado" + noindex false.
  * El resto del artículo se reenvía tal cual porque la API de actualización
  * reemplaza la fila completa.
  *
@@ -19,6 +20,7 @@ import { readFileSync } from "node:fs";
 const EDITABLES = [
   "title", "excerpt", "category", "tags", "focus_keyword",
   "meta_title", "meta_description", "og_image", "canonical_url",
+  "status", "noindex",
 ];
 
 const FILE = process.argv.find((a) => a.endsWith(".json"));
@@ -112,13 +114,13 @@ for (const [id, list] of byId) {
     category: merged.category ?? undefined,
     tags: merged.tags ?? undefined,
     author: art.author ?? undefined,
-    status: art.status,
+    status: merged.status,
     focus_keyword: merged.focus_keyword ?? undefined,
     meta_title: merged.meta_title ?? undefined,
     meta_description: merged.meta_description ?? undefined,
     og_image: merged.og_image ?? undefined,
     canonical_url: merged.canonical_url ?? undefined,
-    noindex: Boolean(art.noindex),
+    noindex: Boolean(merged.noindex),
     published_at: art.published_at ?? null,
   };
   const res = await fetch(`${BASE}/api/admin/articles/${id}`, {

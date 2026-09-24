@@ -3,6 +3,7 @@ import { DEFAULT_STATS } from "./_shared";
 
 export const estudioItf: LandingContent = {
   slug: "proyectos-estudio-itf",
+  serviceName: "Informe Técnico Favorable (ITF)",
   meta: {
     title: "Informe Técnico Favorable (ITF) | Revisor Urbano | VanguardiaMax",
     description:

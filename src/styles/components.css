@@ -314,6 +314,15 @@
 .hero--service h1 {
   font-size: clamp(31px, 4.4vw, 50px);
 }
+/* Antetítulo dentro del <h1> (ver Hero.tsx): recupera la tipografía del cuerpo
+   para verse idéntico a cuando iba fuera del título. */
+.hero h1 .eyebrow {
+  display: flex;
+  width: fit-content;
+  font-family: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+}
 /* Home: tamaño un poco menor + balance para que el título quede en 2 líneas */
 .hero--home h1 {
   font-size: clamp(30px, 4.2vw, 46px);
@@ -1011,6 +1020,48 @@
 }
 
 /* ---- Homologación (home) ----------------------------------------------- */
+/* ---- Enlaces a otras páginas del silo (landings) ------------------------ */
+.silo-links {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+}
+.silo-links .sec-h {
+  font-size: clamp(22px, 2.6vw, 28px);
+}
+.silo-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+.silo-links li a {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.silo-links li a:hover {
+  border-color: var(--gold);
+  color: var(--gold-d);
+}
+.silo-links-all {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--gold-d);
+}
+.silo-links-all:hover {
+  color: var(--gold);
+}
+
 /* ---- Certificaciones y registros (home y landings) ---------------------- */
 .certs {
   background: var(--cream);

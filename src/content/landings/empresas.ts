@@ -3,6 +3,7 @@ import { DEFAULT_STATS } from "./_shared";
 
 export const empresas: LandingContent = {
   slug: "empresas",
+  serviceName: "Tasación NIIF de activos fijos para empresas",
   meta: {
     title: "Tasación de Activos Fijos para Empresas bajo NIIF/IFRS | VanguardiaMax",
     description:

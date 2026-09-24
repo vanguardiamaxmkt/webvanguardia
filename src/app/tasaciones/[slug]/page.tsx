@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { tasacionesPages, findPage, SILO_PARENT } from "@/content/pages";
+import { tasacionesPages, findPage, siloSiblings, SILO_PARENT } from "@/content/pages";
 import { LandingPage } from "@/components/templates/LandingPage";
 import { ServicePage } from "@/components/templates/ServicePage";
 
@@ -35,7 +35,11 @@ export default async function Page({
   const entry = findPage("tasaciones", slug);
   if (!entry) notFound();
   return entry.kind === "landing" ? (
-    <LandingPage content={entry.content} />
+    <LandingPage
+      content={entry.content}
+      parent={SILO_PARENT.tasaciones}
+      siblings={siloSiblings("tasaciones", slug)}
+    />
   ) : (
     <ServicePage content={entry.content} parent={SILO_PARENT.tasaciones} />
   );

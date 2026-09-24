@@ -55,6 +55,20 @@ export const pages: PageEntry[] = [
 export const tasacionesPages = pages.filter((p) => p.silo === "tasaciones");
 export const serviciosPages = pages.filter((p) => p.silo === "servicios");
 
+/** Nombre de una página (tarjetas, migas, enlaces entre páginas del silo). */
+export function pageLabel(p: PageEntry): string {
+  return p.kind === "landing"
+    ? (p.content.serviceName ?? p.content.hero.eyebrow)
+    : p.content.breadcrumbLabel;
+}
+
+/** Demás páginas del mismo silo, como enlaces. */
+export function siloSiblings(silo: Silo, slug: string): { label: string; href: string }[] {
+  return pages
+    .filter((p) => p.silo === silo && p.content.slug !== slug)
+    .map((p) => ({ label: pageLabel(p), href: pagePath(p) }));
+}
+
 export function findPage(silo: Silo, slug: string): PageEntry | null {
   return pages.find((p) => p.silo === silo && p.content.slug === slug) ?? null;
 }

@@ -157,6 +157,12 @@ export interface WhatsAppConfig {
 export interface LandingContent {
   slug: string;
   meta: PageMeta;
+  /**
+   * Nombre del servicio para JSON-LD, migas y enlaces entre landings. Por
+   * defecto se usa `hero.eyebrow`; definirlo solo si el antetítulo no describe
+   * bien el servicio.
+   */
+  serviceName?: string;
   hero: HeroContent;
   heroCard: CertCard;
   stats: Stat[];

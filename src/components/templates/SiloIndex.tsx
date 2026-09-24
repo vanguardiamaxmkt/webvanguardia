@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { PageEntry } from "@/content/pages";
-import { pagePath } from "@/content/pages";
+import { pagePath, pageLabel } from "@/content/pages";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
 import { siteNav } from "@/content/site";
@@ -12,10 +12,6 @@ import { Faq } from "@/components/sections/Faq";
 import { JsonLd } from "@/components/ui/JsonLd";
 import type { FaqItem, ProseBlock } from "@/types/content";
 import { breadcrumbListJsonLd, serviceJsonLd } from "@/lib/schema";
-
-function label(p: PageEntry): string {
-  return p.kind === "landing" ? p.content.hero.eyebrow : p.content.breadcrumbLabel;
-}
 
 /**
  * Índice de un silo (/tasaciones o /servicios): grilla de tarjetas. Opcionalmente
@@ -86,7 +82,7 @@ export function SiloIndex({
                   <span className="seg-tag">
                     {p.silo === "tasaciones" ? "Tasación" : "Servicio"}
                   </span>
-                  <h3>{label(p)}</h3>
+                  <h3>{pageLabel(p)}</h3>
                   <p>{p.content.hero.sub}</p>
                   <span className="seg-more">
                     Ver más{" "}
