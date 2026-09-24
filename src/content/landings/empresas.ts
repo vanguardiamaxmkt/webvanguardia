@@ -11,7 +11,7 @@ export const empresas: LandingContent = {
     canonical: "/tasaciones/empresas",
   },
   hero: {
-    eyebrow: "Inventario · activos fijos",
+    eyebrow: "Inventario y valorización contable",
     heading: "Tasación de activos fijos para tu empresa ",
     headingAccent: "bajo NIIF / IFRS",
     sub: "Inventario y valorización de activos fijos para contabilidad, auditoría y seguros. Informes con sustento técnico y doble visado, reconocidos por auditores y la SBS.",
