@@ -4,9 +4,9 @@ import { ORG_PROVIDER, breadcrumbJsonLd } from "./_shared";
 export const supervisionObras: ServiceContent = {
   slug: "proyectos-supervision-obras",
   meta: {
-    title: "Supervisión de Obras y Gestión de Proyectos en Perú | VanguardiaMax",
+    title: "Supervisión de obras y gestión de proyectos | VanguardiaMax",
     description:
-      "Supervisión técnica de obras y gestión de proyectos de construcción: control de avance, calidad, valorizaciones e informes técnicos. Respaldo para financiamiento y formalización. Cobertura nacional.",
+      "Supervisión técnica de obras y gestión de proyectos: control de avance, calidad, valorizaciones e informes para financiamiento. Cobertura nacional.",
     canonical: "/servicios/proyectos-supervision-obras",
   },
   breadcrumbLabel: "Proyectos y supervisión de obras",

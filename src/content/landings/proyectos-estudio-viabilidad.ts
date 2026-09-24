@@ -4,9 +4,9 @@ import { DEFAULT_STATS } from "./_shared";
 export const estudioViabilidad: LandingContent = {
   slug: "proyectos-estudio-viabilidad",
   meta: {
-    title: "Estudio de Viabilidad de Proyectos Inmobiliarios | VanguardiaMax",
+    title: "Estudio de viabilidad inmobiliaria | VanguardiaMax",
     description:
-      "Estudio de viabilidad y factibilidad para tu proyecto inmobiliario: análisis técnico, económico-financiero, comercial y legal, con flujo de caja, VAN y TIR. Decide con sustento antes de invertir. Conversemos por WhatsApp.",
+      "Estudio de viabilidad de tu proyecto inmobiliario: análisis técnico, financiero, comercial y legal, con flujo de caja, VAN y TIR. Decide antes de invertir.",
     canonical: "/servicios/proyectos-estudio-viabilidad",
   },
   hero: {

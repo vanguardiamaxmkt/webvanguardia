@@ -5,7 +5,7 @@ export const saneamientoInmobiliario: LandingContent = {
   meta: {
     title: "Saneamiento Inmobiliario y Físico-Legal | VanguardiaMax",
     description:
-      "Saneamiento físico-legal de predios: independización, prescripción adquisitiva, regularización de fábrica, rectificación de áreas e inscripción en SUNARP. Deja tu propiedad inscrita y con titularidad clara. Consulta por WhatsApp.",
+      "Saneamiento físico-legal de predios: independización, prescripción adquisitiva, regularización de fábrica y rectificación de áreas e inscripción en SUNARP.",
     canonical: "/servicios/saneamiento-inmobiliario",
   },
   hero: {
@@ -85,6 +85,43 @@ export const saneamientoInmobiliario: LandingContent = {
       },
     ],
   },
+  seoContent: [
+    { type: "h2", text: "¿Qué es el saneamiento inmobiliario o físico-legal?" },
+    {
+      type: "p",
+      html: "El <b>saneamiento inmobiliario</b> —también llamado <b>saneamiento físico-legal</b>— es el conjunto de trámites que pone de acuerdo la realidad de un predio con lo que figura en SUNARP y en la municipalidad: sus áreas, linderos y construcciones (parte física) y la titularidad de su propietario (parte legal). Termina cuando el predio queda <b>inscrito en SUNARP a nombre de su dueño</b>, sin observaciones, y puede venderse, heredarse, hipotecarse u ofrecerse en garantía.",
+    },
+    {
+      type: "p",
+      html: "La parte física corrige lo material: áreas que no coinciden con la partida, linderos mal descritos o una edificación que nunca se declaró. La parte legal ordena el derecho: que quien posee o compró el predio figure como propietario en el registro y que no queden cargas pendientes. En la práctica ambas se trabajan juntas, porque una observación en cualquiera de las dos bloquea la inscripción.",
+    },
+    { type: "h3", text: "Trámites de saneamiento más frecuentes" },
+    {
+      type: "ul",
+      items: [
+        "<b>Primera inscripción de dominio</b> — para predios que nunca accedieron al registro.",
+        "<b>Prescripción adquisitiva y título supletorio</b> — cuando el poseedor no tiene un título inscribible a su nombre.",
+        "<b>Regularización de fábrica</b> — declaratoria de la edificación construida sin licencia, conforme a la Ley Nº 27157.",
+        "<b>Independización y subdivisión</b> — para inscribir por separado departamentos, lotes o secciones de un mismo inmueble.",
+        "<b>Rectificación de áreas y linderos</b> — cuando la medida real del predio no coincide con la inscrita.",
+        "<b>Levantamiento de cargas y gravámenes</b> — hipotecas, embargos u otras anotaciones que ya no deberían figurar.",
+      ],
+    },
+    { type: "h3", text: "Cuándo conviene sanear tu predio" },
+    {
+      type: "ul",
+      items: [
+        "<b>Antes de vender</b> — el comprador y su banco exigen un predio inscrito y sin observaciones.",
+        "<b>En una herencia</b> — para que los herederos puedan inscribir y repartir el bien; si hay que asignarle un valor, lo complementa una <a href='/tasaciones/judicial'>tasación judicial</a>.",
+        "<b>Para obtener financiamiento</b> — un inmueble saneado puede ofrecerse en garantía hipotecaria.",
+        "<b>Si el autovalúo no coincide con la realidad</b> — áreas y construcciones mal declaradas también afectan tu <a href='/tasaciones/impuesto-predial'>impuesto predial</a>.",
+      ],
+    },
+    {
+      type: "p",
+      html: "Todo saneamiento empieza por un diagnóstico: revisamos la partida registral, los planos y los documentos del predio para definir la ruta que corresponde a tu caso. Cuando las áreas o linderos están en duda, la <a href='/servicios/auditoria-planos'>auditoría de planos</a> aporta el sustento técnico que pide el registro. Cuéntanos la situación de tu predio por <b>WhatsApp</b> y te orientamos el mismo día.",
+    },
+  ],
   form: {
     bullets: [
       "Respuesta el mismo día por WhatsApp",
@@ -137,8 +174,8 @@ export const saneamientoInmobiliario: LandingContent = {
   faq: {
     items: [
       {
-        q: "¿Qué es el saneamiento físico-legal?",
-        a: "Es el proceso de regularizar la situación física (áreas, linderos, fábrica) y legal (titularidad e inscripción) de un predio hasta dejarlo inscrito en SUNARP a nombre del propietario.",
+        q: "¿En qué se diferencia el saneamiento físico del legal?",
+        a: "El saneamiento físico corrige la realidad material del predio frente al registro (áreas, linderos y fábrica); el legal ordena la titularidad para que el propietario figure inscrito en SUNARP sin cargas pendientes. Normalmente se trabajan juntos.",
       },
       {
         q: "¿Sirve si mi propiedad no está inscrita?",

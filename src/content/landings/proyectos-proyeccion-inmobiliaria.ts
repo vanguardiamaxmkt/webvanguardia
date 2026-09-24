@@ -4,9 +4,9 @@ import { DEFAULT_STATS } from "./_shared";
 export const proyeccionInmobiliaria: LandingContent = {
   slug: "proyectos-proyeccion-inmobiliaria",
   meta: {
-    title: "Proyección Inmobiliaria | Mejor y Mayor Uso y Rentabilidad | VanguardiaMax",
+    title: "Proyección inmobiliaria: mejor y mayor uso | VanguardiaMax",
     description:
-      "Proyección inmobiliaria de tu terreno o inmueble: análisis de mejor y mayor uso, proyección de valor, absorción de mercado y rentabilidad del proyecto. Conversa tu proyecto por WhatsApp.",
+      "Proyección inmobiliaria de tu terreno o inmueble: mejor y mayor uso, proyección de valor, absorción de mercado y rentabilidad. Conversa tu proyecto.",
     canonical: "/servicios/proyectos-proyeccion-inmobiliaria",
   },
   hero: {

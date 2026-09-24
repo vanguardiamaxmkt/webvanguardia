@@ -5,9 +5,9 @@ export const estudioItf: LandingContent = {
   slug: "proyectos-estudio-itf",
   serviceName: "Informe Técnico Favorable (ITF)",
   meta: {
-    title: "Informe Técnico Favorable (ITF) | Revisor Urbano | VanguardiaMax",
+    title: "Informe Técnico Favorable (ITF) | VanguardiaMax",
     description:
-      "Informe Técnico Favorable (ITF) emitido por Revisores Urbanos para acelerar tu licencia de edificación. Conforme al Reglamento Nacional de Edificaciones (RNE), sin las demoras de la comisión técnica. Cotiza por WhatsApp.",
+      "Informe Técnico Favorable (ITF) emitido por Revisores Urbanos para acelerar tu licencia de edificación, conforme al Reglamento Nacional de Edificaciones.",
     canonical: "/servicios/proyectos-estudio-itf",
   },
   hero: {

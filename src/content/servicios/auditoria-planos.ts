@@ -4,9 +4,9 @@ import { ORG_PROVIDER, breadcrumbJsonLd } from "./_shared";
 export const auditoriaPlanos: ServiceContent = {
   slug: "auditoria-planos",
   meta: {
-    title: "Auditoría y Revisión Técnica de Planos en Perú | VanguardiaMax",
+    title: "Auditoría y revisión técnica de planos | VanguardiaMax",
     description:
-      "Auditoría y revisión técnica de planos de arquitectura, estructuras e instalaciones: verificación de áreas, linderos y conformidad normativa para licencias, saneamiento, compraventa y due diligence. Peritos certificados.",
+      "Revisión técnica de planos de arquitectura, estructuras e instalaciones: áreas, linderos y normativa para licencias, saneamiento y compraventa.",
     canonical: "/servicios/auditoria-planos",
   },
   breadcrumbLabel: "Auditoría de planos",

@@ -14,6 +14,8 @@ import { Certificaciones } from "@/components/sections/Certificaciones";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Icon } from "@/components/ui/Icon";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { faqPageJsonLd } from "@/lib/schema";
 
 export function HomePage() {
   return (
@@ -21,6 +23,7 @@ export function HomePage() {
       baseMessage={home.whatsapp.baseMessage}
       segment={home.whatsapp.segment}
     >
+      <JsonLd data={[faqPageJsonLd(home.faq.items)]} />
       <Topbar variant="home" nav={homeNav} ctaTarget="cotizar" />
       <main>
         {/* ===== Hero ===== */}
