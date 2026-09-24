@@ -5,7 +5,7 @@ import { SiloIndex } from "@/components/templates/SiloIndex";
 export const metadata: Metadata = {
   title: "Servicios técnicos e inmobiliarios | VanguardiaMax",
   description:
-    "Servicios complementarios de VanguardiaMax: saneamiento inmobiliario, auditoría de planos, impuesto predial y municipal, y supervisión de obras. Cobertura nacional con peritos certificados.",
+    "Saneamiento inmobiliario, auditoría de planos, supervisión de obras, estudios de viabilidad e ITF para tu predio o proyecto. Cobertura nacional.",
   alternates: { canonical: "/servicios" },
 };
 
