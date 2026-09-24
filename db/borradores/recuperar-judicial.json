@@ -1,0 +1,20 @@
+[
+  {
+    "id": 15,
+    "slug": "tasacion-judicial-importancia-proceso-y-aplicaciones-en-el-sistema-legal-peruano",
+    "motivo": "Su URL antigua fue la página con más tráfico del sitio anterior (abr–jun 2026: 5 475 impresiones, 64 clics). En la migración quedó en borrador por ser casi idéntico al id 14; se publica en su propia URL y el id 14 se retira con 301 hacia este. Palabra clave foco informativa para no competir con la landing /tasaciones/judicial.",
+    "campos": {
+      "status": "publicado",
+      "noindex": false,
+      "focus_keyword": "qué es una tasación judicial",
+      "meta_title": "¿Qué es una tasación judicial? Proceso y usos en el Perú"
+    }
+  },
+  {
+    "id": 15,
+    "destino": "/tasaciones/judicial",
+    "motivo": "El artículo no tenía ningún enlace; reemplaza al enlace que tenía el id 14 hacia el servicio.",
+    "buscar": "contar con una tasación adecuada es esencial",
+    "reemplazar": "contar con una <a href=\"/tasaciones/judicial\">tasación judicial con validez legal</a> es esencial"
+  }
+]

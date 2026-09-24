@@ -1,0 +1,50 @@
+[
+  {
+    "id": 10,
+    "slug": "tasaciones-de-inmuebles-guia-completa-para-valoraciones-precisas",
+    "motivo": "Canibalización con /tasaciones: el artículo apuntaba a 'tasaciones de inmuebles' en title, H1, meta y palabra clave foco. Se reorienta a lo que realmente explica: cómo se calcula el valor de un inmueble (factores y métodos). Se conserva la URL para no añadir otra redirección, y se mantiene su enlace a /tasaciones con el ancla 'la tasación de inmuebles', que refuerza a /tasaciones como dueña del término.",
+    "campos": {
+      "title": "Cómo se calcula el valor de un inmueble: factores y métodos de valoración",
+      "meta_title": "Valor de un inmueble: factores y métodos de valoración",
+      "meta_description": "Factores que determinan el valor de un inmueble (ubicación, estado, tamaño y mercado) y cómo lo calcula un tasador: métodos comparativo, de costo y de renta.",
+      "focus_keyword": "valor de un inmueble",
+      "excerpt": "Ubicación, estado, tamaño y mercado: los factores que determinan el valor de un inmueble y los tres métodos con los que un tasador lo calcula.",
+      "tags": "valor de un inmueble, métodos de valoración, tasador profesional"
+    }
+  },
+  {
+    "id": 10,
+    "buscar": "<h2>Introducción a las Tasaciones de Inmuebles</h2>",
+    "reemplazar": "<h2>¿De qué depende el valor de un inmueble?</h2>"
+  },
+  {
+    "id": 10,
+    "buscar": "<h2>Importancia de las Tasaciones de Inmuebles</h2>",
+    "reemplazar": "<h2>Por qué importa calcular bien el valor</h2>"
+  },
+  {
+    "id": 10,
+    "buscar": "<h2>Factores que Influyen en la Tasación de Inmuebles</h2>",
+    "reemplazar": "<h2>Factores que influyen en el valor de un inmueble</h2>"
+  },
+  {
+    "id": 10,
+    "buscar": "<h2>Proceso de Tasación de Inmuebles</h2>",
+    "reemplazar": "<h2>Métodos para calcular el valor de un inmueble</h2>"
+  },
+  {
+    "id": 10,
+    "buscar": "El método comparativo es común en la <strong>tasación de inmuebles</strong>.",
+    "reemplazar": "El método comparativo es el más usado para calcular el <strong>valor de un inmueble</strong>."
+  },
+  {
+    "id": 10,
+    "buscar": "<h2>Importancia de Contratar a un Tasador Profesional</h2>",
+    "reemplazar": "<h2>Por qué contratar a un tasador profesional</h2>"
+  },
+  {
+    "id": 10,
+    "buscar": "<p>La tasación de inmuebles es un proceso complejo que requiere",
+    "reemplazar": "<p>Calcular el valor de un inmueble es un proceso complejo que requiere"
+  }
+]

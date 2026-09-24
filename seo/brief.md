@@ -32,7 +32,16 @@ Silos del sitio:
 - +25 años de experiencia, cobertura nacional (home).
 - Valores entregados: comercial, de realización y asegurable (tarjeta del hero).
 
-Cualquier otra cifra (plazos por servicio, requisitos por banco, vigencia de la tasación) **no está verificada**: marcarla como pendiente antes de publicarla.
+**Confirmadas por el negocio el 24-09-2026** (tras la auditoría `seo/auditoria-schema-geo-2026-09.md`):
+
+- **+10 mil tasaciones** realizadas.
+- **SBS · empresa autenticada** / "Autenticado por la SBS".
+- **Doble visado** de los informes.
+- **Vigencia de la tasación: 1 año.**
+- **Presencia en Chile y México** (además de cobertura nacional en el Perú).
+- **Tasación homologada ante la SBS** (hipotecaria).
+
+Cualquier otra cifra (plazos por servicio distintos del express de 24 h, requisitos por banco) **no está verificada**: marcarla como pendiente antes de publicarla.
 
 ## Mercado e idioma
 

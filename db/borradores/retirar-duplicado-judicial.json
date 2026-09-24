@@ -1,0 +1,8 @@
+[
+  {
+    "id": 14,
+    "slug": "tasacion-judicial-evaluacion-tecnica-para-procesos-legales-en-el-peru",
+    "motivo": "Duplicado del id 15 (recuperado el 24-09-2026). Sus URLs redirigen con 301 al id 15 (next.config.ts: retiredArticles y legacyArticleAliases).",
+    "campos": { "status": "borrador", "noindex": true }
+  }
+]
