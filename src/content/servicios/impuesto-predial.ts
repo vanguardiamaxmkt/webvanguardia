@@ -4,9 +4,9 @@ import { ORG_PROVIDER, breadcrumbJsonLd } from "./_shared";
 export const impuestoPredial: ServiceContent = {
   slug: "impuesto-predial",
   meta: {
-    title: "Impuesto Predial y Arbitrios Municipales: Asesoría y Revisión | VanguardiaMax",
+    title: "Revisión de impuesto predial y arbitrios | VanguardiaMax",
     description:
-      "Asesoría en impuesto predial y arbitrios municipales en el Perú: revisión y rectificación del autovalúo (PU/HR), reclamos por cobros indebidos y beneficios para pensionistas y adultos mayores. Paga lo justo.",
+      "Revisión del autovalúo (PU/HR) y reclamos por cobros indebidos en tu impuesto predial y arbitrios municipales. Paga lo justo, ni más ni menos.",
     canonical: "/tasaciones/impuesto-predial",
   },
   breadcrumbLabel: "Impuesto predial y municipal",
@@ -51,7 +51,7 @@ export const impuestoPredial: ServiceContent = {
   prose: [
     {
       type: "h2",
-      text: "Impuesto predial y arbitrios municipales: paga lo que corresponde",
+      text: "¿Qué es el impuesto predial y cómo se calcula?",
     },
     {
       type: "p",
@@ -193,51 +193,5 @@ export const impuestoPredial: ServiceContent = {
       name: "Tasaciones",
       href: "/tasaciones",
     }),
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "¿Cómo se calcula el impuesto predial?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Se calcula sobre el autovalúo del predio, que resulta de la Declaración Jurada (formularios PU y HR) aplicando los valores arancelarios del terreno y los valores unitarios oficiales de construcción. Sobre esa base imponible se aplica la escala progresiva del impuesto.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Qué son el PU y el HR?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Son los formularios de la Declaración Jurada del impuesto predial: el PU registra los datos del terreno y la construcción, y el HR consolida la información del contribuyente y sus predios. De ellos depende el autovalúo.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Existe un beneficio para pensionistas o adultos mayores?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. La ley reconoce una deducción sobre la base imponible del impuesto predial para pensionistas y para adultos mayores no pensionistas que cumplan los requisitos, respecto del predio que constituye su única propiedad y vivienda.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Puedo reclamar un cobro indebido?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Si el autovalúo tiene errores o se cobran arbitrios que no corresponden, se puede presentar la rectificación o el reclamo ante la municipalidad con el debido sustento técnico.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Garantizan que bajará mi impuesto?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No se promete una reducción fija. Se realiza una revisión del autovalúo y de los beneficios aplicables; si hay errores o derechos no aplicados, se corrigen para pagar lo justo. El resultado depende de cada caso y municipalidad.",
-          },
-        },
-      ],
-    },
   ],
 };

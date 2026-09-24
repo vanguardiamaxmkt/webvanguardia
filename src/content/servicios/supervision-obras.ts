@@ -180,43 +180,5 @@ export const supervisionObras: ServiceContent = {
       "Proyectos y supervisión de obras",
       "/servicios/proyectos-supervision-obras",
     ),
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "¿Qué hace un supervisor de obra?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Controla de forma independiente que la construcción se ejecute conforme al proyecto, el cronograma, el presupuesto y las normas de calidad, emitiendo valorizaciones e informes técnicos del avance.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿La supervisión sirve como respaldo para financiamiento?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Las valorizaciones de obra y los informes de avance permiten sustentar el estado de la construcción ante una entidad financiera o un fondo, lo que respalda los desembolsos del proyecto.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Atienden obras fuera de Lima?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Contamos con cobertura nacional y coordinamos la supervisión según la ubicación y la escala de la obra.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Pueden hacer la liquidación de la obra?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Realizamos el cierre técnico y económico de la obra, con la documentación necesaria para la formalización y la conformidad.",
-          },
-        },
-      ],
-    },
   ],
 };

@@ -6,7 +6,7 @@ export const vehiculos: LandingContent = {
   meta: {
     title: "Tasación de Vehículos y Maquinarias | VanguardiaMax",
     description:
-      "Valor comercial real de vehículos, maquinaria y activos fijos. Para crédito con garantía, compra-venta, seguros, contabilidad (NIIF/IFRS) y procesos judiciales. Cotiza por WhatsApp.",
+      "Valor comercial real de autos, camiones y maquinaria para crédito con garantía, compraventa, seguros o procesos judiciales. Cotiza por WhatsApp.",
     canonical: "/tasaciones/vehicular",
   },
   hero: {

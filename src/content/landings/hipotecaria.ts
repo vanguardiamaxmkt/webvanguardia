@@ -6,7 +6,7 @@ export const hipotecaria: LandingContent = {
   meta: {
     title: "Tasación Hipotecaria Express en 24 h | VanguardiaMax",
     description:
-      "Tasación de tu inmueble lista para el banco en 24 horas. Valor comercial y de realización, homologada SBS y conforme al Reglamento Nacional de Tasaciones. Cotiza por WhatsApp.",
+      "Tasación de tu inmueble lista para el banco en 24 horas: valor comercial y de realización, homologada SBS y conforme al Reglamento Nacional de Tasaciones.",
     canonical: "/tasaciones/hipotecaria",
   },
   hero: {

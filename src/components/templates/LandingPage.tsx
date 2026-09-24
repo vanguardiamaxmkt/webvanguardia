@@ -1,4 +1,4 @@
-import type { LandingContent } from "@/types/content";
+import type { LandingContent, ProseBlock } from "@/types/content";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
 import { Footer } from "@/components/layout/Footer";
@@ -18,7 +18,28 @@ import { LeadForm } from "@/components/whatsapp/LeadForm";
 import { Icon } from "@/components/ui/Icon";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { siteNav } from "@/content/site";
-import { breadcrumbListJsonLd, serviceJsonLd } from "@/lib/schema";
+import { breadcrumbListJsonLd, faqPageJsonLd, serviceJsonLd } from "@/lib/schema";
+
+/**
+ * Separa la definición del servicio (primer H2 "¿Qué es…?" y su primer párrafo)
+ * del resto del contenido SEO, para mostrarla arriba: es lo primero que un
+ * motor de IA encuentra y cita. Si el resto queda sin H2 inicial, se le añade
+ * uno para que no quede texto huérfano.
+ */
+function splitDefinition(blocks: ProseBlock[] | undefined, serviceName: string) {
+  if (!blocks?.length) return { definition: null, rest: blocks };
+  const i = blocks.findIndex((b) => b.type === "h2" && /^¿\s*Qu[eé] es/i.test(b.text));
+  const heading = blocks[i];
+  const answer = blocks[i + 1];
+  if (i < 0 || heading?.type !== "h2" || answer?.type !== "p") {
+    return { definition: null, rest: blocks };
+  }
+  let rest = blocks.filter((_, k) => k !== i && k !== i + 1);
+  if (rest.length > 0 && rest[0].type !== "h2") {
+    rest = [{ type: "h2", text: `${serviceName}: lo que debes saber` }, ...rest];
+  }
+  return { definition: { heading: heading.text, html: answer.html }, rest };
+}
 
 /**
  * Renders a complete landing page from its content config. Además del diseño
@@ -38,6 +59,7 @@ export function LandingPage({
 }) {
   const name = content.serviceName ?? content.hero.eyebrow;
   const path = content.meta.canonical ?? `${parent.href}/${content.slug}`;
+  const { definition, rest: seoRest } = splitDefinition(content.seoContent, name);
 
   const jsonLd: Record<string, unknown>[] = [
     serviceJsonLd({
@@ -51,15 +73,7 @@ export function LandingPage({
       { name: parent.name, path: parent.href },
       { name, path },
     ]),
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: content.faq.items.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: { "@type": "Answer", text: item.a },
-      })),
-    },
+    faqPageJsonLd(content.faq.items),
   ];
 
   return (
@@ -83,6 +97,14 @@ export function LandingPage({
           ctaTarget="cotizar"
         />
         <TrustStrip stats={content.stats} />
+        {definition && (
+          <section className="definition" aria-labelledby="que-es">
+            <div className="wrap">
+              <h2 id="que-es">{definition.heading}</h2>
+              <p dangerouslySetInnerHTML={{ __html: definition.html }} />
+            </div>
+          </section>
+        )}
         {content.pain && (
           <Pain
             eyebrow={content.pain.eyebrow}
@@ -101,7 +123,7 @@ export function LandingPage({
           items={content.steps.items}
         />
 
-        {content.seoContent && <Prose blocks={content.seoContent} alt />}
+        {seoRest && seoRest.length > 0 && <Prose blocks={seoRest} alt />}
 
         <section className="lead" id="cotizar">
           <div className="wrap lead-grid">

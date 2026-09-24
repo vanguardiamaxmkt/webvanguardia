@@ -6,7 +6,7 @@ export const embarcaciones: ServiceContent = {
   meta: {
     title: "Tasación de Embarcaciones y Naves en Perú | VanguardiaMax",
     description:
-      "Tasación y peritaje de embarcaciones, naves y artefactos navales en el Perú: pesqueras, yates, lanchas y remolcadores. Valorización para compraventa, garantía, seguros y procesos judiciales. Peritos certificados, cobertura nacional.",
+      "Tasación de embarcaciones en el Perú: pesqueras, yates, lanchas y remolcadores, para compraventa, garantía, seguros o juicios. Cobertura nacional.",
     canonical: "/tasaciones/embarcaciones",
   },
   breadcrumbLabel: "Tasación de embarcaciones",
@@ -182,51 +182,5 @@ export const embarcaciones: ServiceContent = {
       name: "Tasaciones",
       href: "/tasaciones",
     }),
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "¿Qué tipo de embarcaciones pueden tasar?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Tasamos embarcaciones pesqueras artesanales e industriales, yates y embarcaciones de recreo, lanchas, botes, remolcadores y artefactos navales como pontones y plataformas flotantes.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿La tasación sirve para un seguro o una garantía?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Los informes sirven para fijar la suma asegurada de una póliza y para respaldar la embarcación como garantía en operaciones de financiamiento, ya que son reconocidos por aseguradoras y entidades financieras.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Cómo se determina el valor de una embarcación?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Se evalúan la antigüedad, el estado del casco y la motorización, el equipamiento, el tipo de uso y las condiciones del mercado, concluyendo un valor comercial y de realización conforme al Reglamento Nacional de Tasaciones.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Qué documentos necesito?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Generalmente el certificado de matrícula, el certificado de arqueo, documentos de propiedad y, si corresponde, el permiso de pesca.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Por cuánto tiempo es válida la tasación?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Las tasaciones tienen una validez referencial de 1 año; pasado ese plazo conviene actualizar el valor a las condiciones del mercado.",
-          },
-        },
-      ],
-    },
   ],
 };

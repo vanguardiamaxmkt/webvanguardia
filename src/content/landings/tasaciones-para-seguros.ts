@@ -4,9 +4,9 @@ import { DEFAULT_STATS } from "./_shared";
 export const tasacionesParaSeguros: LandingContent = {
   slug: "para-seguros",
   meta: {
-    title: "Tasación para Seguros: Valor Asegurable y Suma Asegurada | VanguardiaMax",
+    title: "Tasación para seguros: valor asegurable | VanguardiaMax",
     description:
-      "Tasación para seguros que define la suma asegurada correcta según el valor de reposición a nuevo. Evita el infraseguro y la regla proporcional, y sustenta tus siniestros. Cotiza por WhatsApp.",
+      "Tasación para seguros que fija la suma asegurada según el valor de reposición a nuevo. Evita el infraseguro y respalda tus siniestros. Cotiza por WhatsApp.",
     canonical: "/tasaciones/para-seguros",
   },
   hero: {

@@ -14,6 +14,8 @@ import { Faq } from "@/components/sections/Faq";
 import { Related } from "@/components/sections/Related";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { site } from "@/content/site";
+import { faqPageJsonLd } from "@/lib/schema";
 
 /** Renders a complete SEO service page from its content config. */
 export function ServicePage({
@@ -24,12 +26,24 @@ export function ServicePage({
   /** Breadcrumb parent (silo): Servicios por defecto, Tasaciones para embarcaciones. */
   parent?: { name: string; href: string };
 }) {
+  const path = content.meta.canonical ?? `${parent.href}/${content.slug}`;
+  // El FAQPage escrito a mano en cada archivo se reemplaza por uno generado
+  // desde las preguntas visibles; al Service se le completa la url si falta.
+  const jsonLd = [
+    ...content.jsonLd
+      .filter((block) => block["@type"] !== "FAQPage")
+      .map((block) =>
+        block["@type"] === "Service" && !block.url ? { ...block, url: `${site.url}${path}` } : block,
+      ),
+    faqPageJsonLd(content.faq.items),
+  ];
+
   return (
     <WhatsAppProvider
       baseMessage={content.whatsapp.baseMessage}
       segment={content.whatsapp.segment}
     >
-      <JsonLd data={content.jsonLd} />
+      <JsonLd data={jsonLd} />
       <Topbar nav={siteNav} />
       <Breadcrumb
         items={[

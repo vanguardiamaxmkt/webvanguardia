@@ -4,9 +4,9 @@ import { DEFAULT_STATS } from "./_shared";
 export const judicial: LandingContent = {
   slug: "judicial",
   meta: {
-    title: "Tasación Judicial y Pericial con Validez Legal | VanguardiaMax",
+    title: "Tasación judicial y pericial en el Perú | VanguardiaMax",
     description:
-      "Peritaje y tasación con validez legal para procesos judiciales, herencias, divorcios y gestión notarial. Peritos certificados, informes reconocidos por juzgados. Consulta por WhatsApp.",
+      "Tasación judicial y peritaje con validez legal para juicios, herencias, divorcios y trámites notariales. Informes reconocidos por juzgados. Cotiza hoy.",
     canonical: "/tasaciones/judicial",
   },
   hero: {

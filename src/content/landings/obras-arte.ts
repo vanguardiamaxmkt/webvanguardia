@@ -4,9 +4,9 @@ import { DEFAULT_STATS } from "./_shared";
 export const obrasArte: LandingContent = {
   slug: "obras-arte",
   meta: {
-    title: "Tasación de Obras de Arte y Antigüedades en Perú | VanguardiaMax",
+    title: "Tasación de obras de arte y antigüedades | VanguardiaMax",
     description:
-      "Valuación de obras de arte por peritos especializados: pinturas, esculturas, antigüedades y colecciones. Evaluamos autoría, autenticidad y procedencia, con valor de mercado y de reposición. Cotiza por WhatsApp.",
+      "Tasación de pinturas, esculturas, antigüedades y colecciones por peritos especializados: autoría, autenticidad y valor de mercado. Cotiza por WhatsApp.",
     canonical: "/tasaciones/obras-arte",
   },
   hero: {

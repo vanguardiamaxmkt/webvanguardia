@@ -4,9 +4,9 @@ import { DEFAULT_STATS } from "./_shared";
 export const activosFijos: LandingContent = {
   slug: "activos-fijos",
   meta: {
-    title: "Tasación de Activos Fijos: Maquinaria, Equipos y Plantas | VanguardiaMax",
+    title: "Tasación de activos fijos, equipos y plantas | VanguardiaMax",
     description:
-      "Tasación de activos fijos —maquinaria, equipos industriales, plantas y bienes muebles— para garantía de financiamiento, seguros y compraventa. Peritos certificados con informes reconocidos por bancos y aseguradoras. Consulta por WhatsApp.",
+      "Tasación de maquinaria, equipos, plantas y bienes muebles para garantías, seguros y compraventa. Informes reconocidos por bancos y aseguradoras. Cotiza.",
     canonical: "/tasaciones/activos-fijos",
   },
   hero: {

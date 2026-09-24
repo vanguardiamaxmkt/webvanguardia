@@ -93,6 +93,22 @@ export function serviceJsonLd(s: {
   };
 }
 
+/**
+ * FAQPage generado SIEMPRE desde las preguntas visibles de la página: Google
+ * exige que el marcado coincida con lo que ve el usuario.
+ */
+export function faqPageJsonLd(items: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}
+
 /** Migas de pan a partir de una lista [nombre, ruta]. */
 export function breadcrumbListJsonLd(items: { name: string; path: string }[]) {
   return {

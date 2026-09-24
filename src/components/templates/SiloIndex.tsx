@@ -11,7 +11,7 @@ import { Prose } from "@/components/sections/Prose";
 import { Faq } from "@/components/sections/Faq";
 import { JsonLd } from "@/components/ui/JsonLd";
 import type { FaqItem, ProseBlock } from "@/types/content";
-import { breadcrumbListJsonLd, serviceJsonLd } from "@/lib/schema";
+import { breadcrumbListJsonLd, faqPageJsonLd, serviceJsonLd } from "@/lib/schema";
 
 /**
  * Índice de un silo (/tasaciones o /servicios): grilla de tarjetas. Opcionalmente
@@ -44,15 +44,7 @@ export function SiloIndex({
   /** Service JSON-LD de la página, cuando el índice es en sí un servicio. */
   service?: Parameters<typeof serviceJsonLd>[0];
 }) {
-  const faqJsonLd = faq && {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faq.items.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
+  const faqJsonLd = faq && faqPageJsonLd(faq.items);
 
   const jsonLd: Record<string, unknown>[] = [
     breadcrumbListJsonLd([

@@ -6,7 +6,7 @@ export const fiduciarias: LandingContent = {
   meta: {
     title: "Tasación Fiduciaria para Fideicomiso | VanguardiaMax",
     description:
-      "Tasación fiduciaria independiente del patrimonio fideicometido: inmuebles, terrenos y activos para fideicomiso de garantía, titulización y financiamiento estructurado. Peritos inscritos, conforme al Reglamento Nacional de Tasaciones. Cotiza por WhatsApp.",
+      "Tasación fiduciaria independiente de inmuebles y activos para fideicomisos de garantía y titulización, conforme al Reglamento Nacional de Tasaciones.",
     canonical: "/tasaciones/fiduciarias",
   },
   hero: {

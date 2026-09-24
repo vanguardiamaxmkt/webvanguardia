@@ -6,7 +6,7 @@ export const agricolas: LandingContent = {
   meta: {
     title: "Tasación de Predios Agrícolas en Perú | VanguardiaMax",
     description:
-      "Tasación de predios agrícolas, fundos y parcelas: valor comercial y de realización de la tierra, cultivos, riego e infraestructura, conforme al Reglamento Nacional de Tasaciones. Cotiza por WhatsApp.",
+      "Tasación de predios agrícolas, fundos y parcelas: tierra, cultivos, riego e infraestructura, conforme al Reglamento Nacional de Tasaciones. Cotiza hoy.",
     canonical: "/tasaciones/agricolas",
   },
   hero: {

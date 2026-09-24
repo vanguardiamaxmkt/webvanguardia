@@ -183,43 +183,5 @@ export const auditoriaPlanos: ServiceContent = {
         "Auditoría y revisión técnica de planos de arquitectura, estructuras e instalaciones, con verificación de áreas y conformidad normativa para licencias, saneamiento, compraventa y due diligence.",
     },
     breadcrumbJsonLd("Auditoría de planos", "/servicios/auditoria-planos"),
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "¿Qué incluye una auditoría de planos?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Incluye la revisión de planos de arquitectura, estructuras e instalaciones, el contraste de áreas y medidas perimétricas con la partida registral, y la verificación de conformidad frente al Reglamento Nacional de Edificaciones y los parámetros municipales, con un informe de observaciones.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Sirve para tramitar una licencia o conformidad de obra?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Auditar los planos antes de presentarlos ayuda a evitar observaciones que retrasan la licencia de edificación o la conformidad de obra y reduce reprocesos ante la municipalidad.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Detectan discrepancias de áreas?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Se contrasta el área y los linderos de los planos con lo inscrito en SUNARP y con la realidad construida, para identificar diferencias que conviene corregir antes de un saneamiento o compraventa.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Es lo mismo que una tasación?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No. La tasación determina el valor del bien, mientras que la auditoría de planos verifica su correcta representación técnica y documental. Son servicios complementarios.",
-          },
-        },
-      ],
-    },
   ],
 };

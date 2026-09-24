@@ -5,9 +5,9 @@ export const empresas: LandingContent = {
   slug: "empresas",
   serviceName: "Tasación NIIF de activos fijos para empresas",
   meta: {
-    title: "Tasación de Activos Fijos para Empresas bajo NIIF/IFRS | VanguardiaMax",
+    title: "Tasación NIIF de activos fijos para empresas | VanguardiaMax",
     description:
-      "Inventario y tasación de activos fijos bajo NIIF/IFRS para estados financieros, contabilidad, auditoría y toma de seguros. Equipos descentralizados con doble visado a nivel nacional. Agenda por WhatsApp.",
+      "Tasación NIIF/IFRS e inventario de activos fijos para estados financieros, contabilidad y auditoría. Doble visado y cobertura nacional. Agenda hoy.",
     canonical: "/tasaciones/empresas",
   },
   hero: {
@@ -83,8 +83,8 @@ export const empresas: LandingContent = {
     ],
   },
   seoContent: [
-    { type: "h2", text: "Tasación de activos fijos para empresas bajo NIIF/IFRS" },
-    { type: "p", html: "La <b>tasación de activos fijos para empresas</b> es un requisito clave para que tus estados financieros reflejen la realidad económica de tu compañía conforme a las <b>NIIF / IFRS</b>. A diferencia de una valorización referencial, una tasación con enfoque contable determina el <b>valor razonable</b> de tu maquinaria, equipos, inmuebles, mobiliario y vehículos siguiendo los criterios de la NIIF 13 y la NIC 16, de modo que tu cierre contable y tu auditoría cuenten con un sustento técnico verificable y defendible ante auditores, la SUNAT y tu directorio." },
+    { type: "h2", text: "¿Qué es una tasación de activos fijos bajo NIIF / IFRS?" },
+    { type: "p", html: "Una <b>tasación de activos fijos bajo NIIF / IFRS</b> es la valorización técnica que determina el <b>valor razonable</b> de la maquinaria, equipos, inmuebles, mobiliario y vehículos de una empresa siguiendo los criterios de la NIIF 13 y la NIC 16. A diferencia de una valorización referencial, es un requisito clave para que tus estados financieros reflejen la realidad económica de tu compañía, de modo que tu cierre contable y tu auditoría cuenten con un sustento técnico verificable y defendible ante auditores, la SUNAT y tu directorio." },
     { type: "p", html: "Nuestro equipo realiza el levantamiento, el peritaje y la documentación que tu área contable necesita: desde el <b>inventario físico de activos</b> hasta el informe final con metodología, vidas útiles y deterioro. Si en cambio necesitas valorizar un bien como garantía de un crédito o para un seguro, revisa la <a href='/tasaciones/activos-fijos'>tasación de activos fijos</a> general." },
     { type: "h3", text: "Valor razonable (NIIF 13 / NIC 16) para estados financieros y auditoría" },
     { type: "p", html: "Bajo el modelo de revaluación de la <b>NIC 16</b>, las propiedades, planta y equipo deben mostrarse a su valor revaluado, que corresponde a su valor razonable a la fecha de la revaluación. La <b>NIIF 13</b> establece cómo medir ese valor razonable y qué jerarquía de datos usar, ya sea por enfoque de mercado, de costo de reposición o de ingresos. Nuestros informes de <b>tasación de activos fijos para empresas</b> aplican estos lineamientos para que tu auditoría externa acepte las cifras sin observaciones y para que tu depreciación contable y tributaria queden correctamente sustentadas. Explicamos cada norma y los tres enfoques de valoración en nuestra guía de <a href='/articulos/valoraciones-ifrs-niif-peru'>valoraciones IFRS-NIIF</a>." },

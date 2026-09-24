@@ -1020,6 +1020,36 @@
 }
 
 /* ---- Homologación (home) ----------------------------------------------- */
+/* ---- Definición del servicio bajo el hero (landings) --------------------- */
+.definition {
+  background: #fff;
+}
+.definition .wrap {
+  max-width: 880px;
+}
+.definition h2 {
+  font-family: var(--font-heading), Montserrat, Arial, sans-serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+.definition p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--slate);
+  padding-left: 18px;
+  border-left: 3px solid var(--gold);
+}
+.definition p b {
+  color: var(--navy);
+}
+.definition a {
+  color: var(--gold-d);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ---- Enlaces a otras páginas del silo (landings) ------------------------ */
 .silo-links {
   background: var(--cream);
