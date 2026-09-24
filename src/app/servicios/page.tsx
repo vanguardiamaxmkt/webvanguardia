@@ -16,6 +16,7 @@ export default function ServiciosIndex() {
       heading="Servicios técnicos e inmobiliarios"
       intro="Más allá de la tasación, te acompañamos a regularizar, auditar y supervisar tu patrimonio. Todos con validez técnica y cobertura nacional."
       current="Servicios"
+      path="/servicios"
       items={serviciosPages}
       baseMessage="Hola VanguardiaMax, quiero información sobre sus servicios."
       segment="servicios-index"

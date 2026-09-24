@@ -11,6 +11,7 @@ import { Prose } from "@/components/sections/Prose";
 import { Faq } from "@/components/sections/Faq";
 import { JsonLd } from "@/components/ui/JsonLd";
 import type { FaqItem, ProseBlock } from "@/types/content";
+import { breadcrumbListJsonLd, serviceJsonLd } from "@/lib/schema";
 
 function label(p: PageEntry): string {
   return p.kind === "landing" ? p.content.hero.eyebrow : p.content.breadcrumbLabel;
@@ -25,21 +26,27 @@ export function SiloIndex({
   heading,
   intro,
   current,
+  path,
   items,
   baseMessage,
   segment,
   seoContent,
   faq,
+  service,
 }: {
   eyebrow: string;
   heading: string;
   intro: string;
   current: string;
+  /** Ruta de la página índice (para las migas de pan en JSON-LD). */
+  path: string;
   items: PageEntry[];
   baseMessage: string;
   segment: string;
   seoContent?: ProseBlock[];
   faq?: { heading?: string; items: FaqItem[] };
+  /** Service JSON-LD de la página, cuando el índice es en sí un servicio. */
+  service?: Parameters<typeof serviceJsonLd>[0];
 }) {
   const faqJsonLd = faq && {
     "@context": "https://schema.org",
@@ -51,9 +58,18 @@ export function SiloIndex({
     })),
   };
 
+  const jsonLd: Record<string, unknown>[] = [
+    breadcrumbListJsonLd([
+      { name: "Inicio", path: "/" },
+      { name: current, path },
+    ]),
+  ];
+  if (service) jsonLd.push(serviceJsonLd(service));
+  if (faqJsonLd) jsonLd.push(faqJsonLd);
+
   return (
     <WhatsAppProvider baseMessage={baseMessage} segment={segment}>
-      {faqJsonLd && <JsonLd data={[faqJsonLd]} />}
+      <JsonLd data={jsonLd} />
       <Topbar nav={siteNav} />
       <Breadcrumb items={[{ label: "Inicio", href: "/" }, { label: current }]} />
       <main>

@@ -14,7 +14,7 @@ export const home = {
     title:
       "Tasaciones Inmobiliarias con Validez Legal en el Perú | VanguardiaMax",
     description:
-      "Tasación de inmuebles con validez legal en todo el Perú: crédito y garantía, compraventa, judicial, herencias, divorcios, municipal y empresarial. Peritos certificados, informes reconocidos por la SBS. Consulta por WhatsApp.",
+      "Tasaciones inmobiliarias con validez legal en todo el Perú para crédito, compraventa, herencias y juicios. Peritos certificados, reconocidos por la SBS.",
     canonical: "/",
   },
   hero: {

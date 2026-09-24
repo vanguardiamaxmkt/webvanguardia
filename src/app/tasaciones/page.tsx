@@ -16,11 +16,20 @@ export default function TasacionesIndex() {
       heading={tasacionesIndex.heading}
       intro={tasacionesIndex.intro}
       current="Tasaciones"
+      path="/tasaciones"
       items={tasacionesPages}
       baseMessage="Hola VanguardiaMax, quiero información sobre la tasación de mi inmueble."
       segment="tasaciones-index"
       seoContent={tasacionesIndex.seoContent}
       faq={tasacionesIndex.faq}
+      service={{
+        name: tasacionesIndex.heading,
+        serviceType: "Tasación de inmuebles",
+        description: tasacionesIndex.meta.description,
+        path: "/tasaciones",
+        // Rango verificado en el sitio (artículo de precios, seo/brief.md).
+        price: { low: 300, high: 1500 },
+      }}
     />
   );
 }

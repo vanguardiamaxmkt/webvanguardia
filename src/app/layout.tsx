@@ -3,6 +3,8 @@ import Script from "next/script";
 import { Inter, Montserrat } from "next/font/google";
 import { site } from "@/content/site";
 import { AutoReveal } from "@/components/ux/AutoReveal";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/schema";
 import "./globals.css";
 
 const inter = Inter({
@@ -58,6 +60,8 @@ export default function RootLayout({
           }}
         />
         <AutoReveal />
+        {/* Entidad única de la empresa (ver src/lib/schema.ts), en todas las páginas. */}
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         {site.gtmId && (
           <>
             <Script id="gtm" strategy="afterInteractive">

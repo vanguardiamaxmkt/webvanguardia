@@ -1,5 +1,6 @@
 import type { Stat } from "@/types/content";
 import { site } from "@/content/site";
+import { ORG_REF } from "@/lib/schema";
 
 /** Stats strip shared by servicio pages that use the default credentials. */
 export const SERVICE_STATS_DEFAULT: Stat[] = [
@@ -9,19 +10,11 @@ export const SERVICE_STATS_DEFAULT: Stat[] = [
   { n: "Nacional", l: "cobertura en todo el Perú" },
 ];
 
-/** Organization block reused across all servicio JSON-LD Service schemas. */
-export const ORG_PROVIDER = {
-  "@type": "Organization",
-  name: site.name,
-  telephone: site.phoneE164,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Platinum Plaza I, C. Dean Valdivia 148",
-    addressLocality: "San Isidro",
-    addressRegion: "Lima",
-    addressCountry: "PE",
-  },
-} as const;
+/**
+ * Proveedor de los Service JSON-LD: referencia a la ficha única de la empresa
+ * que el layout publica en todas las páginas (src/lib/schema.ts).
+ */
+export const ORG_PROVIDER = ORG_REF;
 
 /** Build the BreadcrumbList JSON-LD for a servicio/tasación page. */
 export function breadcrumbJsonLd(

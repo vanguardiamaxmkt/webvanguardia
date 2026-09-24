@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Breadcrumb } from "@/components/sections/Breadcrumb";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { ORG_REF } from "@/lib/schema";
 
 export const dynamic = "force-dynamic";
 
@@ -84,7 +85,7 @@ export default async function ArticuloPage({
     datePublished: article.published_at || undefined,
     dateModified: article.updated_at,
     author: { "@type": "Organization", name: article.author || site.name },
-    publisher: { "@type": "Organization", name: site.name },
+    publisher: ORG_REF,
     mainEntityOfPage: `${site.url}/articulos/${article.slug}`,
   };
 
