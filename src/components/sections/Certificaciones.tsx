@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CertsMarquee } from "./CertsMarquee";
 
 export interface CertificacionItem {
   /** Ruta del logotipo en /public (webp). */
@@ -35,21 +36,30 @@ export function Certificaciones({
           <p className="sec-p">{data.body}</p>
         </div>
 
-        <ul className="certs-grid">
-          {data.items.map((item) => (
-            <li className="cert-logo" key={item.src}>
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={300}
-                height={130}
-                sizes="(max-width: 560px) 44vw, (max-width: 980px) 29vw, 190px"
-                loading="lazy"
-              />
-              <b className="cert-logo-name">{item.name}</b>
-            </li>
-          ))}
-        </ul>
+        {/* Carrusel continuo de derecha a izquierda: la lista va duplicada y la
+            pista se desplaza la mitad de su ancho, así el bucle no tiene saltos.
+            La copia se oculta a lectores de pantalla. Solo se mueve cuando la
+            sección está en pantalla (ver CertsMarquee). */}
+        <CertsMarquee>
+          <ul className="certs-track">
+            {[...data.items, ...data.items].map((item, i) => {
+              const copy = i >= data.items.length;
+              return (
+                <li className="cert-logo" key={`${item.src}-${i}`} aria-hidden={copy || undefined}>
+                  <Image
+                    src={item.src}
+                    alt={copy ? "" : item.alt}
+                    width={300}
+                    height={130}
+                    sizes="190px"
+                    loading="lazy"
+                  />
+                  <b className="cert-logo-name">{item.name}</b>
+                </li>
+              );
+            })}
+          </ul>
+        </CertsMarquee>
 
         <p className="certs-note">{data.note}</p>
       </div>

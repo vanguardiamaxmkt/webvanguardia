@@ -214,6 +214,11 @@ export const home = {
         alt: "Colegio de Arquitectos del Perú",
         name: "Colegio de Arquitectos",
       },
+      {
+        src: "/certificaciones/rics.webp",
+        alt: "RICS, Royal Institution of Chartered Surveyors",
+        name: "RICS",
+      },
     ],
     note: "Los logotipos corresponden a las entidades ante las que nuestros peritos están inscritos o colegiados y a los organismos que reconocen nuestros informes. No implican auspicio ni representación.",
   },
