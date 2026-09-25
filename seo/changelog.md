@@ -34,6 +34,9 @@ Cada cambio publicado se anota con su fecha, su verificación en vivo y la líne
 | Cambio | Estado | Al publicar |
 |---|---|---|
 | Artículo `/articulos/valor-de-reposicion` | Borrador (id 19 en /admin). Falta validar la numeración de artículos del Reglamento Nacional de Tasaciones | Subir el 301 desde `/guia-completa-sobre-el-calculo-del-valor-de-reposicion/` (ya escrito en `next.config.ts`, sin commit). Línea base de la URL antigua: **9 clics, 822 impr., pos. 6,57** |
+| Artículo `/articulos/supervision-de-obra-valor-del-inmueble` | Borrador (id 20 en /admin), redactado desde el documento del cliente del 24-09-2026 | Publicar desde /admin (estado "publicado"). Enlaza a `/servicios/proyectos-supervision-obras`, `/servicios/auditoria-planos` y `/tasaciones`; conviene enlazarlo también desde la landing de supervisión |
+| Artículo `/articulos/tasacion-de-negocio-en-marcha` | Borrador (id 21 en /admin), redactado desde el documento del cliente del 24-09-2026 | Publicar desde /admin. Enlaza a `/tasaciones/empresas`, `/tasaciones/activos-fijos`, `/tasaciones/judicial` y al artículo de valoraciones IFRS-NIIF. Confirmar que el servicio de valoración de negocios se ofrece |
+| Artículo `/articulos/que-es-un-estudio-de-viabilidad` | Borrador (id 22 en /admin), redactado desde el documento del cliente del 24-09-2026 | Publicar desde /admin. Enlaza a `/servicios/proyectos-estudio-viabilidad`, `/servicios/proyectos-proyeccion-inmobiliaria`, `/servicios/proyectos-estudio-itf` y `/tasaciones` |
 | Enlace del Perfil de Empresa de Google | Apunta a `www.vanguardiamax.com/?utm…` | Cambiarlo a `https://vanguardiamax.com/?utm_source=mybusiness&utm_medium=organic&utm_campaign=branding` (lo hace el usuario en Google Business Profile) |
 
 ## Resultados medidos
