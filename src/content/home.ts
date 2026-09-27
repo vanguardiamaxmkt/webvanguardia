@@ -219,8 +219,13 @@ export const home = {
         alt: "RICS, Royal Institution of Chartered Surveyors",
         name: "RICS",
       },
+      {
+        src: "/certificaciones/ivsc.webp",
+        alt: "IVSC, International Valuation Standards Council",
+        name: "IVSC",
+      },
     ],
-    note: "Los logotipos corresponden a las entidades ante las que nuestros peritos están inscritos o colegiados y a los organismos que reconocen nuestros informes. No implican auspicio ni representación.",
+    note: "Los logotipos corresponden a las entidades ante las que nuestros peritos están inscritos o colegiados, a los organismos que reconocen nuestros informes y a los estándares internacionales de valuación que aplicamos. No implican auspicio ni representación.",
   },
   homologacion: {
     eyebrow: "Homologación",
