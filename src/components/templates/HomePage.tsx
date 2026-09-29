@@ -152,6 +152,7 @@ export function HomePage() {
           <div className="wrap">
             <div className="sec-eyebrow">{home.benefits.eyebrow}</div>
             <h2 className="sec-h">{home.benefits.heading}</h2>
+            <p className="sec-p">{home.benefits.body}</p>
             <div className="benefits-grid">
               {home.benefits.items.map((b) => (
                 <article className="bcard" key={b.num}>

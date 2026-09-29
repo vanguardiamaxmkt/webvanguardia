@@ -4,9 +4,9 @@ import { DEFAULT_STATS } from "./_shared";
 export const tasacionesParaSeguros: LandingContent = {
   slug: "para-seguros",
   meta: {
-    title: "Tasación para seguros: valor asegurable | VanguardiaMax",
+    title: "Tasación para seguros y aseguradoras | VanguardiaMax",
     description:
-      "Tasación para seguros que fija la suma asegurada según el valor de reposición a nuevo. Evita el infraseguro y respalda tus siniestros. Cotiza por WhatsApp.",
+      "Tasación para seguros y aseguradoras: suma asegurada, tasaciones preventivas y de siniestros en 24 o 48 horas, a nivel nacional. Cotiza por WhatsApp.",
     canonical: "/tasaciones/para-seguros",
   },
   hero: {
@@ -93,6 +93,16 @@ export const tasacionesParaSeguros: LandingContent = {
     { type: "p", html: "Una tasación para seguros te sirve para <b>contratar o renovar tu póliza</b> con una suma asegurada justa, para <b>evitar el infraseguro</b> y la aplicación de la regla proporcional, y para <b>sustentar un siniestro</b> cuando necesitas demostrarle a la aseguradora cuánto valía el bien dañado o perdido. También es clave para que las empresas valoricen correctamente su contenido y sus activos antes de asegurarlos. Si necesitas un inventario valorizado de tu planta o equipos, complementa este servicio con nuestra <a href='/tasaciones/activos-fijos'>tasación de activos fijos</a>." },
     { type: "h3", text: "Qué bienes se tasan" },
     { type: "p", html: "Tasamos para fines de seguro <b>inmuebles y edificaciones</b> (viviendas, locales, plantas industriales), <b>maquinaria y equipos</b>, el <b>contenido</b> de oficinas, almacenes y comercios, así como los <b>activos</b> de una empresa en su conjunto. Para flotas y unidades de transporte también realizamos <a href='/tasaciones/vehicular'>tasación vehicular</a>, útil para definir el valor asegurado de cada vehículo." },
+    { type: "h2", text: "Tasaciones para aseguradoras y corredores de seguros" },
+    { type: "p", html: "Una <b>tasación para aseguradoras</b> es el informe técnico que una compañía de seguros o un corredor encarga a un perito independiente para conocer el valor de un bien, ya sea antes de emitir o renovar una póliza o después de un siniestro. Trabajamos con <b>aseguradoras y corredores de seguros</b> en todo el Perú con dos servicios:" },
+    { type: "ul", items: [
+      "<b>Tasaciones preventivas</b> — valorizamos el bien antes de emitir o renovar la póliza, para fijar una suma asegurada correcta y evitar el infraseguro o el sobreseguro de la cartera.",
+      "<b>Tasaciones de siniestros</b> — determinamos el valor del bien siniestrado y la magnitud de la pérdida, como sustento técnico para la liquidación de la póliza.",
+    ] },
+    { type: "h3", text: "Plazos y cobertura nacional" },
+    { type: "p", html: "Para los casos urgentes ofrecemos modalidades <b>express</b> y <b>ultra express</b>, con informes en <b>48 horas</b> o en <b>menos de 24 horas</b>, y atendemos en <b>todo el Perú</b>. Cada informe lleva <b>doble visado</b> y se elabora conforme al Reglamento Nacional de Tasaciones." },
+    { type: "h3", text: "Peritos para siniestros complejos" },
+    { type: "p", html: "Para los peritajes complejos contamos con tasadores inscritos en la <b>SBS (REPEV)</b> y en el <b>REPEJ</b> del Poder Judicial, y con tasadores acreditados por <b>RICS</b> para los casos de aseguradoras internacionales. Si trabajas en una aseguradora o una corredora, escríbenos por WhatsApp y coordinamos el alcance del servicio para tu cartera." },
     { type: "p", html: "¿Vas a contratar o renovar una póliza y quieres asegurarte de no quedar subasegurado? Cuéntanos qué bien necesitas valorizar por <b>WhatsApp</b> y te damos el alcance y la cotización el mismo día, sin compromiso." },
   ],
   form: {
@@ -130,6 +140,7 @@ export const tasacionesParaSeguros: LandingContent = {
           "Contratar una nueva póliza",
           "Renovar póliza existente",
           "Sustentar un siniestro",
+          "Soy aseguradora o corredor de seguros",
           "Otro",
         ],
       },
@@ -158,6 +169,14 @@ export const tasacionesParaSeguros: LandingContent = {
       {
         q: "¿La tasación sirve para sustentar un siniestro?",
         a: "Sí. Un informe pericial respalda tu reclamo ante la aseguradora al demostrar cuánto valía el bien dañado o perdido, lo que ayuda a agilizar el pago de la indemnización.",
+      },
+      {
+        q: "¿Trabajan con aseguradoras y corredores de seguros?",
+        a: "Sí. Realizamos tasaciones preventivas, antes de emitir o renovar la póliza, y tasaciones de siniestros para aseguradoras y corredores de seguros en todo el Perú.",
+      },
+      {
+        q: "¿En cuánto tiempo entregan una tasación de siniestro?",
+        a: "Con las modalidades express y ultra express entregamos el informe en 48 horas o en menos de 24 horas. Para siniestros complejos contamos con tasadores inscritos en la SBS (REPEV) y en el REPEJ, y con acreditación RICS para aseguradoras internacionales.",
       },
       {
         q: "¿Cuánto cuesta?",

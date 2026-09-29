@@ -863,6 +863,10 @@
   gap: 22px;
   margin-top: 8px;
 }
+/* Con párrafo de introducción (home), separar las tarjetas del texto. */
+.sec-p + .benefits-grid {
+  margin-top: 30px;
+}
 .bcard {
   background: #fff;
   border: 1px solid var(--line);
