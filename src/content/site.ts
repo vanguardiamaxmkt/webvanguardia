@@ -13,6 +13,15 @@ export const site = {
   phoneDisplay: "963 561 496",
   email: "info@vanguardiamax.com",
   address: "Platinum Plaza I, C. Dean Valdivia 148, San Isidro",
+  /** Dirección desglosada (página de contacto y datos estructurados). */
+  addressLines: ["Platinum Plaza I", "Calle Dean Valdivia 148", "San Isidro, Lima", "Perú"],
+  /** Consulta para Google Maps (mapa embebido, "cómo llegar" y hasMap). */
+  mapQuery: "Platinum Plaza I, Calle Dean Valdivia 148, San Isidro, Lima, Perú",
+  /**
+   * Horario de atención, una línea por rango (p. ej. "Lunes a viernes: 9:00 – 18:00").
+   * Vacío = no se muestra hasta que el negocio lo confirme.
+   */
+  hours: [] as readonly string[],
   /** Redes sociales oficiales. */
   social: {
     facebook: "https://www.facebook.com/vanguardiamax",
@@ -35,6 +44,7 @@ export const homeNav = [
   { href: "/servicios", label: "Servicios" },
   { href: "/articulos", label: "Artículos" },
   { href: "#faq", label: "Preguntas" },
+  { href: "/contacto", label: "Contacto" },
 ] as const;
 
 /** Navegación de sitio (rutas) para landings, servicios y demás páginas. */
@@ -43,4 +53,5 @@ export const siteNav = [
   { href: "/tasaciones", label: "Tasaciones" },
   { href: "/servicios", label: "Servicios" },
   { href: "/articulos", label: "Artículos" },
+  { href: "/contacto", label: "Contacto" },
 ] as const;

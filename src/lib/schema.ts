@@ -39,6 +39,17 @@ export function organizationJsonLd() {
       addressCountry: "PE",
     },
     areaServed: { "@type": "Country", name: "Perú" },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapQuery)}`,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: site.phoneE164,
+        email: site.email,
+        availableLanguage: "es",
+        areaServed: "PE",
+      },
+    ],
     knowsAbout: [
       "Tasación de inmuebles",
       "Tasación judicial",

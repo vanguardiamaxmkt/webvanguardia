@@ -44,6 +44,9 @@ export async function POST(req: Request) {
   const telefono = String(body.telefono || "").trim();
   const tipo = String(body.tipo || "").trim();
   const email = String(body.email || "").trim();
+  // Campos opcionales de la página de contacto.
+  const mensaje = txt(body.mensaje, 1500);
+  const formulario = txt(body.formulario, 40) === "contacto" ? "contacto" : "hero";
 
   if (!nombre || !telefono || !tipo || !email) {
     return NextResponse.json(
@@ -95,6 +98,7 @@ export async function POST(req: Request) {
     ["Teléfono", telefono],
     ["Correo electrónico", email],
     ["Tipo de tasación", tipo],
+    ...(mensaje ? ([["Mensaje", mensaje]] as [string, string][]) : []),
     ["Canal", canal],
     ["Campaña / UTM", campana || "— (sin etiquetas de campaña)"],
     ["Página de entrada", landing ? shortUrl(landing) : "—"],
@@ -104,7 +108,7 @@ export async function POST(req: Request) {
 
   const html = `
     <div style="font-family:Arial,sans-serif;font-size:15px;color:#1b2b36">
-      <h2 style="color:#0185cb;margin:0 0 12px">Nueva solicitud de tasación (web)</h2>
+      <h2 style="color:#0185cb;margin:0 0 12px">${formulario === "contacto" ? "Nuevo mensaje de contacto (web)" : "Nueva solicitud de tasación (web)"}</h2>
       <table style="border-collapse:collapse;width:100%;max-width:520px">
         ${filas
           .map(
@@ -117,7 +121,7 @@ export async function POST(req: Request) {
           .join("")}
       </table>
       <p style="color:#6e869c;font-size:12px;margin-top:14px">
-        Enviado desde el formulario del hero en vanguardiamax.com
+        Enviado desde ${formulario === "contacto" ? "la página de contacto" : "el formulario del hero"} en vanguardiamax.com
         ${landing ? `<br>URL de entrada completa: ${esc(landing)}` : ""}
       </p>
     </div>`;
@@ -129,7 +133,7 @@ export async function POST(req: Request) {
   try {
     await sendMail({
       to: CONTACT_TO,
-      subject: `Solicitud de tasación — ${nombre} (${tipo}) · ${canal}`,
+      subject: `${formulario === "contacto" ? "Contacto web" : "Solicitud de tasación"} — ${nombre} (${tipo}) · ${canal}`,
       html,
       text,
       replyTo: email,

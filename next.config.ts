@@ -76,8 +76,8 @@ const legacyPageRedirects: Record<string, string> = {
   // Institucionales
   "nosotros": "/",
   "nosotros-2": "/",
-  "contacto-tasaciones": "/",
-  "cotizaciones-tasaciones": "/",
+  "contacto-tasaciones": "/contacto",
+  "cotizaciones-tasaciones": "/contacto",
   "libro-reclamaciones": "/libro-de-reclamaciones",
 };
 

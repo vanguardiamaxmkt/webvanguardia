@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/tasaciones",
     "/servicios",
     "/articulos",
+    "/contacto",
     "/libro-de-reclamaciones",
     "/politica-de-privacidad",
   ];
