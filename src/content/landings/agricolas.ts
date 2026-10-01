@@ -96,6 +96,15 @@ export const agricolas: LandingContent = {
     { type: "p", html: "La <b>valorización de fundos</b> se solicita en muchos escenarios. El más común es el <b>crédito agrícola</b>: bancos y cajas piden una tasación para aceptar el predio como garantía de un préstamo de campaña o de capital de trabajo. También es necesaria en la compraventa de fundos, en herencias y sucesiones, en la división de bienes entre copropietarios, en procesos de expropiación o servidumbre, y para contratar seguros agrarios que cubran el valor real de la inversión." },
     { type: "h3", text: "Qué se necesita para tasar tu predio" },
     { type: "p", html: "Para agilizar la <b>tasación de terrenos agrícolas</b> conviene tener a la mano la partida o copia literal del predio, los planos disponibles y la ubicación con coordenadas o referencias claras del fundo. Si te falta algún documento, escríbenos igual: te indicamos cómo obtenerlo y confirmamos la lista exacta según tu caso. Si además tienes un inmueble urbano que respaldar, también realizamos <a href='/tasaciones/hipotecaria'>tasación hipotecaria</a> y otros servicios que puedes revisar en nuestro hub de <a href='/tasaciones'>tasaciones</a>." },
+    { type: "h2", text: "Tasación de predios agrícolas bajo NIIF / IFRS" },
+    { type: "p", html: "La <b>tasación IFRS de predios agrícolas</b> determina el <b>valor razonable</b> de un fundo para los estados financieros de la empresa, separando cada componente según la norma contable que le corresponde. Valorizamos tanto el terreno y la infraestructura como los <b>activos biológicos</b>, en todo tipo de cultivo, y entregamos el informe desglosado por componentes, con la vida útil remanente de cada uno:" },
+    { type: "ul", items: [
+      "<b>Terreno agrícola</b> — NIC 16, al costo o por el modelo de revaluación.",
+      "<b>Plantas productoras</b> (vid, palto, arándano, cítricos) — NIC 16.",
+      "<b>Cultivos en crecimiento y cosecha pendiente</b> — NIC 41, a valor razonable menos los costos de venta.",
+      "<b>Riego, construcciones y maquinaria</b> — NIC 16, con su vida útil remanente.",
+    ] },
+    { type: "p", html: "La medición sigue la <b>NIIF 13</b> y queda lista para el cierre contable y la auditoría. Qué norma aplica a cada parte del fundo, con un ejemplo, lo explicamos en nuestra guía de <a href='/articulos/tasacion-ifrs-de-predios-agricolas'>tasación IFRS de predios agrícolas</a>. Si además necesitas valorizar la planta, los equipos o el resto de los activos de la empresa, revisa nuestra <a href='/tasaciones/empresas'>tasación de activos fijos bajo NIIF</a>." },
     { type: "p", html: "¿Quieres conocer cuánto vale tu fundo o parcela? Cuéntanos la ubicación, las hectáreas y el tipo de cultivo por <b>WhatsApp</b> y te damos el alcance y la cotización el mismo día, sin compromiso." },
   ],
   form: {
@@ -126,6 +135,7 @@ export const agricolas: LandingContent = {
           "Crédito agrícola / garantía",
           "Compra o venta de fundo",
           "Herencia / sucesión",
+          "Estados financieros (NIIF / IFRS)",
           "Expropiación o servidumbre",
           "Otro",
         ],
@@ -155,6 +165,14 @@ export const agricolas: LandingContent = {
       {
         q: "¿Atienden fundos fuera de Lima?",
         a: "Sí. Tasamos predios agrícolas en todas las regiones del Perú: Ica, La Libertad, Piura, Lambayeque, Arequipa y más. Coordinamos la visita del perito al campo.",
+      },
+      {
+        q: "¿Hacen tasaciones de predios agrícolas bajo NIIF / IFRS?",
+        a: "Sí. Determinamos el valor razonable del fundo conforme a la NIIF 13 y lo desglosamos por componentes: el terreno, las plantas productoras, el riego y las construcciones bajo la NIC 16, y los cultivos en crecimiento bajo la NIC 41.",
+      },
+      {
+        q: "¿Valorizan también los cultivos y plantaciones como activos biológicos?",
+        a: "Sí. Valorizamos el terreno, la infraestructura y los activos biológicos de todo tipo de cultivo, con la vida útil remanente de cada componente para tu contabilidad.",
       },
       {
         q: "¿Cuánto cuesta?",

@@ -32,9 +32,9 @@ const legacyArticleAliases: Record<string, string> = {
   "la-vivienda-sube-un-37-al-inicio-de-2022-a-la-espera-de-la-estabilizacion-de-precios": "/articulos",
   "las-tasaciones-hipotecarias-de-vivienda-aumentaron-un-5-hasta-junio-a-maximos-desde-2014": "/articulos",
   "las-tasaciones-hipotecarias-de-viviendas-se-estancan-en-la-primera-mitad-del-ano": "/articulos",
-  "que-hacer-para-no-perderse-en-la-compra-de-una-casa": "/articulos",
+  "que-hacer-para-no-perderse-en-la-compra-de-una-casa": "/articulos/consejos-para-comprar-una-casa",
   "liberan-predios-e-interferencias-para-la-construccion-del-puente-huampani": "/articulos",
-  "tasador-online-sepa-en-cuanto-esta-valorizado-su-inmueble": "/articulos",
+  "tasador-online-sepa-en-cuanto-esta-valorizado-su-inmueble": "/articulos/tasador-online",
 };
 
 // Páginas de servicio y URLs del WordPress antiguo que aún reciben impresiones
