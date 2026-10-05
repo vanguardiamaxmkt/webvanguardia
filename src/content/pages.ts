@@ -10,6 +10,7 @@ import { agricolas } from "./landings/agricolas";
 import { obrasArte } from "./landings/obras-arte";
 import { fiduciarias } from "./landings/fiduciarias";
 import { tasacionesParaSeguros } from "./landings/tasaciones-para-seguros";
+import { hoteles } from "./landings/hoteles";
 import { estudioViabilidad } from "./landings/proyectos-estudio-viabilidad";
 import { proyeccionInmobiliaria } from "./landings/proyectos-proyeccion-inmobiliaria";
 import { estudioItf } from "./landings/proyectos-estudio-itf";
@@ -43,6 +44,7 @@ export const pages: PageEntry[] = [
   { kind: "landing", silo: "tasaciones", content: obrasArte },
   { kind: "landing", silo: "tasaciones", content: fiduciarias },
   { kind: "landing", silo: "tasaciones", content: tasacionesParaSeguros },
+  { kind: "landing", silo: "tasaciones", content: hoteles },
   // ── Silo /servicios (servicios complementarios) ──────────────────────────
   { kind: "landing", silo: "servicios", content: saneamientoInmobiliario },
   { kind: "service", silo: "servicios", content: auditoriaPlanos },

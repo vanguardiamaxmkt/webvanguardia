@@ -15,6 +15,7 @@ export const TIPOS_TASACION = [
   "Obras de arte",
   "Fiduciaria",
   "Para seguros",
+  "Hoteles y resorts",
   "Impuesto predial",
   "Otra",
 ] as const;

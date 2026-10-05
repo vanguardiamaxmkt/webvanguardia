@@ -116,6 +116,7 @@ export const home = {
       "Oficina",
       "Edificio",
       "Almacén / industrial",
+      "Hotel / resort",
       "Proyecto inmobiliario",
     ],
     /** Enlace interno al destino de "tasación de inmuebles" (paso 2 SEO). */

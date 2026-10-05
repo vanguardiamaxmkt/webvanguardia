@@ -43,6 +43,7 @@ export const tasacionesIndex = {
         "<b>Terrenos urbanos y agrícolas:</b> lotes, predios rústicos y <a href='/tasaciones/agricolas'>fundos agrícolas</a>.",
         "<b>Locales comerciales, oficinas y almacenes:</b> para garantías, compraventa o para fijar la renta con una <a href='/tasaciones/alquiler'>tasación de alquiler</a>.",
         "<b>Edificios, plantas industriales y proyectos inmobiliarios:</b> incluidos los <a href='/tasaciones/activos-fijos'>activos fijos</a> de empresas.",
+        "<b>Hoteles y resorts:</b> valorizados como inmueble y como negocio en marcha, con nuestra <a href='/tasaciones/hoteles'>tasación de hoteles y resorts de lujo</a>.",
       ],
     },
     { type: "h2", text: "¿Cuánto cuesta una tasación de inmuebles?" },
