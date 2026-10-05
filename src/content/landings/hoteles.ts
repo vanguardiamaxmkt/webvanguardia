@@ -6,7 +6,7 @@ export const hoteles: LandingContent = {
   meta: {
     title: "Tasación de hoteles y resorts de lujo | VanguardiaMax",
     description:
-      "Tasación de hoteles y resorts de lujo en el Perú: valorizamos el inmueble, el equipamiento y el negocio para venta, crédito, NIIF o seguros. Cotiza hoy.",
+      "Tasación de hoteles y resorts de lujo en el Perú: valor del inmueble y del negocio. También proyección con flujos descontados para desarrollar hoteles.",
     canonical: "/tasaciones/hoteles",
   },
   hero: {
@@ -113,7 +113,19 @@ export const hoteles: LandingContent = {
       "<b>Fideicomisos, herencias y procesos judiciales</b> — con una <a href='/tasaciones/fiduciarias'>tasación fiduciaria</a> o una <a href='/tasaciones/judicial'>tasación judicial</a>, según el caso.",
     ] },
     { type: "h2", text: "¿Qué tipos de hoteles y resorts tasamos?" },
-    { type: "p", html: "Nuestras <b>tasaciones de hoteles y resorts de lujo</b> abarcan hoteles de ciudad, resorts de playa y de campo, hoteles boutique, lodges y complejos turísticos en operación, en todo el Perú. Si el hotel todavía es un proyecto, el punto de partida es un <a href='/servicios/proyectos-estudio-viabilidad'>estudio de viabilidad</a> que confirme si la inversión se sostiene." },
+    { type: "p", html: "Nuestras <b>tasaciones de hoteles y resorts de lujo</b> abarcan hoteles de ciudad, resorts de playa y de campo, hoteles boutique, lodges y complejos turísticos en operación, en todo el Perú. Y si el hotel todavía es un proyecto, hacemos la proyección para desarrollarlo." },
+    { type: "h2", text: "Proyección para desarrollar hoteles: ¿es viable tu proyecto?" },
+    { type: "p", html: "Cuando el hotel todavía no existe, lo que se valoriza es el proyecto. La <b>proyección para desarrollar hoteles</b> estima cuánto costará construir y equipar el hotel, cuánto ingresará cuando opere y si ese resultado justifica la inversión. Es la base para decidir, buscar socios o pedir financiamiento." },
+    { type: "h3", text: "Valuación con flujos descontados" },
+    { type: "p", html: "La <b>valuación de un proyecto hotelero con flujos descontados</b> (flujo de caja descontado) sigue cinco pasos:" },
+    { type: "ul", items: [
+      "<b>Concepto y mercado</b> — categoría, número de habitaciones y servicios, según la demanda del destino y el <a href='/servicios/proyectos-proyeccion-inmobiliaria'>mejor y mayor uso</a> del terreno.",
+      "<b>Proyección de ingresos</b> — ocupación y tarifa promedio año por año, desde la apertura hasta que el hotel se estabiliza, más alimentos y bebidas, eventos y otros servicios.",
+      "<b>Costos e inversión</b> — gastos de operación, terreno, construcción, mobiliario y equipamiento, y gastos de preapertura.",
+      "<b>Descuento de los flujos</b> — los flujos de cada año y el valor del hotel al final del periodo se traen a valor presente con una tasa que refleja el riesgo del proyecto.",
+      "<b>Resultado</b> — valor actual neto (VAN), tasa interna de retorno (TIR) y escenarios optimista, base y pesimista.",
+    ] },
+    { type: "p", html: "El análisis completo —legal, técnico, de mercado y financiero— es nuestro <a href='/servicios/proyectos-estudio-viabilidad'>estudio de viabilidad</a>. El cálculo, paso a paso y con un ejemplo, está en nuestra guía de <a href='/articulos/valuacion-de-proyectos-hoteleros-con-flujos-descontados'>valuación de proyectos hoteleros con flujos descontados</a>." },
     { type: "h2", text: "¿Qué información se necesita para tasar un hotel?" },
     { type: "ul", items: [
       "<b>Documentos del inmueble</b> — partida registral o copia literal, planos y declaración del impuesto predial (PU y HR).",
@@ -162,6 +174,7 @@ export const hoteles: LandingContent = {
           "Estados financieros (NIIF / IFRS)",
           "Seguros",
           "Remodelación, ampliación o reinversión",
+          "Desarrollo de un hotel nuevo (proyección)",
           "Herencia / proceso judicial",
           "Otro",
         ],
@@ -191,6 +204,14 @@ export const hoteles: LandingContent = {
       {
         q: "¿Sirve si voy a remodelar, ampliar o reinvertir en el hotel?",
         a: "Sí. La tasación establece el valor actual del hotel antes de la inversión, y un estudio de viabilidad evalúa si la remodelación o ampliación se paga con los ingresos adicionales.",
+      },
+      {
+        q: "¿Hacen la proyección para desarrollar un hotel nuevo?",
+        a: "Sí. Proyectamos la ocupación, las tarifas, los ingresos, los gastos y la inversión del proyecto, y lo valuamos con flujos descontados para obtener el VAN y la TIR en escenarios optimista, base y pesimista.",
+      },
+      {
+        q: "¿Qué es la valuación con flujos descontados de un proyecto hotelero?",
+        a: "Es el método que estima el valor de un hotel que aún no existe a partir del dinero que generará: se proyectan sus flujos año por año, se suma el valor del hotel al final del periodo y todo se trae a valor presente con una tasa que refleja el riesgo. Si ese valor supera la inversión, el proyecto crea valor.",
       },
       {
         q: "¿Qué información necesito para tasar un hotel?",
