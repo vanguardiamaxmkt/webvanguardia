@@ -1,6 +1,7 @@
 import type { HeroContent } from "@/types/content";
 import { WhatsAppLink } from "@/components/whatsapp/WhatsAppLink";
 import { WizardLink } from "@/components/whatsapp/WizardLink";
+import { HeroFormLink } from "@/components/hero/HeroFormLink";
 import { WaIcon } from "@/components/whatsapp/WaIcon";
 import { Icon } from "@/components/ui/Icon";
 
@@ -10,6 +11,7 @@ export function Hero({
   variant = "landing",
   card,
   ctaTarget,
+  formTarget,
 }: {
   content: HeroContent;
   variant?: "landing" | "service";
@@ -19,6 +21,11 @@ export function Hero({
    * ese id. Si se omite (páginas sin formulario), abre WhatsApp directo.
    */
   ctaTarget?: string;
+  /**
+   * id de la tarjeta-formulario del hero. Si se pasa, el botón secundario
+   * ("Cotiza por formulario") resalta ese formulario en vez de saltar a su href.
+   */
+  formTarget?: string;
 }) {
   const { eyebrow, heading, headingAccent, sub, primaryCta, secondaryCta, trust } =
     content;
@@ -57,11 +64,16 @@ export function Hero({
                 {primaryCta.label}
               </a>
             )}
-            {secondaryCta && (
-              <a className="btn btn-ghost" href={secondaryCta.href}>
-                {secondaryCta.label}
-              </a>
-            )}
+            {secondaryCta &&
+              (formTarget ? (
+                <HeroFormLink className="btn btn-ghost" target={formTarget}>
+                  {secondaryCta.label}
+                </HeroFormLink>
+              ) : (
+                <a className="btn btn-ghost" href={secondaryCta.href}>
+                  {secondaryCta.label}
+                </a>
+              ))}
           </div>
           <div className="trustline">
             {trust.map((t) => (

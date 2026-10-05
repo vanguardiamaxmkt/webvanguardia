@@ -70,7 +70,7 @@ export function HeroLeadForm({
   }
 
   return (
-    <div className="hero-card">
+    <div className="hero-card" id="formulario">
       <div className="cert-top">
         <div>
           <h4>{cert.title}</h4>

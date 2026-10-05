@@ -109,6 +109,7 @@ export function LandingPage({
             )
           }
           ctaTarget="cotizar"
+          formTarget={heroForm ? "formulario" : undefined}
         />
         <TrustStrip stats={content.stats} />
         {definition && (
