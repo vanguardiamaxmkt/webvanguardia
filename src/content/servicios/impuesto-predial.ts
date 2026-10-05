@@ -42,6 +42,17 @@ export const impuestoPredial: ServiceContent = {
       { k: "Cobertura", v: "Lima, Callao y municipalidades del país" },
     ],
   },
+  formCard: {
+    title: "Revisión de tu predial",
+    subtitle: "Autovalúo · Arbitrios · Beneficios",
+    rows: [
+      { k: "Autovalúo declarado (PU / HR)", v: "S/ ———" },
+      { k: "Autovalúo revisado", v: "S/ ———" },
+    ],
+    sealText: "REVISIÓN TÉCNICA · AUTOVALÚO · PU / HR · ",
+    foot: "Revisión técnica de tu autovalúo y arbitrios",
+    submitLabel: "Solicitar revisión",
+  },
   stats: [
     { n: "+25", l: "años de experiencia" },
     { n: "PU/HR", l: "revisión de autovalúo" },

@@ -42,6 +42,16 @@ export const embarcaciones: ServiceContent = {
       { k: "Cobertura", v: "Lima, Callao y principales puertos del Perú" },
     ],
   },
+  formCard: {
+    title: "Informe de Tasación",
+    subtitle: "Embarcación · Valor comercial y de realización",
+    rows: [
+      { k: "Valor comercial", v: "S/ ———" },
+      { k: "Valor de realización", v: "S/ ———" },
+    ],
+    sealText: "TASACIÓN NAVAL · PERITO CERTIFICADO · REGLAMENTO NACIONAL · ",
+    foot: "Conforme al Reglamento Nacional de Tasaciones · SBS",
+  },
   stats: SERVICE_STATS_DEFAULT,
   prose: [
     { type: "h2", text: "¿Qué es la tasación de embarcaciones?" },

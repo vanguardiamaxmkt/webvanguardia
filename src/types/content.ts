@@ -184,6 +184,11 @@ export interface ServiceContent {
   breadcrumbLabel: string;
   hero: HeroContent;
   heroCard: FactsCard;
+  /**
+   * Cabecera de la tarjeta con formulario que reemplaza a la ficha en el hero
+   * (páginas del silo /tasaciones). `submitLabel` cambia el texto del botón.
+   */
+  formCard?: Omit<CertCard, "kind"> & { submitLabel?: string };
   stats: Stat[];
   prose: ProseBlock[];
   benefits: { eyebrow: string; heading: string; items: Benefit[] };

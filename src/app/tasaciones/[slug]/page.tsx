@@ -39,8 +39,9 @@ export default async function Page({
       content={entry.content}
       parent={SILO_PARENT.tasaciones}
       siblings={siloSiblings("tasaciones", slug)}
+      heroForm
     />
   ) : (
-    <ServicePage content={entry.content} parent={SILO_PARENT.tasaciones} />
+    <ServicePage content={entry.content} parent={SILO_PARENT.tasaciones} heroForm />
   );
 }

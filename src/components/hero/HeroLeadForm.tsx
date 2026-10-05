@@ -3,8 +3,9 @@
 import { useState } from "react";
 import type { CertCard as CertCardData } from "@/types/content";
 import { Seal } from "@/components/sections/Seal";
-import { TIPOS_TASACION } from "@/content/tipos-tasacion";
+import { TIPOS_TASACION, type TipoTasacion } from "@/content/tipos-tasacion";
 import { useWhatsApp } from "@/components/whatsapp/WhatsAppProvider";
+import { pushDataLayer } from "@/lib/whatsapp";
 
 /**
  * Tarjeta del hero: cabecera "Informe de Tasación" (valores con barras),
@@ -12,9 +13,19 @@ import { useWhatsApp } from "@/components/whatsapp/WhatsAppProvider";
  * A diferencia del wizard inferior (que abre WhatsApp), este envía la
  * solicitud por correo vía /api/contacto, junto con la atribución de la
  * visita (UTM, página de entrada, referrer) para saber de dónde llegó el lead.
- * Incluye honeypot y consentimiento de datos.
+ * Incluye honeypot y consentimiento de datos. Se usa en la home y en las
+ * páginas del silo /tasaciones, donde el tipo de tasación llega preseleccionado.
  */
-export function HeroLeadForm({ cert }: { cert: Omit<CertCardData, "kind"> }) {
+export function HeroLeadForm({
+  cert,
+  defaultTipo,
+  submitLabel = "Solicitar tasación",
+}: {
+  cert: Omit<CertCardData, "kind">;
+  /** Tipo de tasación preseleccionado (el de la página que muestra el formulario). */
+  defaultTipo?: TipoTasacion;
+  submitLabel?: string;
+}) {
   const { utm, origin, visit, segment } = useWhatsApp();
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
@@ -49,6 +60,7 @@ export function HeroLeadForm({ cert }: { cert: Omit<CertCardData, "kind"> }) {
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(json.error || "No se pudo enviar. Intenta de nuevo.");
+      pushDataLayer({ event: "lead_form_submit", form: "hero", segment });
       setDone(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "No se pudo enviar.");
@@ -98,7 +110,7 @@ export function HeroLeadForm({ cert }: { cert: Omit<CertCardData, "kind"> }) {
               <input name="telefono" type="tel" placeholder="Teléfono" required />
             </div>
             <div className="hf-field">
-              <select name="tipo" required defaultValue="">
+              <select name="tipo" required defaultValue={defaultTipo ?? ""}>
                 <option value="" disabled>
                   Tipo de tasación
                 </option>
@@ -134,7 +146,7 @@ export function HeroLeadForm({ cert }: { cert: Omit<CertCardData, "kind"> }) {
           {error && <p className="hf-error">{error}</p>}
 
           <button type="submit" className="hf-btn" disabled={sending}>
-            {sending ? "Enviando…" : "Solicitar tasación"}
+            {sending ? "Enviando…" : submitLabel}
           </button>
         </form>
       )}

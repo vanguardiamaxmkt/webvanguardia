@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Hero } from "@/components/sections/Hero";
 import { CertCard } from "@/components/sections/CertCard";
+import { HeroLeadForm } from "@/components/hero/HeroLeadForm";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Pain } from "@/components/sections/Pain";
 import { Benefits } from "@/components/sections/Benefits";
@@ -18,6 +19,7 @@ import { LeadForm } from "@/components/whatsapp/LeadForm";
 import { Icon } from "@/components/ui/Icon";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { siteNav } from "@/content/site";
+import { TIPO_POR_SLUG } from "@/content/tipos-tasacion";
 import { breadcrumbListJsonLd, faqPageJsonLd, serviceJsonLd } from "@/lib/schema";
 
 /**
@@ -50,12 +52,18 @@ export function LandingPage({
   content,
   parent,
   siblings,
+  heroForm = false,
 }: {
   content: LandingContent;
   /** Silo al que pertenece (Tasaciones / Servicios). */
   parent: { name: string; href: string };
   /** Demás páginas del mismo silo, para el bloque de enlaces. */
   siblings: { label: string; href: string }[];
+  /**
+   * Muestra en el hero la tarjeta con formulario por correo (como la home) en
+   * lugar del informe de ejemplo. Activo en el silo /tasaciones.
+   */
+  heroForm?: boolean;
 }) {
   const name = content.serviceName ?? content.hero.eyebrow;
   const path = content.meta.canonical ?? `${parent.href}/${content.slug}`;
@@ -93,7 +101,13 @@ export function LandingPage({
       <main>
         <Hero
           content={content.hero}
-          card={<CertCard data={content.heroCard} />}
+          card={
+            heroForm ? (
+              <HeroLeadForm cert={content.heroCard} defaultTipo={TIPO_POR_SLUG[content.slug]} />
+            ) : (
+              <CertCard data={content.heroCard} />
+            )
+          }
           ctaTarget="cotizar"
         />
         <TrustStrip stats={content.stats} />

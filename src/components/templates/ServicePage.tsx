@@ -7,6 +7,7 @@ import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Breadcrumb } from "@/components/sections/Breadcrumb";
 import { Hero } from "@/components/sections/Hero";
 import { FactsCard } from "@/components/sections/FactsCard";
+import { HeroLeadForm } from "@/components/hero/HeroLeadForm";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Prose } from "@/components/sections/Prose";
 import { Benefits } from "@/components/sections/Benefits";
@@ -15,16 +16,24 @@ import { Related } from "@/components/sections/Related";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { site } from "@/content/site";
+import { TIPO_POR_SLUG } from "@/content/tipos-tasacion";
 import { faqPageJsonLd } from "@/lib/schema";
 
 /** Renders a complete SEO service page from its content config. */
 export function ServicePage({
   content,
   parent = { name: "Servicios", href: "/servicios" },
+  heroForm = false,
 }: {
   content: ServiceContent;
   /** Breadcrumb parent (silo): Servicios por defecto, Tasaciones para embarcaciones. */
   parent?: { name: string; href: string };
+  /**
+   * Muestra en el hero la tarjeta con formulario por correo (como la home) en
+   * lugar de la ficha del servicio, si la página define `formCard`. Activo en
+   * el silo /tasaciones.
+   */
+  heroForm?: boolean;
 }) {
   const path = content.meta.canonical ?? `${parent.href}/${content.slug}`;
   // El FAQPage escrito a mano en cada archivo se reemplaza por uno generado
@@ -56,7 +65,17 @@ export function ServicePage({
         <Hero
           content={content.hero}
           variant="service"
-          card={<FactsCard data={content.heroCard} />}
+          card={
+            heroForm && content.formCard ? (
+              <HeroLeadForm
+                cert={content.formCard}
+                defaultTipo={TIPO_POR_SLUG[content.slug]}
+                submitLabel={content.formCard.submitLabel}
+              />
+            ) : (
+              <FactsCard data={content.heroCard} />
+            )
+          }
         />
         <TrustStrip stats={content.stats} />
         <Prose blocks={content.prose} />
