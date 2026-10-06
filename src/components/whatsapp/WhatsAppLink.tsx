@@ -39,8 +39,9 @@ export function WhatsAppLink({
             { label: "Ubicación", valor: location ?? "—" },
           ],
         });
-        // …y luego el evento GTM + consumo de la atribución.
-        contact();
+        // …y luego el evento GTM + consumo de la atribución, indicando qué
+        // botón fue (header, hero, cta-final, flotante, canales).
+        contact({ button_location: location ?? "boton" });
       }}
     >
       {children}

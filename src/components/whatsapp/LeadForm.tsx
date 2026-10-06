@@ -34,8 +34,16 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
     window.open(buildUrl(message), "_blank", "noopener");
     // 2) Registramos en la hoja de cálculo en segundo plano (no se espera).
     submitLead({ campos, nombre: valor("nombre"), telefono: valor("telefono") });
-    // 3) Evento GTM + consumo de la atribución.
-    contact({ form_submit: true });
+    // 3) Evento GTM + consumo de la atribución. Solo se incluyen los datos
+    //    que este formulario tenga (tipo/finalidad y distrito/ubicación).
+    const destino = valor("tipo") || valor("finalidad");
+    const ubicacion = valor("distrito") || valor("ubicacion");
+    contact({
+      form_submit: true,
+      button_location: "formulario_whatsapp",
+      ...(destino ? { destino } : {}),
+      ...(ubicacion ? { ubicacion } : {}),
+    });
   }
 
   return (

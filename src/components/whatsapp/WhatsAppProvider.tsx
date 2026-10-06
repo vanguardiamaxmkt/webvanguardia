@@ -99,13 +99,15 @@ export function WhatsAppProvider({
   }, []);
 
   // Objetivo cumplido (contactó por WhatsApp): registramos el evento con la
-  // atribución vigente y luego la consumimos.
+  // atribución vigente y luego la consumimos. GTM escucha `whatsapp_click` y
+  // dispara el píxel de Meta como "LeadCalificado" (ver gtm/).
   const contact = useCallback(
     (extra?: Record<string, unknown>) => {
       pushDataLayer({
         event: "whatsapp_click",
         segmento: segment,
         origen: originLabel(utm, segment),
+        page_path: window.location.pathname,
         utm_campaign: utm.campaign,
         utm_source: utm.source,
         utm_medium: utm.medium,
