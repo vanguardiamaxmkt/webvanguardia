@@ -98,6 +98,10 @@
   max-width: var(--maxw);
   margin: -28px auto 0;
   padding: 0 22px;
+  /* Por encima de la cabecera: las secciones animadas (transform) se pintan
+     sobre los bloques sin posición y tapaban el borde superior de la foto. */
+  position: relative;
+  z-index: 2;
 }
 .article-cover img {
   width: 100%;
