@@ -110,7 +110,7 @@ for (const [id, list] of byId) {
     title: merged.title,
     excerpt: merged.excerpt ?? undefined,
     content,
-    cover_image: art.cover_image ?? undefined,
+    cover_image: merged.cover_image ?? undefined,
     category: merged.category ?? undefined,
     tags: merged.tags ?? undefined,
     author: art.author ?? undefined,
