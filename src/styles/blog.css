@@ -306,6 +306,12 @@ h2[id] {
   fill: currentColor;
   flex: 0 0 auto;
 }
+/* Estos trazos ocupan poco del lienzo: se agrandan para igualar a WhatsApp y X. */
+.sh-in svg,
+.sh-fb svg,
+.sh-copy svg {
+  transform: scale(1.45);
+}
 .sh:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(15, 42, 67, 0.18);
