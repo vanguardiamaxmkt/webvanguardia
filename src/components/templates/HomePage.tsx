@@ -6,7 +6,7 @@ import { WizardLink } from "@/components/whatsapp/WizardLink";
 import { WaIcon } from "@/components/whatsapp/WaIcon";
 import { LeadForm } from "@/components/whatsapp/LeadForm";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
-import { HeroLeadForm } from "@/components/hero/HeroLeadForm";
+import { EmailLeadSection } from "@/components/sections/EmailLeadSection";
 import { Topbar } from "@/components/layout/Topbar";
 import { Footer } from "@/components/layout/Footer";
 import { TrustStrip } from "@/components/sections/TrustStrip";
@@ -82,7 +82,7 @@ export function HomePage() {
               </div>
             </div>
             <div className="hero-art">
-              <HeroLeadForm cert={home.cert} />
+              <LeadForm fields={home.form.fields} variant="hero" id="cotizar" />
             </div>
           </div>
         </section>
@@ -275,29 +275,7 @@ export function HomePage() {
         <Certificaciones data={home.certificaciones} />
 
         {/* ===== Formulario maestro ===== */}
-        <section className="lead" id="cotizar">
-          <div className="wrap lead-grid">
-            <div>
-              <div className="sec-eyebrow" style={{ color: "var(--gold)" }}>
-                Cotiza ahora
-              </div>
-              <h2>Cuéntanos de tu caso y te respondemos hoy</h2>
-              <p className="sec-p">
-                Completa los datos y te llevamos directo a WhatsApp con tu consulta
-                lista. Sin formularios eternos.
-              </p>
-              <ul>
-                {home.form.bullets.map((bullet) => (
-                  <li key={bullet}>
-                    <Icon name="check" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <LeadForm fields={home.form.fields} />
-          </div>
-        </section>
+        <EmailLeadSection cert={home.cert} />
 
         <Faq items={home.faq.items} id="faq" />
         <FinalCta data={home.finalCta} />

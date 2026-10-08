@@ -8,7 +8,21 @@ import type { FormField } from "@/types/content";
  * Lead capture form. Builds a qualified WhatsApp message from the field values
  * and opens the chat — no backend, conversion happens in WhatsApp.
  */
-export function LeadForm({ fields }: { fields: FormField[] }) {
+export function LeadForm({
+  fields,
+  variant = "default",
+  id,
+}: {
+  fields: FormField[];
+  /**
+   * `hero`: versión compacta para la cabecera (etiquetas ocultas, los
+   * desplegables de dos en dos y menos espacio).
+   */
+  variant?: "default" | "hero";
+  /** id de la tarjeta (destino de los botones "Cotiza"). */
+  id?: string;
+}) {
+  const hero = variant === "hero";
   const { buildUrl, segment, contact, submitLead } = useWhatsApp();
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -41,23 +55,26 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
     contact({
       form_submit: true,
       button_location: "formulario_whatsapp",
+      form_position: hero ? "hero" : "final",
       ...(destino ? { destino } : {}),
       ...(ubicacion ? { ubicacion } : {}),
     });
   }
 
+  const fid = (name: string) => (hero ? `h-${name}` : name);
+
   return (
-    <div className="form-card">
-      <h3>Solicita tu cotización</h3>
-      <p className="fp">Toma 20 segundos.</p>
-      <form onSubmit={handleSubmit}>
+    <div className={hero ? "form-card form-card--hero" : "form-card"} id={id}>
+      <h3>{hero ? "Cotiza por WhatsApp" : "Solicita tu cotización"}</h3>
+      <p className="fp">{hero ? "Te respondemos hoy · toma 20 segundos" : "Toma 20 segundos."}</p>
+      <form onSubmit={handleSubmit} className={hero ? "lf-grid" : undefined}>
         {fields.map((field) => (
           <div className="field" key={field.name}>
-            <label htmlFor={field.name}>{field.label}</label>
+            <label htmlFor={fid(field.name)}>{field.label}</label>
             {field.type === "select" ? (
-              <select id={field.name} name={field.name} required defaultValue="">
+              <select id={fid(field.name)} name={field.name} required defaultValue="">
                 <option value="" disabled>
-                  Selecciona…
+                  {hero ? field.label : "Selecciona…"}
                 </option>
                 {field.options.map((opt) => (
                   <option key={opt} value={opt}>
@@ -67,10 +84,10 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
               </select>
             ) : (
               <input
-                id={field.name}
+                id={fid(field.name)}
                 name={field.name}
                 type={field.type}
-                placeholder={field.placeholder}
+                placeholder={hero ? field.label : field.placeholder}
                 required
               />
             )}
@@ -78,9 +95,9 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
         ))}
         {/* Honeypot anti-bots: oculto para humanos, los bots lo autocompletan */}
         <div className="hp-field" aria-hidden="true">
-          <label htmlFor="empresa_web">No llenar este campo</label>
+          <label htmlFor={fid("empresa_web")}>No llenar este campo</label>
           <input
-            id="empresa_web"
+            id={fid("empresa_web")}
             name="empresa_web"
             type="text"
             tabIndex={-1}
@@ -91,8 +108,9 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
         <label className="form-check form-consent">
           <input type="checkbox" name="consent" required />
           <span>
-            Autorizo el tratamiento de mis datos personales y ser contactado por
-            WhatsApp, conforme a la{" "}
+            {hero
+              ? "Autorizo el tratamiento de mis datos y ser contactado por WhatsApp, conforme a la "
+              : "Autorizo el tratamiento de mis datos personales y ser contactado por WhatsApp, conforme a la "}
             <a href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer">
               Política de Privacidad
             </a>
@@ -104,7 +122,7 @@ export function LeadForm({ fields }: { fields: FormField[] }) {
           <WaIcon />
           Enviar por WhatsApp
         </button>
-        <p className="form-note">Al enviar se abrirá WhatsApp con tu consulta lista.</p>
+        {!hero && <p className="form-note">Al enviar se abrirá WhatsApp con tu consulta lista.</p>}
       </form>
     </div>
   );

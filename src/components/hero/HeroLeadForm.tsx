@@ -20,11 +20,14 @@ export function HeroLeadForm({
   cert,
   defaultTipo,
   submitLabel = "Solicitar tasación",
+  cardId,
 }: {
   cert: Omit<CertCardData, "kind">;
   /** Tipo de tasación preseleccionado (el de la página que muestra el formulario). */
   defaultTipo?: TipoTasacion;
   submitLabel?: string;
+  /** id de la tarjeta (destino de los botones que llevan a este formulario). */
+  cardId?: string;
 }) {
   const { utm, origin, visit, segment } = useWhatsApp();
   const [sending, setSending] = useState(false);
@@ -70,7 +73,7 @@ export function HeroLeadForm({
   }
 
   return (
-    <div className="hero-card" id="formulario">
+    <div className="hero-card" id={cardId}>
       <div className="cert-top">
         <div>
           <h4>{cert.title}</h4>

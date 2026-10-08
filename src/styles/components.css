@@ -2237,3 +2237,56 @@ a.ccard-val:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- Formulario de WhatsApp compacto en la cabecera --------------------- */
+.form-card--hero {
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+  padding: 24px 24px 20px;
+  color: var(--ink);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.42);
+}
+.form-card--hero h3 {
+  font-size: 20px;
+}
+.form-card--hero .fp {
+  margin-bottom: 14px;
+}
+.lf-grid {
+  display: block;
+}
+.lf-grid .field {
+  margin-bottom: 10px;
+}
+/* Etiquetas solo para lectores de pantalla: el texto va en el campo. */
+.lf-grid .field label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.lf-grid .field input,
+.lf-grid .field select {
+  padding: 11px 12px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.lf-grid .field select:invalid {
+  color: var(--muted);
+}
+.lf-grid .form-consent {
+  font-size: 11.5px;
+  margin: 4px 0 12px;
+}
+.form-card--hero .btn-wa {
+  margin-top: 0;
+  padding: 13px;
+}
+@media (max-width: 860px) {
+  .form-card--hero {
+    margin: 0 auto;
+  }
+}

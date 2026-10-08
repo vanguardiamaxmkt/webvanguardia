@@ -7,7 +7,9 @@ import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Breadcrumb } from "@/components/sections/Breadcrumb";
 import { Hero } from "@/components/sections/Hero";
 import { FactsCard } from "@/components/sections/FactsCard";
-import { HeroLeadForm } from "@/components/hero/HeroLeadForm";
+import { LeadForm } from "@/components/whatsapp/LeadForm";
+import { EmailLeadSection } from "@/components/sections/EmailLeadSection";
+import type { FormField } from "@/types/content";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Prose } from "@/components/sections/Prose";
 import { Benefits } from "@/components/sections/Benefits";
@@ -18,6 +20,13 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { site } from "@/content/site";
 import { TIPO_POR_SLUG } from "@/content/tipos-tasacion";
 import { faqPageJsonLd } from "@/lib/schema";
+
+/** Campos del formulario de WhatsApp del hero en las páginas de servicio. */
+const SERVICE_FORM_FIELDS: FormField[] = [
+  { type: "text", name: "nombre", label: "Nombre" },
+  { type: "text", name: "ubicacion", label: "Distrito o ciudad" },
+  { type: "tel", name: "telefono", label: "Teléfono / WhatsApp" },
+];
 
 /** Renders a complete SEO service page from its content config. */
 export function ServicePage({
@@ -36,6 +45,7 @@ export function ServicePage({
   heroForm?: boolean;
 }) {
   const path = content.meta.canonical ?? `${parent.href}/${content.slug}`;
+  const withForm = heroForm && !!content.formCard;
   // El FAQPage escrito a mano en cada archivo se reemplaza por uno generado
   // desde las preguntas visibles; al Service se le completa la url si falta.
   const jsonLd = [
@@ -53,7 +63,7 @@ export function ServicePage({
       segment={content.whatsapp.segment}
     >
       <JsonLd data={jsonLd} />
-      <Topbar nav={siteNav} />
+      <Topbar nav={siteNav} ctaTarget={withForm ? "cotizar" : undefined} />
       <Breadcrumb
         items={[
           { label: "Inicio", href: "/" },
@@ -65,13 +75,10 @@ export function ServicePage({
         <Hero
           content={content.hero}
           variant="service"
+          ctaTarget={withForm ? "cotizar" : undefined}
           card={
-            heroForm && content.formCard ? (
-              <HeroLeadForm
-                cert={content.formCard}
-                defaultTipo={TIPO_POR_SLUG[content.slug]}
-                submitLabel={content.formCard.submitLabel}
-              />
+            withForm ? (
+              <LeadForm fields={SERVICE_FORM_FIELDS} variant="hero" id="cotizar" />
             ) : (
               <FactsCard data={content.heroCard} />
             )
@@ -86,11 +93,18 @@ export function ServicePage({
           alt
         />
         <Faq heading={content.faq.heading} items={content.faq.items} />
+        {withForm && content.formCard && (
+          <EmailLeadSection
+            cert={content.formCard}
+            defaultTipo={TIPO_POR_SLUG[content.slug]}
+            submitLabel={content.formCard.submitLabel}
+          />
+        )}
         <Related data={content.related} id="servicios" />
         <FinalCta data={content.finalCta} />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp target={withForm ? "cotizar" : undefined} />
     </WhatsAppProvider>
   );
 }

@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Hero } from "@/components/sections/Hero";
 import { CertCard } from "@/components/sections/CertCard";
-import { HeroLeadForm } from "@/components/hero/HeroLeadForm";
+import { EmailLeadSection } from "@/components/sections/EmailLeadSection";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Pain } from "@/components/sections/Pain";
 import { Benefits } from "@/components/sections/Benefits";
@@ -100,16 +100,20 @@ export function LandingPage({
       />
       <main>
         <Hero
-          content={content.hero}
+          content={
+            heroForm && content.hero.secondaryCta
+              ? { ...content.hero, secondaryCta: { label: "Cotiza por correo", href: "#cotizar-correo" } }
+              : content.hero
+          }
           card={
             heroForm ? (
-              <HeroLeadForm cert={content.heroCard} defaultTipo={TIPO_POR_SLUG[content.slug]} />
+              <LeadForm fields={content.form.fields} variant="hero" id="cotizar" />
             ) : (
               <CertCard data={content.heroCard} />
             )
           }
           ctaTarget="cotizar"
-          formTarget={heroForm ? "formulario" : undefined}
+          formTarget={heroForm ? "formulario-correo" : undefined}
         />
         <TrustStrip stats={content.stats} />
         {definition && (
@@ -140,29 +144,33 @@ export function LandingPage({
 
         {seoRest && seoRest.length > 0 && <Prose blocks={seoRest} alt />}
 
-        <section className="lead" id="cotizar">
-          <div className="wrap lead-grid">
-            <div>
-              <div className="sec-eyebrow" style={{ color: "var(--gold)" }}>
-                Cotiza ahora
+        {heroForm ? (
+          <EmailLeadSection cert={content.heroCard} defaultTipo={TIPO_POR_SLUG[content.slug]} />
+        ) : (
+          <section className="lead" id="cotizar">
+            <div className="wrap lead-grid">
+              <div>
+                <div className="sec-eyebrow" style={{ color: "var(--gold)" }}>
+                  Cotiza ahora
+                </div>
+                <h2>Cuéntanos de tu caso y te respondemos hoy</h2>
+                <p className="sec-p">
+                  Completa los datos y te llevamos directo a WhatsApp con tu consulta
+                  lista. Sin formularios eternos.
+                </p>
+                <ul>
+                  {content.form.bullets.map((bullet) => (
+                    <li key={bullet}>
+                      <Icon name="check" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h2>Cuéntanos de tu caso y te respondemos hoy</h2>
-              <p className="sec-p">
-                Completa los datos y te llevamos directo a WhatsApp con tu consulta
-                lista. Sin formularios eternos.
-              </p>
-              <ul>
-                {content.form.bullets.map((bullet) => (
-                  <li key={bullet}>
-                    <Icon name="check" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
+              <LeadForm fields={content.form.fields} />
             </div>
-            <LeadForm fields={content.form.fields} />
-          </div>
-        </section>
+          </section>
+        )}
 
         <Faq items={content.faq.items} id="faq" />
         <SiloLinks

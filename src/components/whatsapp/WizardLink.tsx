@@ -33,6 +33,7 @@ export function WizardLink({
       // (páginas de servicio), el botón del CTA final. Así no se detiene en el
       // inicio de la sección (título/bullets), sino en el wizard mismo.
       const highlight =
+        (el.matches(".form-card") ? el : null) ??
         el.querySelector<HTMLElement>(".form-card") ??
         el.querySelector<HTMLElement>(".btn-wa") ??
         el;
