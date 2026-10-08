@@ -18,7 +18,7 @@ import { readFileSync } from "node:fs";
 
 /** Campos (además de `content`) que una edición puede sobrescribir. */
 const EDITABLES = [
-  "title", "excerpt", "category", "tags", "focus_keyword",
+  "title", "excerpt", "category", "tags", "focus_keyword", "cover_image",
   "meta_title", "meta_description", "og_image", "canonical_url",
   "status", "noindex",
 ];
