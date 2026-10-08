@@ -1,0 +1,16 @@
+[
+  {
+    "id": 25,
+    "slug": "tasacion-ifrs-de-predios-agricolas",
+    "motivo": "Aprobado por el cliente el 01-10-2026; seguía en borrador en /admin.",
+    "campos": { "status": "publicado", "noindex": false }
+  },
+  {
+    "id": 13,
+    "slug": "que-es-la-tasacion-de-propiedades-con-ifrs",
+    "destino": "/articulos/tasacion-ifrs-de-predios-agricolas",
+    "motivo": "Es el artículo que hoy posiciona (2.º–3.º orgánico) para 'tasaciones ifrs de predios agricolas' sin tratar el tema; enlaza al artículo específico con la palabra clave exacta como ancla.",
+    "buscar": "<li><strong>Activos Biológicos (NIC 41)</strong>: Plantas y animales vivos relacionados con actividades agrícolas.</li>",
+    "reemplazar": "<li><strong>Activos Biológicos (NIC 41)</strong>: Plantas y animales vivos relacionados con actividades agrícolas. Lo explicamos en detalle en <a href=\"/articulos/tasacion-ifrs-de-predios-agricolas\">tasación IFRS de predios agrícolas</a>.</li>"
+  }
+]

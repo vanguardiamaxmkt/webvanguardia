@@ -1,0 +1,146 @@
+[
+  {
+    "id": 26,
+    "slug": "valuacion-de-proyectos-hoteleros-con-flujos-descontados",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto 4mBlowNrbxI)",
+    "campos": {
+      "cover_image": "/articulos/portadas/valuacion-de-proyectos-hoteleros-con-flujos-descontados.jpg"
+    }
+  },
+  {
+    "id": 21,
+    "slug": "tasacion-de-negocio-en-marcha",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto qynqu1rMnbk)",
+    "campos": {
+      "cover_image": "/articulos/portadas/tasacion-de-negocio-en-marcha.jpg"
+    }
+  },
+  {
+    "id": 13,
+    "slug": "que-es-la-tasacion-de-propiedades-con-ifrs",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto V5vF94h52r0)",
+    "campos": {
+      "cover_image": "/articulos/portadas/que-es-la-tasacion-de-propiedades-con-ifrs.jpg"
+    }
+  },
+  {
+    "id": 25,
+    "slug": "tasacion-ifrs-de-predios-agricolas",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto JpJvKs8D0rM)",
+    "campos": {
+      "cover_image": "/articulos/portadas/tasacion-ifrs-de-predios-agricolas.jpg"
+    }
+  },
+  {
+    "id": 23,
+    "slug": "tasador-online",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto FlPc9_VocJ4)",
+    "campos": {
+      "cover_image": "/articulos/portadas/tasador-online.jpg"
+    }
+  },
+  {
+    "id": 24,
+    "slug": "consejos-para-comprar-una-casa",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto QpRjfYmGtbk)",
+    "campos": {
+      "cover_image": "/articulos/portadas/consejos-para-comprar-una-casa.jpg"
+    }
+  },
+  {
+    "id": 22,
+    "slug": "que-es-un-estudio-de-viabilidad",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto rn00OVh0gEI)",
+    "campos": {
+      "cover_image": "/articulos/portadas/que-es-un-estudio-de-viabilidad.jpg"
+    }
+  },
+  {
+    "id": 20,
+    "slug": "supervision-de-obra-valor-del-inmueble",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto x-ghf9LjrVg)",
+    "campos": {
+      "cover_image": "/articulos/portadas/supervision-de-obra-valor-del-inmueble.jpg"
+    }
+  },
+  {
+    "id": 19,
+    "slug": "valor-de-reposicion",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto hHz4yrvxwlA)",
+    "campos": {
+      "cover_image": "/articulos/portadas/valor-de-reposicion.jpg"
+    }
+  },
+  {
+    "id": 15,
+    "slug": "tasacion-judicial-importancia-proceso-y-aplicaciones-en-el-sistema-legal-peruano",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto ozS0tPf8QT0)",
+    "campos": {
+      "cover_image": "/articulos/portadas/tasacion-judicial-importancia-proceso-y-aplicaciones-en-el-sistema-leg.jpg"
+    }
+  },
+  {
+    "id": 10,
+    "slug": "tasaciones-de-inmuebles-guia-completa-para-valoraciones-precisas",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto rQT0D4nwcqM)",
+    "campos": {
+      "cover_image": "/articulos/portadas/tasaciones-de-inmuebles-guia-completa-para-valoraciones-precisas.jpg"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "tasadores-de-terrenos-como-determinar-el-valor-del-terreno",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto eGHv-J3wNCY)",
+    "campos": {
+      "cover_image": "/articulos/portadas/tasadores-de-terrenos-como-determinar-el-valor-del-terreno.jpg"
+    }
+  },
+  {
+    "id": 11,
+    "slug": "cuales-son-los-pasos-para-la-construccion-de-un-centro-comercial",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto 1HVfpQsXiME)",
+    "campos": {
+      "cover_image": "/articulos/portadas/cuales-son-los-pasos-para-la-construccion-de-un-centro-comercial.jpg"
+    }
+  },
+  {
+    "id": 12,
+    "slug": "precio-de-una-tasacion-cuanto-cuesta-tasar-en-peru-lo-que-las-tasadoras-no-te-dicen",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto X4VwfPzy_2o)",
+    "campos": {
+      "cover_image": "/articulos/portadas/precio-de-una-tasacion-cuanto-cuesta-tasar-en-peru-lo-que-las-tasadora.jpg"
+    }
+  },
+  {
+    "id": 18,
+    "slug": "que-es-la-merced-conductiva",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto Q33-rEyk2JA)",
+    "campos": {
+      "cover_image": "/articulos/portadas/que-es-la-merced-conductiva.jpg"
+    }
+  },
+  {
+    "id": 17,
+    "slug": "valoraciones-ifrs-niif-peru",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto 3B5Hf9_PLpU)",
+    "campos": {
+      "cover_image": "/articulos/portadas/valoraciones-ifrs-niif-peru.jpg"
+    }
+  },
+  {
+    "id": 16,
+    "slug": "tasaciones-ifrs-en-peru-descubre-el-valor-real-de-tu-empresa",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto hZ2ULF80dCY)",
+    "campos": {
+      "cover_image": "/articulos/portadas/tasaciones-ifrs-en-peru-descubre-el-valor-real-de-tu-empresa.jpg"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "como-realizar-una-tasacion-inmobiliaria-en-tres-pasos-detallados",
+    "motivo": "Portada de stock (Unsplash, licencia gratuita, foto jf8n7XEJLlA)",
+    "campos": {
+      "cover_image": "/articulos/portadas/como-realizar-una-tasacion-inmobiliaria-en-tres-pasos-detallados.jpg"
+    }
+  }
+]

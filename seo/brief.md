@@ -8,7 +8,7 @@ Empresa peruana de **tasaciones y peritajes valuatorios** con cobertura nacional
 
 Silos del sitio:
 
-- `/tasaciones/*` — hipotecaria, judicial, activos-fijos, empresas (NIIF/IFRS e inventario), alquiler, vehicular, embarcaciones, impuesto-predial, agricolas, obras-arte, fiduciarias, para-seguros.
+- `/tasaciones/*` — hipotecaria, judicial, activos-fijos, empresas (NIIF/IFRS e inventario), alquiler, vehicular, embarcaciones, impuesto-predial, agricolas, obras-arte, fiduciarias, para-seguros, hoteles (hoteles y resorts de lujo, desde el 04-10-2026).
 - `/servicios/*` — saneamiento-inmobiliario, auditoria-planos, proyectos-supervision-obras, proyectos-estudio-viabilidad, proyectos-proyeccion-inmobiliaria, proyectos-estudio-itf.
 - `/articulos/*` — blog (9 publicados a 22-09-2026; 8 borradores heredados).
 

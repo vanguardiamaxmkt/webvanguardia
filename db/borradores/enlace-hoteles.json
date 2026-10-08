@@ -1,0 +1,10 @@
+[
+  {
+    "id": 21,
+    "slug": "tasacion-de-negocio-en-marcha",
+    "destino": "/tasaciones/hoteles",
+    "motivo": "El artículo abre con el ejemplo de un hotel en funcionamiento y explica por qué un negocio rentable vale más que el local vacío; es el enlace contextual natural hacia la nueva landing de hoteles (publicada el 04-10-2026).",
+    "buscar": "el comprador no solo adquiere el espacio, sino los ingresos que ya genera.</p>",
+    "reemplazar": "el comprador no solo adquiere el espacio, sino los ingresos que ya genera. Es el caso típico de la <a href=\"/tasaciones/hoteles\">tasación de hoteles y resorts</a>, donde el valor depende de la ocupación y las tarifas.</p>"
+  }
+]
