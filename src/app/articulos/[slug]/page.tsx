@@ -1,7 +1,10 @@
 import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPublishedBySlug } from "@/lib/articles";
+import Link from "next/link";
+import { getPublishedBySlug, listRelated } from "@/lib/articles";
+import { readingStats, withHeadingAnchors } from "@/lib/article-html";
+import type { Article } from "@/types/article";
 import { site, siteNav } from "@/content/site";
 import { WhatsAppProvider } from "@/components/whatsapp/WhatsAppProvider";
 import { Topbar } from "@/components/layout/Topbar";
@@ -10,6 +13,9 @@ import { FloatingWhatsApp } from "@/components/whatsapp/FloatingWhatsApp";
 import { Breadcrumb } from "@/components/sections/Breadcrumb";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { ORG_REF } from "@/lib/schema";
+import { ArticleReading } from "@/components/articles/ArticleReading";
+import { TableOfContents } from "@/components/articles/TableOfContents";
+import { ShareButtons } from "@/components/articles/ShareButtons";
 
 export const dynamic = "force-dynamic";
 
@@ -71,6 +77,15 @@ export default async function ArticuloPage({
   if (!article) notFound();
 
   const image = article.cover_image || article.og_image;
+  const { html, toc } = withHeadingAnchors(article.content || "");
+  const { words, minutes } = readingStats(html);
+  const pageUrl = `${site.url}/articulos/${article.slug}`;
+  let related: Article[] = [];
+  try {
+    related = await listRelated(article.id, article.category);
+  } catch {
+    related = [];
+  }
   const tags = (article.tags || "")
     .split(",")
     .map((t) => t.trim())
@@ -86,7 +101,9 @@ export default async function ArticuloPage({
     dateModified: article.updated_at,
     author: { "@type": "Organization", name: article.author || site.name },
     publisher: ORG_REF,
-    mainEntityOfPage: `${site.url}/articulos/${article.slug}`,
+    mainEntityOfPage: pageUrl,
+    wordCount: words,
+    timeRequired: `PT${minutes}M`,
   };
 
   return (
@@ -95,6 +112,7 @@ export default async function ArticuloPage({
       segment="articulo"
     >
       <JsonLd data={[jsonLd]} />
+      <ArticleReading slug={article.slug} category={article.category} readingMinutes={minutes} />
       <Topbar nav={siteNav} />
       <Breadcrumb
         items={[
@@ -112,6 +130,7 @@ export default async function ArticuloPage({
             <div className="ameta">
               {article.author && <span>Por {article.author}</span>}
               {article.published_at && <span>{fmtDate(article.published_at)}</span>}
+              <span>{minutes} min de lectura</span>
             </div>
           </div>
         </section>
@@ -124,20 +143,61 @@ export default async function ArticuloPage({
         )}
 
         <section className="article-body">
-          <div className="wrap">
-            <div
-              className="article-prose"
-              dangerouslySetInnerHTML={{ __html: article.content || "" }}
-            />
-            {tags.length > 0 && (
-              <div className="article-tags">
-                {tags.map((t) => (
-                  <span key={t}>#{t}</span>
-                ))}
-              </div>
+          <div className={toc.length >= 3 ? "wrap article-layout" : "wrap"}>
+            {toc.length >= 3 && (
+              <aside className="article-aside">
+                <TableOfContents items={toc} />
+              </aside>
             )}
+            <div className="article-main">
+              <div
+                id="article-content"
+                className="article-prose"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
+              {tags.length > 0 && (
+                <div className="article-tags">
+                  {tags.map((t) => (
+                    <span key={t}>#{t}</span>
+                  ))}
+                </div>
+              )}
+              <ShareButtons url={pageUrl} title={article.title} />
+            </div>
           </div>
         </section>
+
+        {related.length > 0 && (
+          <section className="blog related-articles">
+            <div className="wrap">
+              <div className="sec-eyebrow">Sigue leyendo</div>
+              <h2 className="sec-h">Artículos relacionados</h2>
+              <div className="blog-grid">
+                {related.map((a, i) => (
+                  <Link
+                    className="blog-card"
+                    href={`/articulos/${a.slug}`}
+                    key={a.id}
+                    data-track="related"
+                    data-slug={a.slug}
+                    data-position={i + 1}
+                  >
+                    {a.cover_image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img className="thumb" src={a.cover_image} alt={a.title} loading="lazy" />
+                    )}
+                    <div className="body">
+                      {a.category && <span className="blog-tag">{a.category}</span>}
+                      <h3>{a.title}</h3>
+                      {a.excerpt && <p>{a.excerpt}</p>}
+                      <div className="blog-meta">{fmtDate(a.published_at)}</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
       <FloatingWhatsApp />

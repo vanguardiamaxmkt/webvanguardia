@@ -55,6 +55,29 @@ export async function getPublishedBySlug(slug: string): Promise<Article | null> 
   return rows[0] ?? null;
 }
 
+/**
+ * Artículos para "Sigue leyendo": primero los de la misma categoría, luego los
+ * más recientes. Excluye el actual.
+ */
+export async function listRelated(
+  id: number,
+  category: string | null,
+  limit = 3,
+): Promise<Article[]> {
+  const [rows] = await getPool().query<ArticleRow[]>(
+    `SELECT id, slug, title, excerpt, cover_image, category, published_at, created_at
+       FROM articulos
+       WHERE status = 'publicado'
+         AND noindex = 0
+         AND id <> ?
+         AND (published_at IS NULL OR published_at <= NOW())
+       ORDER BY (category <=> ?) DESC, COALESCE(published_at, created_at) DESC
+       LIMIT ?`,
+    [id, category, limit],
+  );
+  return rows;
+}
+
 /* ------------------------------ Panel /admin ------------------------------ */
 
 export async function listAll(): Promise<Article[]> {
