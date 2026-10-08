@@ -260,36 +260,91 @@ h2[id] {
   scroll-margin-top: 90px;
 }
 .share {
+  margin-top: 36px;
+  padding: 22px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #eaf7fe 0%, #f4f6f7 100%);
+  border: 1px solid #cfeaf9;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  margin-top: 32px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
+  justify-content: space-between;
+  gap: 16px 24px;
 }
-.share-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-  margin-right: 4px;
-}
-.share a,
-.share button {
-  font: inherit;
-  font-size: 13px;
-  font-weight: 600;
+.share-head b {
+  display: block;
+  font-family: var(--font-heading), Montserrat, Arial, sans-serif;
+  font-size: 18px;
   color: var(--navy);
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 7px 14px;
-  cursor: pointer;
 }
-.share a:hover,
-.share button:hover {
-  border-color: var(--gold);
-  color: var(--gold-d);
+.share-head span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.share-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sh {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.sh svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+.sh:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 42, 67, 0.18);
+  filter: brightness(1.05);
+}
+.sh-wa {
+  background: #25d366;
+  color: #063019;
+}
+.sh-in {
+  background: #0a66c2;
+}
+.sh-fb {
+  background: #1877f2;
+}
+.sh-x {
+  background: #111;
+}
+.sh-copy {
+  background: #fff;
+  color: var(--navy);
+  border: 1.5px solid var(--line);
+}
+.sh-copy.ok {
+  background: #e6f6ee;
+  color: #1f9d57;
+  border-color: #b6e6c9;
+}
+@media (max-width: 560px) {
+  .share {
+    padding: 18px;
+  }
+  .share-btns {
+    width: 100%;
+  }
+  .sh {
+    flex: 1 1 calc(50% - 8px);
+    justify-content: center;
+  }
 }
 .related-articles {
   border-top: 1px solid var(--line);
