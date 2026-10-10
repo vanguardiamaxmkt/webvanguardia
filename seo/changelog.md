@@ -48,4 +48,14 @@ Cada cambio publicado se anota con su fecha, su verificación en vivo y la líne
 
 ## Resultados medidos
 
-_(vacío: se completa a partir del 23-10-2026)_
+**Lectura preliminar, 10-10-2026** (captura de GSC 1 jul – 8 oct, sin filtro de país, redondeada; el periodo reciente se deriva restando la línea base, así que es aproximado ±10 %):
+
+| Periodo | Días | Clics | Impresiones | CTR | Clics/día | Impr./día |
+|---|---|---|---|---|---|---|
+| 1 abr – 30 jun (sitio antiguo) | 91 | 257 | 22 734 | 1,13 % | 2,8 | 250 |
+| 1 jul – 19 sep (sitio nuevo, antes del SEO) | 81 | 166 | 11 187 | 1,48 % | 2,1 | 138 |
+| 20 sep – 8 oct (tras los cambios del 22–24 sep) | ~19 | ~76 | ~3 800 | ~2,0 % | 4,0 | ~200 |
+
+- Clics por día **×1,95** y CTR **×1,35** frente a la línea base; impresiones por día ×1,45. Frente al sitio antiguo: +40 % de clics/día con 20 % menos impresiones (el sitio nuevo convierte mejor cada impresión).
+- Posición media: 11,7 ponderada en la base; 10,9 en el periodo completo de la captura.
+- Sin medición de conversiones orgánicas todavía (ROI no calculable). Lectura definitiva el **25-10-2026** con exportación filtrada País = Perú (28 días completos).
