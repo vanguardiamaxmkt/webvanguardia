@@ -18,13 +18,13 @@ export default function TasacionesIndex() {
       current="Tasaciones"
       path="/tasaciones"
       items={tasacionesPages}
-      baseMessage="Hola VanguardiaMax, quiero información sobre la tasación de mi inmueble."
+      baseMessage="Hola VanguardiaMax, quiero información sobre una tasación."
       segment="tasaciones-index"
       seoContent={tasacionesIndex.seoContent}
       faq={tasacionesIndex.faq}
       service={{
         name: tasacionesIndex.heading,
-        serviceType: "Tasación de inmuebles",
+        serviceType: "Tasaciones",
         description: tasacionesIndex.meta.description,
         path: "/tasaciones",
         // Rango verificado en el sitio (artículo de precios, seo/brief.md).
