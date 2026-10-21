@@ -2290,3 +2290,8 @@ a.ccard-val:hover {
     margin: 0 auto;
   }
 }
+
+/* Números de la franja de confianza: cifras de ancho fijo para que el conteo no "baile". */
+.stat .n .count-n {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,4 +1,5 @@
 import type { Stat } from "@/types/content";
+import { CountUp } from "@/components/ux/CountUp";
 
 export function TrustStrip({ stats }: { stats: Stat[] }) {
   return (
@@ -6,7 +7,7 @@ export function TrustStrip({ stats }: { stats: Stat[] }) {
       <div className="wrap">
         {stats.map((s) => (
           <div className="stat" key={s.l}>
-            <div className="n">{s.n}</div>
+            <div className="n"><CountUp value={s.n} /></div>
             <div className="l">{s.l}</div>
           </div>
         ))}
