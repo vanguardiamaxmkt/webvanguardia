@@ -142,3 +142,12 @@ section {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* Cabecera centrada más ancha (home: "Por qué VanguardiaMax"), para que el párrafo ocupe el ancho útil. */
+.sec-head-center--wide {
+  max-width: 58em;
+}
+.sec-head-center--wide .sec-h,
+.sec-head-center--wide .sec-p {
+  max-width: none;
+}
