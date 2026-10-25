@@ -12,7 +12,7 @@ export interface SegmentCard {
 export const home = {
   meta: {
     title:
-      "Tasaciones Inmobiliarias con Validez Legal en el Perú | VanguardiaMax",
+      "Empresa de tasaciones inmobiliarias en Perú | VanguardiaMax",
     description:
       "Tasaciones inmobiliarias con validez legal en todo el Perú para crédito, compraventa, herencias y juicios. Peritos certificados, reconocidos por la SBS.",
     canonical: "/",
