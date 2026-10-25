@@ -105,7 +105,7 @@ export const judicial: LandingContent = {
     { type: "h3", text: "Por qué debe tener validez legal" },
     {
       type: "p",
-      html: "Una valuación sin respaldo técnico suele rechazarse en el expediente y obliga a repetir el trámite. Por eso trabajamos con <b>peritos certificados e inscritos</b> en los registros oficiales (REPEV / REPEJ), cuya firma y sustento normativo dan al informe el peso legal que el juzgado exige. Cada <b>valuación para juicio</b> se apoya en el Reglamento Nacional de Tasaciones, lo que la hace consistente y difícil de objetar. Si además tu predio requiere ordenar su situación registral antes del peritaje, podemos orientarte sobre <a href='/servicios/saneamiento-inmobiliario'>saneamiento inmobiliario</a> para que el bien llegue al proceso correctamente documentado.",
+      html: "Una valuación sin respaldo técnico suele rechazarse en el expediente y obliga a repetir el trámite. Por eso el informe lo firma un <b>perito judicial inmobiliario</b>, es decir, un <b>tasador judicial</b> certificado e inscrito en los registros oficiales (REPEV / REPEJ), cuya firma y sustento normativo dan al informe el peso legal que el juzgado exige. Cada <b>valuación para juicio</b> se apoya en el Reglamento Nacional de Tasaciones, lo que la hace consistente y difícil de objetar. Si además tu predio requiere ordenar su situación registral antes del peritaje, podemos orientarte sobre <a href='/servicios/saneamiento-inmobiliario'>saneamiento inmobiliario</a> para que el bien llegue al proceso correctamente documentado.",
     },
     { type: "h3", text: "Documentos que suelen pedirse" },
     {
@@ -165,6 +165,10 @@ export const judicial: LandingContent = {
       {
         q: "¿El peritaje tiene validez legal?",
         a: "Sí. Nuestras tasaciones tienen validez legal y son reconocidas por instituciones financieras y gubernamentales, con sustento conforme al Reglamento Nacional de Tasaciones del Perú.",
+      },
+      {
+        q: "¿Qué es un perito judicial inmobiliario?",
+        a: "Es el tasador judicial que valoriza inmuebles dentro de un proceso: un ingeniero o arquitecto colegiado inscrito en el REPEJ del Poder Judicial o designado por el juez. Su informe, elaborado conforme al Reglamento Nacional de Tasaciones, se presenta como prueba en herencias, divorcios, remates y litigios.",
       },
       {
         q: "¿Sirve para herencias y divorcios?",

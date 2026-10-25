@@ -27,7 +27,7 @@ export const tasacionesIndex = {
     { type: "h2", text: "¿Qué es una tasación?" },
     {
       type: "p",
-      html: "Una <b>tasación</b> es el procedimiento por el cual un perito tasador inspecciona, estudia y analiza las cualidades y características de un bien en una fecha determinada para fijar su valor. Así la define el <b>Reglamento Nacional de Tasaciones</b> del Perú (R.M. N.° 172-2016-VIVIENDA), que también fija qué debe contener el <b>informe técnico de tasación</b>: memoria descriptiva, cálculo del valor y anexos, firmados por el perito. Se tasan inmuebles, vehículos, maquinaria, embarcaciones, obras de arte y empresas completas.",
+      html: "Una <b>tasación</b> es el procedimiento por el cual un perito tasador inspecciona, estudia y analiza las cualidades y características de un bien en una fecha determinada para fijar su valor. Así la define el <b>Reglamento Nacional de Tasaciones</b> del Perú (R.M. N.° 172-2016-VIVIENDA), que rige la <b>tasación de bienes inmuebles</b>, muebles e intangibles y fija qué debe contener el <b>informe técnico de tasación</b>: memoria descriptiva, cálculo del valor y anexos, firmados por el perito. Se tasan inmuebles, vehículos, maquinaria, embarcaciones, obras de arte y empresas completas.",
     },
     { type: "h2", text: "Tipos de tasaciones en el Perú" },
     {
@@ -70,7 +70,7 @@ export const tasacionesIndex = {
     { type: "h2", text: "Tasación de inmuebles en Lima y todo el Perú" },
     {
       type: "p",
-      html: "La <b>tasación de inmuebles</b> es el informe técnico que determina cuánto vale una propiedad. La elabora un perito tasador luego de inspeccionar el inmueble y analizar el mercado, conforme al Reglamento Nacional de Tasaciones. El informe expresa el <b>valor comercial</b> (lo que pagaría el mercado), el <b>valor de realización</b> (el que usa el banco para una venta rápida) y, cuando se requiere, el <b>valor asegurable</b>.",
+      html: "La <b>tasación de inmuebles</b>, también llamada <b>tasación de propiedades</b>, es el informe técnico que determina cuánto vale una propiedad. La elabora un perito tasador luego de inspeccionar el inmueble y analizar el mercado, conforme al Reglamento Nacional de Tasaciones. El informe expresa el <b>valor comercial</b> (lo que pagaría el mercado), el <b>valor de realización</b> (el que usa el banco para una venta rápida) y, cuando se requiere, el <b>valor asegurable</b>.",
     },
     {
       type: "p",
@@ -79,7 +79,7 @@ export const tasacionesIndex = {
     { type: "h2", text: "Tasadores certificados en Lima y todo el Perú" },
     {
       type: "p",
-      html: "Nuestros <b>tasadores</b> son ingenieros y arquitectos colegiados, inscritos en los registros que exige cada trámite: el <b>REPEV</b> de la SBS para créditos y garantías, y el <b>REPEJ</b> del Poder Judicial para peritajes. Con más de 25 años de experiencia, atendemos en <b>Lima, Callao y provincias</b>, con equipos descentralizados en todo el Perú.",
+      html: "VanguardiaMax es una <b>empresa de tasaciones</b> con más de 25 años de experiencia. Nuestros <b>tasadores</b> de casas, departamentos, terrenos y demás bienes raíces son ingenieros y arquitectos colegiados, inscritos en los registros que exige cada trámite: el <b>REPEV</b> de la SBS para créditos y garantías, y el <b>REPEJ</b> del Poder Judicial para peritajes. Atendemos en <b>Lima, Callao y provincias</b>, con equipos descentralizados en todo el Perú.",
     },
     { type: "h2", text: "Qué inmuebles tasamos" },
     {
