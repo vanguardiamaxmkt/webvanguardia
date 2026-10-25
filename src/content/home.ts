@@ -125,7 +125,7 @@ export const home = {
   benefits: {
     eyebrow: "Por qué VanguardiaMax",
     heading: "La autoridad que tu decisión necesita",
-    body: "Tu tasación tiene que resistir la revisión de un banco, un juzgado, un auditor o una aseguradora. Conocemos cómo se valoran los bienes en cada industria y región del Perú, y lo que exige cada entidad que va a recibir el informe. Trabajamos conforme al Reglamento Nacional de Tasaciones y a las Normas Internacionales de Valuación (IVS) del International Valuation Standards Council (IVSC), con doble visado en cada informe y más de 10 mil tasaciones realizadas.",
+    body: "Tu tasación tiene que resistir la revisión de un banco, un juzgado, un auditor o una aseguradora. Como empresa de tasación de inmuebles, vehículos y activos con servicio en todo el Perú, conocemos cómo se valoran los bienes en cada industria y región, y lo que exige cada entidad que va a recibir el informe. Trabajamos conforme al Reglamento Nacional de Tasaciones y a las Normas Internacionales de Valuación (IVS) del International Valuation Standards Council (IVSC), con doble visado en cada informe y más de 10 mil tasaciones realizadas.",
     items: [
       {
         num: "01",
