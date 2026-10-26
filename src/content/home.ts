@@ -229,6 +229,21 @@ export const home = {
     ],
     note: "Los logotipos corresponden a las entidades ante las que nuestros peritos están inscritos o colegiados, a los organismos que reconocen nuestros informes y a los estándares internacionales de valuación que aplicamos. No implican auspicio ni representación.",
   },
+  clientes: {
+    eyebrow: "Clientes",
+    heading: "Bancos y empresas que confían en nuestras tasaciones",
+    body: "Entidades financieras y empresas de distintos sectores del Perú nos encargan la tasación de sus garantías, inmuebles y activos.",
+    items: [
+      { src: "/clientes/web/bbva.webp", alt: "BBVA", name: "BBVA" },
+      { src: "/clientes/web/banco-pichincha-nuevo.webp", alt: "Banco Pichincha", name: "Banco Pichincha" },
+      { src: "/clientes/web/banbif.webp", alt: "BanBif", name: "BanBif" },
+      { src: "/clientes/web/banco-alfin.webp", alt: "Alfin Banco", name: "Alfin Banco" },
+      { src: "/clientes/web/cofide.webp", alt: "COFIDE, el banco de desarrollo del Perú", name: "COFIDE" },
+      { src: "/clientes/web/sa-fernando.webp", alt: "San Fernando", name: "San Fernando" },
+      { src: "/clientes/web/eecol.webp", alt: "EECOL Electric", name: "EECOL Electric" },
+    ],
+    note: "Los logotipos pertenecen a sus respectivos titulares y se muestran solo para identificar a empresas que han contratado nuestros servicios. No implican auspicio ni representación.",
+  },
   homologacion: {
     eyebrow: "Homologación",
     heading: "Tasaciones homologadas, útiles ante el Estado y la banca",

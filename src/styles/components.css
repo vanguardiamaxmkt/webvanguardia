@@ -1128,6 +1128,13 @@
 .certs-marquee.is-running:focus-within .certs-track {
   animation-play-state: paused;
 }
+/* Clientes: fondo blanco (va entre secciones grises) y movimiento de izquierda a derecha. */
+.certs--clientes {
+  background: #fff;
+}
+.certs--clientes .certs-track {
+  animation-direction: reverse;
+}
 @keyframes certs-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }

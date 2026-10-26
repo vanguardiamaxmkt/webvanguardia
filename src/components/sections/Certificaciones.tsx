@@ -18,17 +18,21 @@ export interface CertificacionesData {
 
 /**
  * Registros y colegios profesionales ante los que trabajan los peritos.
- * Reutilizable en la home y en las landings de /tasaciones.
+ * Reutilizable en la home y en las landings de /tasaciones; con `variant="clientes"`
+ * muestra los logos de clientes con el mismo formato.
  */
 export function Certificaciones({
   data,
   id = "certificaciones",
+  variant,
 }: {
   data: CertificacionesData;
   id?: string;
+  /** "clientes": fondo blanco y carrusel en sentido contrario (logos de clientes). */
+  variant?: "clientes";
 }) {
   return (
-    <section className="certs" id={id}>
+    <section className={variant ? `certs certs--${variant}` : "certs"} id={id}>
       <div className="wrap">
         <div className="sec-head-center">
           <div className="sec-eyebrow">{data.eyebrow}</div>

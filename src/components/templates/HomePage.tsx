@@ -167,6 +167,9 @@ export function HomePage() {
           </div>
         </section>
 
+        {/* ===== Clientes ===== */}
+        <Certificaciones data={home.clientes} id="clientes" variant="clientes" />
+
         {/* ===== Proceso de 5 pasos ===== */}
         <section className="how" id="como">
           <div className="wrap">
