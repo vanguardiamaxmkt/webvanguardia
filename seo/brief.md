@@ -8,7 +8,7 @@ Empresa peruana de **tasaciones y peritajes valuatorios** con cobertura nacional
 
 Silos del sitio:
 
-- `/tasaciones/*` — hipotecaria, judicial, activos-fijos, empresas (NIIF/IFRS e inventario), alquiler, vehicular, embarcaciones, impuesto-predial, agricolas, obras-arte, fiduciarias, para-seguros, hoteles (hoteles y resorts de lujo, desde el 04-10-2026).
+- `/tasaciones/*` — fintech (desde el 08-11-2026), hipotecaria, judicial, activos-fijos, empresas (NIIF/IFRS e inventario), alquiler, vehicular, embarcaciones, impuesto-predial, agricolas, obras-arte, fiduciarias, para-seguros, hoteles (hoteles y resorts de lujo, desde el 04-10-2026).
 - `/servicios/*` — saneamiento-inmobiliario, auditoria-planos, proyectos-supervision-obras, proyectos-estudio-viabilidad, proyectos-proyeccion-inmobiliaria, proyectos-estudio-itf.
 - `/articulos/*` — blog (9 publicados a 22-09-2026; 8 borradores heredados).
 
@@ -40,6 +40,15 @@ Silos del sitio:
 - **Vigencia de la tasación: 1 año.**
 - **Presencia en Chile y México** (además de cobertura nacional en el Perú).
 - **Tasación homologada ante la SBS** (hipotecaria).
+
+**Confirmadas por el negocio el 08-11-2026** (landing `/tasaciones/fintech`):
+
+- Clientes **fintech a nivel nacional**; tasaciones para **Mibanco** de negocios en marcha de mypes en base a la mercadería (se puede mencionar).
+- **Staff experto asignado a cada cuenta fintech** (profesionales altamente calificados).
+- Tasan **todo tipo de bienes**.
+- **Inspección virtual**, **inspección personalizada** (según la regulación de la fintech) e **inspección para adjudicados**.
+- Plazos: **no se publica un plazo fijo**; se dice "plazos acordes al tipo de bien y a la solicitud".
+- Valores del informe: **comercial**, **de realización** (valor de venta rápida o de oportunidad) y **de reconstrucción**.
 
 **Confirmada por el negocio el 06-11-2026:** pilotos RPAS acreditados ante el ministerio (se entiende MTC / DGAC; pendiente de confirmar).
 

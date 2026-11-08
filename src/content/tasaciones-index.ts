@@ -65,6 +65,7 @@ export const tasacionesIndex = {
         "<a href='/tasaciones/alquiler'>Tasación de alquileres y renta</a>: fijar o revisar la merced conductiva.",
         "<a href='/tasaciones/impuesto-predial'>Impuesto predial y municipal</a>: revisión del autovalúo y de la base imponible.",
         "<a href='/tasaciones/hoteles'>Tasación de hoteles y resorts</a>: inmueble, equipamiento y negocio en marcha.",
+        "<a href='/tasaciones/fintech'>Tasaciones para fintech</a>: garantías de créditos con valor comercial, de realización y de reconstrucción.",
       ],
     },
     { type: "h2", text: "Tasación de inmuebles en Lima y todo el Perú" },

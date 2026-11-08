@@ -98,6 +98,7 @@ export const hipotecaria: LandingContent = {
     { type: "p", html: "El costo de una tasación hipotecaria depende del tipo de inmueble (casa, departamento, terreno, local), de su tamaño y de la ubicación, por lo que cada cotización es personalizada. En cuanto a plazos, trabajamos en modalidad <b>express</b>: la entrega del informe puede darse en aproximadamente <b>24 horas</b> desde la inspección, siempre que la documentación esté completa. Si además necesitas valorizar otros bienes, también realizamos <a href='/tasaciones/vehicular'>tasación vehicular</a> y otros servicios que puedes revisar en nuestro hub de <a href='/tasaciones'>tasaciones</a>." },
     { type: "h3", text: "Vigencia de la tasación" },
     { type: "p", html: "Una tasación hipotecaria tiene una validez aproximada de <b>1 año</b>. Pasado ese tiempo conviene una nueva evaluación para reflejar las condiciones actuales del mercado inmobiliario, ya que los valores comerciales pueden variar y el banco suele exigir un informe vigente al momento del desembolso." },
+    { type: "p", html: "¿Eres una fintech o una empresa de préstamos con garantía? Conoce nuestras <a href='/tasaciones/fintech'>tasaciones para fintech</a>, con staff dedicado a tu cuenta y valor comercial, de realización y de reconstrucción." },
     { type: "p", html: "¿Necesitas tu tasación lista para el banco esta semana? Cuéntanos el distrito y el tipo de inmueble por <b>WhatsApp</b> y te damos el alcance y la cotización el mismo día, sin compromiso." },
   ],
   form: {

@@ -17,6 +17,7 @@ export const TIPOS_TASACION = [
   "Fiduciaria",
   "Para seguros",
   "Hoteles y resorts",
+  "Fintech y prestamistas",
   "Impuesto predial",
   "Otra",
 ] as const;
@@ -40,5 +41,6 @@ export const TIPO_POR_SLUG: Record<string, TipoTasacion> = {
   fiduciarias: "Fiduciaria",
   "para-seguros": "Para seguros",
   hoteles: "Hoteles y resorts",
+  fintech: "Fintech y prestamistas",
   "impuesto-predial": "Impuesto predial",
 };
