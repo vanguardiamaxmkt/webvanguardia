@@ -1,0 +1,42 @@
+[
+ {
+  "id": 27,
+  "slug": "tipos-de-tasaciones-en-el-peru",
+  "motivo": "Portada provista por el usuario (08-11-2026)",
+  "campos": {
+   "cover_image": "/articulos/portadas/tipos-de-tasaciones-en-el-peru.jpg"
+  }
+ },
+ {
+  "id": 28,
+  "slug": "reglamento-nacional-de-tasaciones",
+  "motivo": "Portada provista por el usuario (08-11-2026)",
+  "campos": {
+   "cover_image": "/articulos/portadas/reglamento-nacional-de-tasaciones.jpg"
+  }
+ },
+ {
+  "id": 29,
+  "slug": "como-verificar-si-un-tasador-esta-inscrito-en-la-sbs",
+  "motivo": "Portada provista por el usuario (08-11-2026)",
+  "campos": {
+   "cover_image": "/articulos/portadas/como-verificar-si-un-tasador-esta-inscrito-en-la-sbs.jpg"
+  }
+ },
+ {
+  "id": 30,
+  "slug": "tasaciones-con-drones",
+  "motivo": "Portada provista por el usuario (08-11-2026)",
+  "campos": {
+   "cover_image": "/articulos/portadas/tasaciones-con-drones.jpg"
+  }
+ },
+ {
+  "id": 31,
+  "slug": "tasaciones-industriales",
+  "motivo": "Portada provista por el usuario (08-11-2026)",
+  "campos": {
+   "cover_image": "/articulos/portadas/tasaciones-industriales.jpg"
+  }
+ }
+]
