@@ -41,6 +41,8 @@ Silos del sitio:
 - **Presencia en Chile y México** (además de cobertura nacional en el Perú).
 - **Tasación homologada ante la SBS** (hipotecaria).
 
+**Confirmada por el negocio el 06-11-2026:** pilotos RPAS acreditados ante el ministerio (se entiende MTC / DGAC; pendiente de confirmar).
+
 Cualquier otra cifra (plazos por servicio distintos del express de 24 h, requisitos por banco) **no está verificada**: marcarla como pendiente antes de publicarla.
 
 ## Mercado e idioma

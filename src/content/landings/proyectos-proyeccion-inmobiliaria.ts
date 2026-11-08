@@ -148,6 +148,10 @@ export const proyeccionInmobiliaria: LandingContent = {
         a: "La proyección estima el valor, la rentabilidad y el potencial de desarrollo. El estudio de viabilidad profundiza en la factibilidad técnica, legal y económica para ejecutar el proyecto. Suelen ser pasos complementarios.",
       },
       {
+        q: "¿En qué se diferencia una proyección inmobiliaria de una tasación?",
+        a: "La tasación determina el valor de un inmueble a una fecha concreta: la elabora un perito tasador conforme al Reglamento Nacional de Tasaciones y es la que piden bancos, juzgados y notarías. La proyección inmobiliaria mira hacia adelante: estima el valor futuro, la rentabilidad y el mejor uso del terreno o del proyecto. Son complementarias: la tasación dice cuánto vale hoy y la proyección, cuánto podría valer y si conviene desarrollarlo.",
+      },
+      {
         q: "¿Sirve para presentar el proyecto a un banco o inversionista?",
         a: "Sí. La proyección entrega valor proyectado, absorción y flujo del proyecto con escenarios, que es justo el sustento que piden inversionistas y bancos para evaluar un desarrollo.",
       },
