@@ -16,6 +16,7 @@ import { ORG_REF } from "@/lib/schema";
 import { ArticleReading } from "@/components/articles/ArticleReading";
 import { TableOfContents } from "@/components/articles/TableOfContents";
 import { ShareButtons } from "@/components/articles/ShareButtons";
+import { ArticleCta } from "@/components/articles/ArticleCta";
 
 export const dynamic = "force-dynamic";
 
@@ -155,6 +156,7 @@ export default async function ArticuloPage({
                 className="article-prose"
                 dangerouslySetInnerHTML={{ __html: html }}
               />
+              <ArticleCta title={article.title} />
               {tags.length > 0 && (
                 <div className="article-tags">
                   {tags.map((t) => (
